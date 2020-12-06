@@ -25,9 +25,14 @@ const Login = () => {
           onChange={(event) => setPasswd(event.target.value)}
         />
       </Form.Group>
-      <Button variant="outline-primary" type="submit" size="lg" color="primary">
-        Login
-      </Button>
+      <Form.Group>
+        <Button variant="outline-primary" type="submit" color="primary" block>
+          Login
+        </Button>
+        <Button variant="outline-primary" type="submit" color="primary" block>
+          Register
+        </Button>
+      </Form.Group>
     </Form>
   );
 };

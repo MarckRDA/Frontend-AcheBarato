@@ -10,7 +10,6 @@ function App() {
     <Jumbotron
       style={{
         margin: "5.5em 1.5em",
-        padding: "5em",
         backgroundColor: "darkorange",
       }}
     >
@@ -18,7 +17,6 @@ function App() {
         <Row>
           <Col xs={6}>
           <Image src={logopath} thumbnail/>
-           <h1>Logo</h1>
           </Col>
           <Col xs={6}>
             <Login />
