@@ -39,7 +39,7 @@ function MainPage() {
         </Form>
       </Navbar>
       <div className="w-100 mb-0">
-        <p style={{backgroundColor:"red", marginBottom:"0px", height:"50px"}}>Banner</p>
+        <p style={{backgroundColor:"black", marginBottom:"0px", height:"50px" }}>Banner</p>
       </div>
         <Carrousel />
         <CarouselProdutos/>
