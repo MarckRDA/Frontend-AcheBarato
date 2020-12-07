@@ -6,6 +6,7 @@ import "./Components/styleLogo.css"
 import MainPage from "./MainPage";
 import ProdutosPesquisados from "./ProdutosPesquisados";
 import NavegacaoLateral from "./NavegacaoLateral";
+import ProdutoEscolhido from "./ProdutoEscolhido";
 function App() {
   return (
     //<PrimarySearchAppBar/>
