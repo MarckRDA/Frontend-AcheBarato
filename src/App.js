@@ -2,7 +2,7 @@ import "./App.css";
 import Login from "./Components/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
-import logopath from "/home/marckrda/ws-javascript/layouts-projeto/src/Logo.png";
+import logopath from "./Components/Logo";
 import MainPage from "./MainPage";
 import ProdutosPesquisados from "./ProdutosPesquisados";
 import NavegacaoLateral from "./NavegacaoLateral";
