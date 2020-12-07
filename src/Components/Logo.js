@@ -1,5 +1,5 @@
 import React from 'react';
-import imagemLogo from "../src/Logo"
+import imagemLogo from './Logo'
 
 function Logo () {
   return (
