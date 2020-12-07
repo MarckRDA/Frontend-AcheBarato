@@ -70,7 +70,7 @@ function NavegacaoLateral() {
         </Form>
       </Nav.Item>
       <Nav.Item as={Col}>
-        <h3>Faixa de Disconto</h3>
+        <h3>Faixa de Desconto</h3>
         <Form.Group>
           <Form.Check type="checkbox" label="20 %" />
           <Form.Check type="checkbox" label="50 %" />
