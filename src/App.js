@@ -6,6 +6,7 @@ import logopath from "./Components/Logo";
 import MainPage from "./MainPage";
 import ProdutosPesquisados from "./ProdutosPesquisados";
 import NavegacaoLateral from "./NavegacaoLateral";
+import ProdutoEscolhido from "./ProdutoEscolhido";
 function App() {
   return (
     //<PrimarySearchAppBar/>
@@ -28,18 +29,20 @@ function App() {
     //   </Container>
     // </Jumbotron>
     //<MainPage/>
-    <Container className="mr-auto ml-auto ">
-      <Row>
-        <Col xs={2}>
-          <aside>
-            <NavegacaoLateral />
-          </aside>
-        </Col>
-        <Col xs={10}>
-          <ProdutosPesquisados />
-        </Col>
-      </Row>
-    </Container>
+    // <Container className="mr-auto ml-auto ">
+    //   <Row>
+    //     <Col xs={2}>
+    //       <aside>
+    //         <NavegacaoLateral />
+    //       </aside>
+    //     </Col>
+    //     <Col xs={10}>
+    //       <ProdutosPesquisados />
+    //     </Col>
+    //   </Row>
+    // </Container>
+    <ProdutoEscolhido/>
+    
   );
 }
 
