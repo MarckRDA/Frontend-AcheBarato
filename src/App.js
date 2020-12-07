@@ -1,12 +1,11 @@
 import "./App.css";
 import Login from "./Components/Login/Login";
-import SeachPage from "./SeachPage"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
-import logopath from "/media/rodrigo/Dados/dev/layouts-projeto/src/Logo.png";
+import logopath from "./Components/Logo";
 import MainPage from "./MainPage";
 import ProdutosPesquisados from "./ProdutosPesquisados";
-
+import NavegacaoLateral from "./NavegacaoLateral";
 function App() {
   return (
     //<PrimarySearchAppBar/>
@@ -29,16 +28,18 @@ function App() {
     //   </Container>
     // </Jumbotron>
     //<MainPage/>
-    // <Container>
-    //   <Col xs={3}>
-    //     <h1>Navegação aside</h1>
-    //   </Col>
-    //   <Col xs={9}>
-    //     <ProdutosPesquisados />
-    //   </Col>
-    // </Container>
-    // <SeachPage/>
-    <MainPage/>
+    <Container className="mr-auto ml-auto ">
+      <Row>
+        <Col xs={2}>
+          <aside>
+            <NavegacaoLateral />
+          </aside>
+        </Col>
+        <Col xs={10}>
+          <ProdutosPesquisados />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
