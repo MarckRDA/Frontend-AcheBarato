@@ -15,7 +15,7 @@ function CarouselProdutos() {
     <CarouselItem key={n.toString()}>
       <Container >
         <Row className="ml-auto mr-auto mb-3">
-          <Card style={{ width: "15rem", margin: "15px" }}>
+          <Card style={{ width: "15rem", margin: "10px" }}>
             <Card.Img variant="top" src={l} />
             <Card.Body>
               <Card.Title>Produto f</Card.Title>

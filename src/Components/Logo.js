@@ -1,11 +1,12 @@
 import React from 'react';
+import imagemLogo from "../src/Logo"
 
-const Logo = (props) => {
+function Logo () {
   return (
     <img
       alt="Logo"
-      src="./src/logo.svg"
-      {...props}
+      src= {imagemLogo}
+      
     />
   );
 };
