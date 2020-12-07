@@ -24,7 +24,7 @@ function MainPage() {
           <Dropdown.Item as="button">Celulares</Dropdown.Item>
           <Dropdown.Item as="button">TV's</Dropdown.Item>
         </DropdownButton>
-        <InputGroup className="mr-auto ml-auto col-sm-9">
+        <InputGroup  className="mr-auto ml-auto col-sm-9 ">
           <FormControl
             placeholder="Recipient's username"
             aria-label="Recipient's username"
