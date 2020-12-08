@@ -4,7 +4,10 @@ body{
     background-size:auto;
     background-repeat: no-repeat;
     background-color: #f48221;
-
-
-
+    text-align: left;
+    background-color: #f4843c;
+    position: relative;
+    left: -43px;
+    border: 139px solid #f4843c;
 }
+

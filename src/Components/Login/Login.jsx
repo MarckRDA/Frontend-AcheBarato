@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import "/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Login/Login.jsx";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
 
   return (
-    
 
-    <Form>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label >Email</Form.Label>
-        <Form.Control 
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </Form.Group>
-      <Form.Group controlId="formBasicPassword">
+          <Form >
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label >Email</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="E-mail"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </Form.Group>
+       
+      <Form.Group controlId="formBasicPassword" >
         <Form.Label >Password</Form.Label>
         <Form.Control
           type="password"
@@ -31,11 +39,23 @@ const Login = () => {
         <Button variant="outline-primary" type="submit" color="primary" block>
           Login
         </Button>
-        <Button variant="outline-primary" type="submit" color="primary" block>
-          Register
-        </Button>
+        <Router>
+
+          <Button variant="outline-primary"
+            type="submit"
+            color="primary"
+            block
+
+          >
+            Register
+
+          </Button>
+        </Router>
+
       </Form.Group>
-    </Form>
+          </Form>
+       
+ 
   );
 };
 
