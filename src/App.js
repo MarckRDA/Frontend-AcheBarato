@@ -8,22 +8,24 @@ import MainPage from "./MainPage";
 import ProdutosPesquisados from "./ProdutosPesquisados";
 import NavegacaoLateral from "./NavegacaoLateral";
 import ProdutoEscolhido from "./ProdutoEscolhido";
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
 function App() {
   return (
     //<PrimarySearchAppBar/>
 
-      <Container >
-        <Row>
-          <Col xs={6}  >
-          </Col>
-          <Col xs={6} >
-            <Login />
-          </Col>
-        </Row>
-      </Container>
+      // <Container >
+      //   <Row>
+      //     <Col xs={6}  >
+      //     </Col>
+      //     <Col xs={6} >
+      //       <Login />
+      //     </Col>
+      //   </Row>
+      // </Container>
      
 
-    //<MainPage/>
+    <MainPage/>
     // <Container className="mr-auto ml-auto ">
     //   <Row>
     //     <Col xs={2}>
@@ -32,7 +34,7 @@ function App() {
     //       </aside>
     //     </Col>
     //     <Col xs={10}>
-    //       <ProdutosPesquisados />
+          //  <ProdutosPesquisados />
     //     </Col>
     //   </Row>
     // </Container>
