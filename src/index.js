@@ -13,6 +13,7 @@ import PrimarySearchAppBar from './PrimarySearchAppBar';
 import SeachPage from './SeachPage';
 import CarouselProdutos from './CarouselProdutos';
 import NotFoundView from './NotFound';
+import NotFound from './NotFound';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,7 +27,7 @@ ReactDOM.render(
       <Route path="/SeachPage" component={SeachPage} />
       <Route path="/Carrousel" component={Carrousel}/>
       <Route path="/CarouselProdutos" components={CarouselProdutos}/>
-      <Route path='*' component={NotFound} />
+      <Route path='/NotFound' component={NotFound} />
 
       
 
