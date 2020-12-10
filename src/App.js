@@ -10,6 +10,8 @@ import NavegacaoLateral from "./NavegacaoLateral";
 import ProdutoEscolhido from "./ProdutoEscolhido";
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+
+// todo : to make a component call routers and make to render here
 function App() {
   return (
     //<PrimarySearchAppBar/>
@@ -25,7 +27,7 @@ function App() {
       // </Container>
      
 
-    <MainPage/>
+    // <MainPage/>
     // <Container className="mr-auto ml-auto ">
     //   <Row>
     //     <Col xs={2}>
@@ -39,7 +41,7 @@ function App() {
     //   </Row>
     // </Container>
     // <Login/>
-    // <ProdutoEscolhido/>
+    <ProdutoEscolhido/>
   );
 }
 

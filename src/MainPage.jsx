@@ -1,4 +1,5 @@
 import React from "react";
+import{Link} from 'react-router-dom'
 import {
   Dropdown,
   DropdownButton,
@@ -31,11 +32,11 @@ function MainPage() {
             aria-describedby="basic-addon2"
           />
           <InputGroup.Append>
-           <Button variant="outline-secondary">Search</Button>
+           <Link to="/SeachPage"><Button variant="outline-secondary">Search</Button></Link>
           </InputGroup.Append>
         </InputGroup>
         <Form inline>
-          <Button variant="outline-light">Entrar</Button>
+          <Link to="/NotFound"><Button variant="outline-light">Entrar</Button></Link>
         </Form>
       </Navbar>
       <div className="w-100 mb-0">

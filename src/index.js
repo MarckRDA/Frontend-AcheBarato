@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import NavegacaoLateral from './NavegacaoLateral';
 import Carrousel from './Carrousel';
@@ -27,10 +27,7 @@ ReactDOM.render(
       <Route path="/SeachPage" component={SeachPage} />
       <Route path="/Carrousel" component={Carrousel}/>
       <Route path="/CarouselProdutos" components={CarouselProdutos}/>
-      <Route path='/NotFound' component={NotFound} />
-
-      
-
+      <Route path='/NotFound' component={NotFound} />  
   </Switch>
 </ BrowserRouter>
 
