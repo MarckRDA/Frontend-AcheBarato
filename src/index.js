@@ -6,6 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MainPage from './MainPage';
 import NavegacaoLateral from './NavegacaoLateral';
+import Carrousel from './Carrousel';
+import ProdutosPesquisados from './ProdutosPesquisados';
+import ProdutoEscolhido from './ProdutoEscolhido';
+import PrimarySearchAppBar from './PrimarySearchAppBar';
+import SeachPage from './SeachPage';
+import CarouselProdutos from './CarouselProdutos';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,10 +19,12 @@ ReactDOM.render(
       <Route path="/App" exact={true} component={App} />
       <Route path="/MainPage" exact={true} component={MainPage} />
       <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
-      <Route path="/PrimarySearchAppBar" component={Primary} />
-      <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
-      <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
-      <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
+      <Route path="/PrimarySearchAppBar" component={PrimarySearchAppBar} />
+      <Route path="/ProdutoEscolhido" component={ProdutoEscolhido} />
+      <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
+      <Route path="/SeachPage" component={SeachPage} />
+      <Route path="/Carrousel" component={Carrousel}/>
+      <Route path="/CarouselProdutos" components={CarouselProdutos}/>
 
   </Switch>
 </ BrowserRouter>
