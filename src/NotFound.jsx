@@ -7,9 +7,11 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Page from "/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Page.js";
+import { FilterNone } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    background: 'linear-gradient(45deg, #f4843c 100%, #FF8E53 50%)',
     backgroundColor: theme.palette.background.dark,
     height: '100%',
     paddingBottom: theme.spacing(3),
@@ -45,13 +47,7 @@ const NotFound = () => {
           >
             404: The page you are looking for isn’t here
           </Typography>
-          <Typography
-            align="center"
-            color="textPrimary"
-            variant="subtitle2"
-          >
-           
-          </Typography>
+          
           <Box textAlign="center">
             <img
               alt="Under development"
