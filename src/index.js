@@ -12,8 +12,8 @@ import ProdutoEscolhido from './ProdutoEscolhido';
 import PrimarySearchAppBar from './PrimarySearchAppBar';
 import SeachPage from './SeachPage';
 import CarouselProdutos from './CarouselProdutos';
-import Login from '/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Login/Login.jsx';
-import NotFound from './NotFound';
+import Login from './Components/Login/Login.jsx';
+import NotFound from './NotFound.jsx';
 import FormRegister from './FormRegister';
 
 ReactDOM.render(

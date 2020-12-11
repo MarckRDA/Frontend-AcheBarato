@@ -6,7 +6,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import Page from "/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Page.js";
+import Page from './Page.js';
 
 const useStyles = makeStyles((theme) => ({
   root: {
