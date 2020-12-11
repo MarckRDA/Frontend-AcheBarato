@@ -7,23 +7,13 @@ const useStyles = makeStyles(() => createStyles({
       margin: 0,
       padding: 0,
     },
-    html: {
-      '-webkit-font-smoothing': 'antialiased',
-      '-moz-osx-font-smoothing': 'grayscale',
+    body: {
+      background: 'linear-gradient(45deg, #f4843c 100%, #FF8E53 50%)',
+      backgroundColor: theme.palette.background.dark,
       height: '100%',
-      width: '100%'
-    },
-    row: {
-     
-      height: '100%',
-      width: '100%'
-    },
-    a: {
-      textDecoration: 'none'
-    },
-    '#root': {
-      height: '100%',
-      width: '100%'
+      paddingBottom: theme.spacing(3),
+      paddingTop: theme.spacing(3)
+
     }
   }
 }));

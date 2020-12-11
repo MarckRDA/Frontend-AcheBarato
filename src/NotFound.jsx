@@ -7,7 +7,6 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Page from "/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Page.js";
-import { FilterNone } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {

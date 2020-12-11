@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Login/Login.jsx";
 
 import {
   BrowserRouter as Router,

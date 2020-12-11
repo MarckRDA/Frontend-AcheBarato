@@ -12,13 +12,15 @@ import ProdutoEscolhido from './ProdutoEscolhido';
 import PrimarySearchAppBar from './PrimarySearchAppBar';
 import SeachPage from './SeachPage';
 import CarouselProdutos from './CarouselProdutos';
-import NotFoundView from './NotFound';
+import Login from '/media/rodrigo/Dados/dev/layouts-projeto/src/Components/Login/Login.jsx';
 import NotFound from './NotFound';
+import FormRegister from './FormRegister';
 
 ReactDOM.render(
   <BrowserRouter>
   <Switch>
       <Route path="/App" exact={true} component={App} />
+      <Route path="./Componentes/Login" exact={true} component={Login} />
       <Route path="/MainPage" exact={true} component={MainPage} />
       <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
       <Route path="/PrimarySearchAppBar" component={PrimarySearchAppBar} />
@@ -27,6 +29,7 @@ ReactDOM.render(
       <Route path="/SeachPage" component={SeachPage} />
       <Route path="/Carrousel" component={Carrousel}/>
       <Route path="/CarouselProdutos" components={CarouselProdutos}/>
+      <Route path="/FormRegister" components={FormRegister}/>
       <Route path='/NotFound' component={NotFound} />  
   </Switch>
 </ BrowserRouter>
