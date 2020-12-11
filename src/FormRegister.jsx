@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState,Col } from "react";
-// import styleFormRegister from "./Components/styleFormRegister.css";
+import styleFormRegister from "./Components/styleFormRegister.css";
 
 // todo import blobalstyles.js
 import {
