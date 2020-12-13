@@ -13,7 +13,20 @@ function MainPage() {
       />
       <BannerPropaganda />
       <CarouselMainPage/>
-      <CarouselProdutos />
+      <CarouselProdutos trendingProducts={[
+    { name: "cyberpunk", description: "xsxs", category:"eletronicos" },
+    { name: "shbah", description: "dsjbasj", category:"eletronicos" },
+    { name: "ssjnjn", description: "kmdskmd", category:"eletronicos" },
+    { name: "hbahasa", description: "dkdmskmd", category:"eletronicos" },
+    { name: "hbahasa", description: "dkdmskmd", category:"roupas" },
+    { name: "hbahasa", description: "dkdmskmd", category:"roupas" },
+    { name: "hbahasa", description: "dkdmskmd", category:"roupas" },
+    { name: "hbahasa", description: "dkdmskmd", category:"roupas" },
+    { name: "hbahasa", description: "dkdmskmd", category:"computadores" },
+    { name: "hbahasa", description: "dkdmskmd", category:"computadores" },
+    { name: "hbahasa", description: "dkdmskmd", category:"computadores" },
+    { name: "hbahasa", description: "dkdmskmd", category:"computadores" }
+  ]}/>
     </div>
   );
 }

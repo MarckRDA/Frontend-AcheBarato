@@ -27,19 +27,19 @@ function App() {
       // </Container>
     //  <Login/>
 
-    <MainPage/>
-    // <Container className="mr-auto ml-auto ">
-    //   <Row>
-    //     <Col xs={2}>
-    //       <aside>
-    //         <NavegacaoLateral />
-    //       </aside>
-    //     </Col>
-    //     <Col xs={10}>
-          //  <ProdutosPesquisados />
-    //     </Col>
-    //   </Row>
-    // </Container>
+    //<MainPage/>
+    <Container className="mr-auto ml-auto ">
+      <Row>
+        <Col xs={2}>
+          <aside>
+            <NavegacaoLateral />
+          </aside>
+        </Col>
+        <Col xs={10}>
+           <ProdutosPesquisados />
+        </Col>
+      </Row>
+    </Container>
     
     // <Login/>
     // <ProdutoEscolhido/>
