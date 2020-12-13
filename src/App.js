@@ -2,9 +2,9 @@ import "./App.css";
 import Login from "./Components/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
-import "./Components/styleLogo.css" 
+//import "./Components/styleLogo.css" 
 import FormRegister from "./FormRegister";
-import MainPage from "./MainPage";
+import MainPage from './UI/Pages/MainPage.jsx'
 import ProdutosPesquisados from "./ProdutosPesquisados";
 import NavegacaoLateral from "./NavegacaoLateral";
 import ProdutoEscolhido from "./ProdutoEscolhido";
@@ -27,7 +27,7 @@ function App() {
       // </Container>
     //  <Login/>
 
-    // <MainPage/>
+    <MainPage/>
     // <Container className="mr-auto ml-auto ">
     //   <Row>
     //     <Col xs={2}>
@@ -43,7 +43,7 @@ function App() {
     
     // <Login/>
     // <ProdutoEscolhido/>
-    <FormRegister/>
+    //<FormRegister/>
   );
 }
 

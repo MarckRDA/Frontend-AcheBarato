@@ -3,38 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import MainPage from './MainPage';
-import NavegacaoLateral from './NavegacaoLateral';
-import Carrousel from './Carrousel';
-import ProdutosPesquisados from './ProdutosPesquisados';
-import ProdutoEscolhido from './ProdutoEscolhido';
-import PrimarySearchAppBar from './PrimarySearchAppBar';
-import SeachPage from './SeachPage';
-import CarouselProdutos from './CarouselProdutos';
-import Login from './Components/Login/Login.jsx';
-import NotFound from './NotFound.jsx';
-import FormRegister from './FormRegister';
 
 ReactDOM.render(
-  <BrowserRouter>
-  <Switch>
-      <Route path="/App" exact={true} component={App} />
-      <Route path="./Componentes/Login" exact={true} component={Login} />
-      <Route path="/MainPage" exact={true} component={MainPage} />
-      <Route path="/NavegacaoLateral" component={NavegacaoLateral} />
-      <Route path="/PrimarySearchAppBar" component={PrimarySearchAppBar} />
-      <Route path="/ProdutoEscolhido" component={ProdutoEscolhido} />
-      <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
-      <Route path="/SeachPage" component={SeachPage} />
-      <Route path="/Carrousel" component={Carrousel}/>
-      <Route path="/CarouselProdutos" components={CarouselProdutos}/>
-      <Route path="/FormRegister" components={FormRegister}/>
-      <Route path='/NotFound' component={NotFound} />  
-  </Switch>
-</ BrowserRouter>
-
-, document.getElementById('root')
+  <App/>, 
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
