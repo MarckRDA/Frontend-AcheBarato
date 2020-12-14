@@ -5,7 +5,7 @@ import {
   Container,
   Row,
 } from "react-bootstrap";
-import CardTrendProduct from "./UI/StatelessComponents/CardTrendProduct/CardTrendProduct";
+import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 
 // ToDo: Fix dynamic carousel
 

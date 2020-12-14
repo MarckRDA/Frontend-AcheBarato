@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Container, ListGroup, Row, Table } from "react-bootstrap";
-import Carrousel from "./UI/StatelessComponents/CarouselMainPage/CarouselMainPage";
+import Carrousel from "./Components/CarouselMainPage/CarouselMainPage";
 
 function ProdutoEscolhido() {
   return (

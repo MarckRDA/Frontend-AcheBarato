@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import BrandButton from '../../UI/StatelessComponents/BrandButton/BrandButton';
+import BrandButton from '../BrandButton/BrandButton';
 import {Navbar} from 'react-bootstrap';
 import SearchBar from '../SearchBar/SearchBar'
 

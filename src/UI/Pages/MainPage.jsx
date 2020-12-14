@@ -1,8 +1,8 @@
 import React from "react";
-import CarouselProdutos from "../../CarouselProdutos";
-import CarouselMainPage from '../StatelessComponents/CarouselMainPage/CarouselMainPage';
+import CarouselProdutos from "../../Components/CarouselProducts/CarouselProdutos";
+import CarouselMainPage from '../../Components/CarouselMainPage/CarouselMainPage';
 import NavigationBar from "../../Components/NavigationBar/NavigationBar";
-import BannerPropaganda from "../StatelessComponents/Banner/BannerPropaganda";
+import BannerPropaganda from "../../Components/Banner/BannerPropaganda";
 
 function MainPage() {
   return (

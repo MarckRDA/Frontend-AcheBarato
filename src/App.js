@@ -1,15 +1,7 @@
 import "./App.css";
-import Login from "./Components/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
 //import "./Components/styleLogo.css" 
-import FormRegister from "./FormRegister";
-import MainPage from './UI/Pages/MainPage.jsx'
-import ProdutosPesquisados from "./ProdutosPesquisados";
-import NavegacaoLateral from "./NavegacaoLateral";
-import ProdutoEscolhido from "./ProdutoEscolhido";
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
+import SearchResultProducts from './UI/Pages/SearchResultPage.jsx'
 
 // todo : to make a component call routers and make to render here
 function App() {
@@ -28,19 +20,7 @@ function App() {
     //  <Login/>
 
     //<MainPage/>
-    <Container className="mr-auto ml-auto ">
-      <Row>
-        <Col xs={2}>
-          <aside>
-            <NavegacaoLateral />
-          </aside>
-        </Col>
-        <Col xs={10}>
-           <ProdutosPesquisados />
-        </Col>
-      </Row>
-    </Container>
-    
+    <SearchResultProducts/>    
     // <Login/>
     // <ProdutoEscolhido/>
     //<FormRegister/>

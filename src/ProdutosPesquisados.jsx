@@ -1,158 +1,24 @@
 import React from "react";
 
-import { ListGroup, Card, Button, Container, CardDeck } from "react-bootstrap";
+import { ListGroup, Container } from "react-bootstrap";
+import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 
-function ProdutosPesquisados() {
+//todo: terminar o controle de produtos 
+
+function ProdutosPesquisados(props) {
+  const productsSearched = props.products;
+  const listProducts = productsSearched.map(
+    ({ ...productsSearched }, index) => (
+      <SearchResultProducts
+        productDescription={productsSearched.name}
+        productName={productsSearched.productDescription}
+      />
+    )
+  );
   return (
     <Container className="">
       <ListGroup variant="flush">
-        <ListGroup.Item style={{border: "none"}}>
-          <CardDeck>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-          </CardDeck>
-        </ListGroup.Item>
-        <ListGroup.Item style={{border: "none"}}>
-          <CardDeck>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-          </CardDeck>
-        </ListGroup.Item>
-        <ListGroup.Item style={{border: "none"}}>
-          <CardDeck>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                border: "none",
-                width: "15rem",
-                height: "10rem",
-                margin: "10px",
-              }}
-            >
-              <Card.Img variant="top" />
-              <Card.Body>
-                <Card.Title>Produto f</Card.Title>
-                <Card.Text>Product description</Card.Text>
-                <Button variant="primary">Ver Produto</Button>
-              </Card.Body>
-            </Card>
-          </CardDeck>
-        </ListGroup.Item>
+        {listProducts}
       </ListGroup>
     </Container>
   );
