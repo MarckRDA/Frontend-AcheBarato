@@ -1,15 +1,15 @@
 import React from "react";
 
-import { ListGroup, Container } from "react-bootstrap";
-import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
+import { ListGroup, Container, Row } from "react-bootstrap";
+import SearchResultProducts from "../SearchResultProducts/SearchResultProducts";
 
-//todo: terminar o controle de produtos 
 
 function ProdutosPesquisados(props) {
   const productsSearched = props.products;
   const listProducts = productsSearched.map(
     ({ ...productsSearched }, index) => (
       <SearchResultProducts
+        key={index}
         productDescription={productsSearched.name}
         productName={productsSearched.productDescription}
       />
@@ -18,7 +18,9 @@ function ProdutosPesquisados(props) {
   return (
     <Container className="">
       <ListGroup variant="flush">
+      <Row lg={4}>
         {listProducts}
+        </Row>
       </ListGroup>
     </Container>
   );

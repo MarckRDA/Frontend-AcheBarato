@@ -1,12 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "./Components/styleLogo.css" 
-import SearchResultProducts from './UI/Pages/SearchResultPage.jsx'
+import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido.jsx'
 
 // todo : to make a component call routers and make to render here
 function App() {
   return (
-    //<PrimarySearchAppBar/>
 
       // <Container >
       //   <Row>
@@ -19,11 +17,20 @@ function App() {
       // </Container>
     //  <Login/>
 
-    //<MainPage/>
-    <SearchResultProducts/>    
-    // <Login/>
-    // <ProdutoEscolhido/>
-    //<FormRegister/>
+     <ProdutoEscolhido products={[
+      { name: "cyberpunk", price: "24,20"},
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" },
+      { name: "shbah", price: "43,23" }]}/>
   );
 }
 

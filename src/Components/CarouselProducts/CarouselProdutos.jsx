@@ -5,6 +5,7 @@ import {
   Container,
   Row,
 } from "react-bootstrap";
+
 import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 
 // ToDo: Fix dynamic carousel

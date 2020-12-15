@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import styled from "styled-components";
-import l from "../../logo.svg";
+import l from '../../assets/logo.svg'
 
 const CardStyled = styled(Card)`
     width:15rem;
