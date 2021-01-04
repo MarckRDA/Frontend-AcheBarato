@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+// import { } from "react-bootstrap";
+import {Form,Wrapper,Button} from "./ComponentsStyled";
 
 import {
   BrowserRouter as Router,
@@ -14,7 +15,8 @@ const Login = () => {
 
   return (
 
-          <Form >
+    <Wrapper>
+          <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label >Email</Form.Label>
               <Form.Control
@@ -53,7 +55,7 @@ const Login = () => {
 
       </Form.Group>
           </Form>
-       
+          </Wrapper>
  
   );
 };

@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido.jsx'
 import Login from './Components/Login/Login.jsx'
+
 
 // todo : to make a component call routers and make to render here
 function App() {
