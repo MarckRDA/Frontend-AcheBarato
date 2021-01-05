@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
-import Styled from "styled-components";
+import styled from "styled-components";
 import "./LoginStyles.css"
 
 import {
@@ -11,6 +11,21 @@ import {
 } from "react-router-dom";
 
 
+ const LoginButton = styled(Button)`
+    width: 30%;
+    height: 2.4rem;
+    border: none;
+    margin-left:15rem;
+    cursor: pointer;
+    background: #13d0f1;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+`;
 
 
 const Login = () => {
@@ -41,12 +56,12 @@ const Login = () => {
         />
       </Form.Group>
       <Form.Group>
-        <Button variant="outline-primary" type="submit" color="primary" block>
+        <LoginButton variant="outline-primary" type="submit" color="primary" block>
           Login
-        </Button>
+        </LoginButton>
         <Router>
 
-          <Button variant="outline-primary"
+          <LoginButton variant="outline-primary"
             type="submit"
             color="primary"
             block
@@ -54,7 +69,7 @@ const Login = () => {
           >
             Register
 
-          </Button>
+          </LoginButton>
         </Router>
 
       </Form.Group>
