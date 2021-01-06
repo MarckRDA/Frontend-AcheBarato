@@ -16,9 +16,11 @@ body {
     background-position-y: 5rem;
     font-weight: 300;
     font-family: 'Fira Sans', sans-serif;
+    display: block;
 }
 
 .form-control {
+    display: block;
     margin-left: 9rem;
     display: block;
     width: 57%;
@@ -35,22 +37,26 @@ body {
 }
 
 label {
+    display: block;
     display: inline-block;
     margin-bottom: 0.5rem;
     margin-left: 9rem;
 }
 
 .form-group {
+    display: block;
     margin-bottom: 2rem;
 }
 
 h3,
 label {
+    display: block;
     font-weight: 400;
     font-family: 'Fira Sans', sans-serif;
 }
 
 h3 {
+    display: block;
     text-align: center;
     margin: 0;
     line-height: 1;
