@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 230px;
     font-size: 1.2rem;
-    font-weight: 100;
     line-height: 0.5;
     color: #212529;
     text-align: left;
     background-color: #f4843c;
     background-image: url("../assets/logotipo.png");
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: 24rem;
     background-position-y: 5rem;
+    font-weight: 300;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .form-control {
@@ -25,8 +31,7 @@ body {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: 14.25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: 0.5rem;
 }
 
 label {
@@ -37,4 +42,17 @@ label {
 
 .form-group {
     margin-bottom: 2rem;
+}
+
+h3,
+label {
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 20px;
 }

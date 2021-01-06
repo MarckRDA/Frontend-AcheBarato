@@ -1,15 +1,73 @@
-body{
-    background-image: url("background.png") ;
-    background-size:auto;
-    font-size: x-large;
-    font-family: initial;
-    font-style: normal;
-    font-weight: 50;
-    padding: 8%;
-    font-family:'Times New Roman', Times, serif;
-    background-position: 50%;
-  
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 230px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 0.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f4843c;
+    background-image: url("../assets/logotipo.png");
+    background-repeat: no-repeat;
+    background-position-x: 24rem;
+    background-position-y: 5rem;
+}
 
+.form-control {
+    margin-left: 9rem;
+    display: block;
+    width: 57%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-color: #719ECE;
+    border-radius: 0.5rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-left: 9rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: .3rem;
+    margin-left: 7.75rem;
+}
+
+h3,
+label {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+h1 {
+    text-align: right;
+    font-size: 13px;
+    padding-top: 10px;
+    color: #7f7d7d;
+    margin: 0;
+}

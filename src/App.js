@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from './Components/Login/Login.jsx'
+import FormRegister from './Components/FormRegister/FormRegister.jsx'
 
 
 
@@ -14,12 +15,14 @@ function App() {
         //     <Col xs={6}  >
         //     </Col>
         //     <Col xs={6} >
-        <
-        Login / >
+
+        // <
+        // Login / >
         //     </Col>
         //   </Row>
         // </Container>
-
+        <
+        FormRegister / >
 
 
         // <
