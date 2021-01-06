@@ -1,7 +1,7 @@
-body{
+body {
     margin: "5.5em 1.5em";
-    background-image: url("../Logo.png") ;
-    background-size:auto;
+    background-image: url("../Logo.png");
+    background-size: auto;
     background-repeat: no-repeat;
     background-color: #f48221;
     text-align: left;
@@ -10,4 +10,3 @@ body{
     left: -43px;
     border: 139px solid #f4843c;
 }
-

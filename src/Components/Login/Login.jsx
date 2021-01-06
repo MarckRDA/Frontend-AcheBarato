@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Form, Button, Jumbotron } from "react-bootstrap";
-import styled from "styled-components";
 import "./LoginStyles.css"
+import { LoginButton,JumbotronStyled} from "./LoginStyles";
+import styled from "styled-components";
+
 
 import {
   BrowserRouter as Router,
@@ -11,29 +13,7 @@ import {
 } from "react-router-dom";
 
 
-const LoginButton = styled(Button)`
-    width: 30%;
-    height: 2.4rem;
-    border: none;
-    margin-left:15rem;
-    cursor: pointer;
-    background: #13d0f1;
-    border-radius: 0.5rem;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    `;
-    
-const JumbotronStyled = styled(Jumbotron)`
- border-radius: 3rem;
- color: #1a1515;
- justify-content: center;
- opacity: 100%;
- box-shadow: inset -1px 4px 27px 7px #9e958d, 0px 3px 13px -5px black;
  
- `;
-
 
 const Login = () => {
   const [email, setEmail] = useState("");

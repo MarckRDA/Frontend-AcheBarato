@@ -1,27 +1,23 @@
-import { createStyles, makeStyles } from '@material-ui/core';
+import { createGlobalStyle } from "styled-components";
+import px2vw from "../utils/px2vw";
 
-const useStyles = makeStyles(() => createStyles({
-  '@global': {
-    '*': {
-      boxSizing: 'border-box',
-      margin: 0,
-      padding: 0,
-    },
-    body: {
-      background: 'linear-gradient(45deg, #f4843c 100%, #FF8E53 50%)',
-      backgroundColor: theme.palette.background.dark,
-      height: '100%',
-      paddingBottom: theme.spacing(3),
-      paddingTop: theme.spacing(3)
-
-    }
+export const Global = createGlobalStyle `
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}));
+  :root {
+      font-size: ${px2vw(24)};
 
-const GlobalStyles = () => {
-  useStyles();
+      @media (min-width: 768px) {
+        font-size: ${px2vw(18)};
+      }
 
-  return null;
-};
+      @media (min-width: 1024px) {
+        font-size: ${px2vw(16)};
+      }
+    }
+`;
 
-export default GlobalStyles;
+export default Global;
