@@ -10,7 +10,7 @@ import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 
 // ToDo: Fix dynamic carousel
 
-function CarouselProdutos(props) {
+function CarouselProducts(props) {
   const productInformations = props.trendingProducts;
 
   const CardsTrendsProdutcs = productInformations.map(({ ...rest }, index) => (
@@ -41,4 +41,4 @@ function CarouselProdutos(props) {
   );
 }
 
-export default CarouselProdutos;
+export default CarouselProducts;

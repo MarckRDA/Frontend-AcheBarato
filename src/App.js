@@ -2,8 +2,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from './Components/Login/Login.jsx'
 import FormRegister from './Components/FormRegister/FormRegister.jsx'
-
-
+import BrandButton from './Components/BrandButton/BrandButton.jsx'
+import MainPage from './UI/Pages/MainPage.jsx';
+import Routes from './Routes.jsx';
 
 // todo : to make a component call routers and make to render here
 function App() {
@@ -21,9 +22,10 @@ function App() {
         //     </Col>
         //   </Row>
         // </Container>
-        <
-        FormRegister / >
-
+        // <
+        // FormRegister / >
+        // <
+        // BrandButton / >
 
         // <
         // ProdutoEscolhido products = {
@@ -44,6 +46,9 @@ function App() {
         //     ]
         // }
         // />
+        <
+        Routes / >
+
     );
 }
 

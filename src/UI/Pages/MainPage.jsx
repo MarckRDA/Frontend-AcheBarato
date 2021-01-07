@@ -1,12 +1,13 @@
 import React from "react";
-import CarouselProdutos from "../../Components/CarouselProducts/CarouselProdutos";
+import CarouselProdutos from "../../Components/CarouselProducts/CarouselProducts";
 import CarouselMainPage from '../../Components/CarouselMainPage/CarouselMainPage';
 import NavigationBar from "../../Components/NavigationBar/NavigationBar";
 import BannerPropaganda from "../../Components/Banner/BannerPropaganda";
+import './MainPageStyles/MainPageStyles.css';
 
 function MainPage() {
   return (
-    <div>
+    <div >
       <NavigationBar
         variant="dark"
         optionsMenu={["maros", "dashbs", "hbahab"]}

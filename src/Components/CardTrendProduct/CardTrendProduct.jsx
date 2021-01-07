@@ -1,11 +1,12 @@
 import { Card, Button } from "react-bootstrap";
 import styled from "styled-components";
-import l from '../../assets/logo.svg'
+import l from '../assets/logotipo.png';
 
 const CardStyled = styled(Card)`
     width:15rem;
     margin:10px
 `;
+
 const CardTrendProduct = (props) => {
   return (
     <CardStyled>
@@ -17,6 +18,6 @@ const CardTrendProduct = (props) => {
       </Card.Body>
     </CardStyled>
   );
-};
+}
 
 export default CardTrendProduct;

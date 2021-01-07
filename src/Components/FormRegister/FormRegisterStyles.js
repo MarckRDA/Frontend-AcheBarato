@@ -22,12 +22,12 @@ export const RegisterButton = styled(Button)
     `;
 
 export const JumbotronStyled = styled(Jumbotron)
-`
+` 
+
   background-color: #ffff;
   border-radius: 2rem;
   color: #1a1515;
   justify-content: center;
   opacity: 100%;
-  box-shadow: inset -1px 4px 27px 7px #ffff, 0px 3px 13px -5px black
-
+  box-shadow: inset -1px 4px 27px 7px #ffff, 0px 3px 13px -5px black;
 `;

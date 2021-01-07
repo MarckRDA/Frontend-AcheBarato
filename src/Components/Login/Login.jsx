@@ -5,16 +5,6 @@ import { LoginButton,JumbotronStyled} from "./LoginStyles";
 import styled from "styled-components";
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
- 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
@@ -47,7 +37,6 @@ const Login = () => {
           <LoginButton variant="outline-primary" type="submit" color="primary" block>
             Login
         </LoginButton>
-          <Router>
 
             <LoginButton variant="outline-primary"
               type="submit"
@@ -58,7 +47,6 @@ const Login = () => {
               Register
 
           </LoginButton>
-          </Router>
 
         </Form.Group>
       </Form>
