@@ -4,12 +4,6 @@
 }
 
 body {
-    margin: 230px;
-    font-size: 1.2rem;
-    font-weight: 100;
-    line-height: 0.5;
-    color: #212529;
-    text-align: left;
     background-color: #f48221;
     background-image: url("../assets/logotipo.png");
     background-repeat: no-repeat;

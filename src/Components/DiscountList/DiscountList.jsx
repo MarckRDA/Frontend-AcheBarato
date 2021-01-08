@@ -8,7 +8,7 @@ const DiscountList = (props) => {
     )
     return (
     <>
-      <h3>Faixa de Desconto</h3>
+     
       <Form.Group>
         {discounts}
       </Form.Group>

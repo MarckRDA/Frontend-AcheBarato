@@ -10,8 +10,10 @@ const Login = () => {
   const [passwd, setPasswd] = useState("");
 
   return (
+    
 
-    <JumbotronStyled>
+    <JumbotronStyled >
+      <div class="container">
       <Form >
       <h3>Login</h3>
         <Form.Group controlId="formBasicEmail">
@@ -50,6 +52,7 @@ const Login = () => {
 
         </Form.Group>
       </Form>
+      </div>
     </JumbotronStyled>
 
   );

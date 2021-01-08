@@ -6,7 +6,7 @@ import { Form, Button, Jumbotron } from "react-bootstrap";
 
 export const LoginButton = styled(Button)
 `
-    width: 30%;
+    width: 20%;
     height: 2.4rem;
     border: none;
     margin-left:11rem;

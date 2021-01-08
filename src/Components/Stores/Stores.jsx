@@ -6,7 +6,7 @@ const Stores = (props) => {
   ));
   return (
     <>
-      <h3>Lojas</h3>
+      
       <Form>
         <Form.Group>{listStores}</Form.Group>
       </Form>

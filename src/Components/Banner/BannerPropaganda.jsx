@@ -1,5 +1,4 @@
 import Styled from "styled-components";
-import "./BannerStyles.css"
 
 
 const BannerStyled = Styled.p`
