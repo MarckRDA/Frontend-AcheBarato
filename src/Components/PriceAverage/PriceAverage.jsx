@@ -1,5 +1,8 @@
 import { Card, Row, Col } from "react-bootstrap";
+import PriceCharts from "./Charts/PriceCharts.jsx";
 
+
+ 
 const PriceAverage = () => {
   return (
     <Card>
@@ -10,9 +13,12 @@ const PriceAverage = () => {
         <Row>
           <Col xs={8}>
             <p>Variação gráfica do preço</p>
+            <PriceCharts/>
+           
           </Col>
           <Col xs={4}>
             <p>painel de criação de alertas</p>
+            
           </Col>
         </Row>
       </Card.Body>

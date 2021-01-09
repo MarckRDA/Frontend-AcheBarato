@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 import BrandButton from '../BrandButton/BrandButton';
 import { Navbar } from 'react-bootstrap';
-import SearchBar from '../SearchBar/SearchBar'
+import SearchBar from "../SearchBar/SearchBar.jsx";
 
 
 
@@ -12,7 +12,7 @@ const NavigationBar = ({ ...props }) => {
   return (
     <Navbar>
       <BrandButton options={props.optionsMenu} />
-      <SearchBar />
+      <SearchBar/>
     </Navbar>
   );
 };
