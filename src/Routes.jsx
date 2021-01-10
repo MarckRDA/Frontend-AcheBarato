@@ -4,6 +4,7 @@ import FormRegister from './Components/FormRegister/FormRegister.jsx'
 import PriceAverage from './Components/PriceAverage/PriceAverage.jsx';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Reports from './Components/Reports/Reports.jsx';
 
 
 export default function Routes() {
@@ -13,7 +14,7 @@ export default function Routes() {
                 
                 <Route path="/Login" component={Login} />
                 <Route path="/FormRegister" component={FormRegister} />
-                <Route path="/PriceAverage" component={PriceAverage} />
+                <Route path="/Reports" component={Reports} />
 
             </Switch>
         </Router>
