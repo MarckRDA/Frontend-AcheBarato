@@ -1,26 +1,17 @@
 import { Card, Row, Col } from "react-bootstrap";
-import PriceCharts from "./Charts/PriceCharts.jsx";
+import PriceCharts from "./Charts/PriceCharts.jsx"
 
 
- 
+
 const PriceAverage = () => {
   return (
     <Card>
       <Card.Header>
-        <Card.Title>Histórico de preços</Card.Title>
+        <h3 class="container">Histórico de preços</h3>
       </Card.Header>
       <Card.Body>
-        <Row>
-          <Col xs={8}>
-            <p>Variação gráfica do preço</p>
-            <PriceCharts/>
-           
-          </Col>
-          <Col xs={4}>
-            <p>painel de criação de alertas</p>
-            
-          </Col>
-        </Row>
+        <p>Variação gráfica do preço</p>
+        <PriceCharts />
       </Card.Body>
     </Card>
   );
