@@ -1,23 +1,41 @@
-import { createGlobalStyle } from "styled-components";
-import px2vw from "../utils/px2vw";
+import { createGlobalStyle } from 'styled-components'
 
-export const Global = createGlobalStyle `
-  * {
+export const GlobalStyles = createGlobalStyle `
+  html, body {
     margin: 0;
     padding: 0;
+  }
+  *, *::after, *::before {
     box-sizing: border-box;
   }
-  :root {
-      font-size: ${px2vw(24)};
-
-      @media (min-width: 768px) {
-        font-size: ${px2vw(18)};
-      }
-
-      @media (min-width: 1024px) {
-        font-size: ${px2vw(16)};
-      }
-    }
-`;
-
-export default Global;
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.primaryLight};
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  img {
+    border-radius: 5px;
+    height: auto;
+    width: 10rem;
+  }
+  div {
+    text-align: center;
+  }
+  small {
+    display: block;
+  }
+  a {
+    color: ${({ theme }) => theme.primaryHover};
+    text-decoration: none;
+  }
+`
