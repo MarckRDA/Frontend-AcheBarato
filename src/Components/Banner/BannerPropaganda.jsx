@@ -1,3 +1,4 @@
+
 import Styled from "styled-components";
 
 
@@ -11,7 +12,6 @@ const BannerStyled = Styled.p`
     margin-left: -14.40rem;
    
 `;
-
 const BannerPropaganda = () => {
   return (
     <div className="w-100 mb-0">

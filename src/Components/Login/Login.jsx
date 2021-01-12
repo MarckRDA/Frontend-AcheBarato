@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Jumbotron } from "react-bootstrap";
 import "./LoginStyles.css"
-import { LoginButton,JumbotronStyled} from "./LoginStyles";
+import { LoginButton,JumbotronStyled} from "./loginstyles";
 import styled from "styled-components";
 
 

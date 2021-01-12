@@ -1,19 +1,19 @@
-import Styled from "styled-components";
-import BrandButton from '../BrandButton/BrandButton';
-import { Navbar } from 'react-bootstrap';
-import SearchBar from "../SearchBar/SearchBar.jsx";
+// import Styled from "styled-components";
+// import { Navbar } from 'react-bootstrap';
+// import SearchBar from "../SearchBar/SearchBar.jsx";
+// import Burguer from "../../Components/Burguer"
 
 
 
 
 
 
-const NavigationBar = ({ ...props }) => {
-  return (
-    <Navbar>
-      <BrandButton options={props.optionsMenu} />
-      <SearchBar/>
-    </Navbar>
-  );
-};
-export default NavigationBar;
+// const NavigationBar = ({ ...props }) => {
+//   return (
+//     <Navbar>
+//        <Burguer class="burguer-menu" />
+//       <SearchBar/>
+//     </Navbar>
+//   );
+// };
+// export default NavigationBar;
