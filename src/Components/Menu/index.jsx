@@ -1,11 +1,14 @@
 import React from 'react'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container, Row, Col,Image } from 'react-bootstrap';
 import { LoginButton, ContactButton } from "./menustyles";
+import imagem from "../assets/logoicone.png";
 
 const Navbarmenu = () => (
 
   <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
-    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand href="#home">
+    <img src={imagem} />
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">

@@ -1,46 +1,47 @@
 import * as React from "react";
-import { JumbotronStyled, ChartStyled } from "./PriceCharts.js";
 import "./PriceCharts.css";
+import { Chart } from "react-google-charts";
+
 
 const PriceCharts = () => {
   return (
-    <JumbotronStyled>
-      <ChartStyled
-        width={'600'}
-        height={'400'}
-        chartType="Line"
-        loader={<div class="container">Demonstrativo</div>}
-        data={[
-          [
-            'Preço',
-            'Nome Produto',
-          ],
-      // [data,preço]
-          [1, 37.60,],
-          [2, 38.60],
-          [3, 39.60],
-          [4, 35.60],
-          [5, 34.60],
-          [6, 33.60],
-          [7, 37.60],
-          [8, 37.80],
-          [9, 37.90],
-          [10, 37.608],
-          [11, 36.60],
-          [12, 34.60],
-          [13, 31.60],
-          [14, 28.60],
-        ]}
-        options={{
-          chart: {
-            title: 'Demonstrativo de variação',
-            subtitle: 'Preço de produtos pesquisados',
-          },
-        }}
-        rootProps={{ 'data-testid': '3' }}
 
-      />
-    </JumbotronStyled>
+    <Chart
+
+      chartType="ColumnChart"
+      spreadSheetUrl="https://docs.google.com/spreadsheets/d/1jN0iw0usssnsG1_oi-NXtuKfsUsGme09GsFidbqxFYA"
+      toolbarItems={[
+        {
+          type: 'csv',
+          datasource:
+            'https://spreadsheets.google.com/tq?key=1jN0iw0usssnsG1_oi-NXtuKfsUsGme09GsFidbqxFYA',
+        },
+      ]}
+      rootProps={{ 'data-testid': '1' }}
+
+      width={400}
+      height={'300px'}
+      chartType="AreaChart"
+      loader={<div>Loading Chart</div>}
+      data={[
+        ['Variação de preço', 'Variação de Preços'],
+        ['data1', 1000],
+        ['data2', 1170],
+        ['data3', 660],
+        ['data4', 1030],
+      ]}
+      options={{
+        title: 'Preço por data',
+        hAxis: { title: 'Datas', titleTextStyle: { color: '#0b34eb' } },
+        vAxis: { minValue: 0 },
+
+        // For the legend to fit, we make the chart area smaller
+        chartArea: { width: '50%', height: '70%' },
+        // lineWidth: 25
+      }}
+    />
+
+
   );
 };
 export default PriceCharts;

@@ -10,7 +10,7 @@ const PriceAverage = () => {
         <h3 class="container">Histórico de preços</h3>
       </Card.Header>
       <Card.Body>
-        <p>Variação gráfica do preço</p>
+        <p class="container">Variação gráfica do preço</p>
         <PriceCharts />
       </Card.Body>
     </Card>
