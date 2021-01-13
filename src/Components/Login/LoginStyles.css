@@ -3,22 +3,6 @@
         box-sizing: border-box;
     }
     
-    body {
-        margin: 230px;
-        font-size: 1.2rem;
-        line-height: 0.5;
-        color: #212529;
-        text-align: left;
-        background-color: #f48221;
-        background-image: url("../assets/logotipo.png");
-        background-repeat: no-repeat;
-        background-position-x: 29rem;
-        background-position-y: 5rem;
-        font-weight: 300;
-        font-family: 'Fira Sans', sans-serif;
-        display: block;
-    }
-    
     label {
         display: block;
         display: inline-block;

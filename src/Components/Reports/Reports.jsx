@@ -10,10 +10,6 @@ import { Impressao } from './impressao.js';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 
-
-
-
-
 function Reports() {
 
     const visualizarImpressao = async () => {

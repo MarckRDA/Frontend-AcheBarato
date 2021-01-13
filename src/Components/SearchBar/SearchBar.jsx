@@ -2,10 +2,6 @@ import { InputGroup,Form} from "react-bootstrap";
 import {ButtonStyled,FormControlStyled} from "./SearchBar.js";
 
 
-
-
-
-
 const SearchBar = () => {
   return (
     <>

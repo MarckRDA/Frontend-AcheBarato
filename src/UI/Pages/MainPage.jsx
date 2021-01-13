@@ -5,15 +5,20 @@ import NavigationBar from "../../Components/NavigationBar/NavigationBar";
 import BannerPropaganda from "../../Components/Banner/BannerPropaganda";
 import Navbarmenu from "../../Components/Menu";
 import SearchBar from "../../Components/SearchBar/SearchBar.jsx"
+import {Form,FormControl,Button} from "react-bootstrap";
+
 function MainPage() {
   return (
+
     <>
 
-      <Navbarmenu/>
-      <SearchBar/>
-      <BannerPropaganda />
-      <CarouselMainPage />
+      <div class="menu-bar">
+        <Navbarmenu />
+      </div>
 
+      {/* <BannerPropaganda /> */}
+      <CarouselMainPage />
+      <SearchBar/>
       <CarouselProdutos trendingProducts={[
         { name: "cyberpunk", description: "xsxs", category: "eletronicos" },
         { name: "shbah", description: "dsjbasj", category: "eletronicos" },

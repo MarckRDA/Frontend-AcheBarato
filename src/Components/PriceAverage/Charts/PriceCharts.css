@@ -2,9 +2,7 @@
     * {
         box-sizing: border-box;
     }
-    
-    body {}
-    
+  
     .card-body .p {
         display: block;
         font-weight: 500;

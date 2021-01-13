@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import Styled from "styled-components";
 import imagem from "../assets/logotipo.png";
-import './CarouselStyles.css';
+
 
 const CarouselStyled = Styled(Carousel)`
   margin-bottom: 100px;

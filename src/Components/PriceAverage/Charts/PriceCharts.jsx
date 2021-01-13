@@ -6,8 +6,8 @@ const PriceCharts = () => {
   return (
     <JumbotronStyled>
       <ChartStyled
-        width={'600px'}
-        height={'400px'}
+        width={'600'}
+        height={'400'}
         chartType="Line"
         loader={<div class="container">Demonstrativo</div>}
         data={[
