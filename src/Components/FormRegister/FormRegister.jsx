@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {Jumbotron} from "react-bootstrap";
 import "./styleFormRegister.css";
 import { RegisterButton,JumbotronStyled} from "./FormRegisterStyles.js";
-
+import imagem from '../../Components/assets/logoicone.png'
 
 // todo import blobalstyles.js
 import {
@@ -30,7 +30,10 @@ function FormRegister() {
   
 
   return (
-    <JumbotronStyled>
+    <>
+    <img class="img-form" src={imagem}/>
+    <JumbotronStyled fluid>
+      <div class="formregister">
       <Form>
       <h3>Sign-in</h3>
 
@@ -59,13 +62,14 @@ function FormRegister() {
           Submit
   </RegisterButton>
   
-  
-      </Form>
+    </Form>
+    </div>
     </JumbotronStyled>
-
+</>
   );
 }
 
 
 
 export default FormRegister;
+

@@ -4,12 +4,11 @@ import { Form, Button, Jumbotron } from "react-bootstrap";
 
 
 
-export const LoginButton = styled(Button)
-`
-    width: 20%;
+export const LoginButton = styled(Button)`
+    width: 25%;
     height: 2.4rem;
     border: none;
-    margin-left:11rem;
+    margin-left:4rem;
     cursor: pointer;
     background: #13d0f1;
     border-radius: 0.5rem;
@@ -21,8 +20,11 @@ export const LoginButton = styled(Button)
     
     `;
 
-export const JumbotronStyled = styled(Jumbotron)
-`
+export const JumbotronStyled = styled(Jumbotron)`
+
+width:fit-content;
+margin-top:10rem;
+margin-left:26rem;
 background-color: #ffff;
 border-radius: 2rem;
 color: #1a1515;

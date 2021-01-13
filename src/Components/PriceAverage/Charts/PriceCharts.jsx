@@ -1,13 +1,14 @@
 import * as React from "react";
+import Component from "react";
 import "./PriceCharts.css";
-import { Chart } from "react-google-charts";
+import { Chart,} from "react-google-charts";
 
 
 const PriceCharts = () => {
   return (
-
+<>
     <Chart
-
+      //Exportar csv com o histórico de preço
       chartType="ColumnChart"
       spreadSheetUrl="https://docs.google.com/spreadsheets/d/1jN0iw0usssnsG1_oi-NXtuKfsUsGme09GsFidbqxFYA"
       toolbarItems={[
@@ -17,31 +18,37 @@ const PriceCharts = () => {
             'https://spreadsheets.google.com/tq?key=1jN0iw0usssnsG1_oi-NXtuKfsUsGme09GsFidbqxFYA',
         },
       ]}
-      rootProps={{ 'data-testid': '1' }}
 
-      width={400}
+      width={'500px'}
       height={'300px'}
-      chartType="AreaChart"
+      chartType="ScatterChart"
       loader={<div>Loading Chart</div>}
       data={[
-        ['Variação de preço', 'Variação de Preços'],
-        ['data1', 1000],
-        ['data2', 1170],
-        ['data3', 660],
-        ['data4', 1030],
+        ['Data', 'Preço'],
+        [8, 37],
+        [4, 33.5],
+        [11, 34.5],
+        [14, 39.8],
+        [15, 30.5],
+        [16, 30.8],
+        [18, 30],
       ]}
       options={{
-        title: 'Preço por data',
-        hAxis: { title: 'Datas', titleTextStyle: { color: '#0b34eb' } },
-        vAxis: { minValue: 0 },
-
-        // For the legend to fit, we make the chart area smaller
-        chartArea: { width: '50%', height: '70%' },
-        // lineWidth: 25
+        title: 'VAriação de preço do produto por datas',
+        hAxis: { title: 'Data' },
+        vAxis: { title: 'Preço' },
+        legend: 'none',
+        trendlines: { 0: {} },
       }}
+      rootProps={{ 'data-testid': '1' }}
     />
-
-
+    
+</>    
   );
 };
+
+
+
+
 export default PriceCharts;
+

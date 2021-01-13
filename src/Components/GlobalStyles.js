@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle `
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${({ theme }) => theme.primaryDark};
+    background:  #ff7212;
     color: ${({ theme }) => theme.primaryLight};
     height: 100vh;
     text-rendering: optimizeLegibility;

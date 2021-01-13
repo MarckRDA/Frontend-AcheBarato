@@ -3,7 +3,7 @@ import Login from './Components/Login/Login.jsx'
 import FormRegister from './Components/FormRegister/FormRegister.jsx'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NotFound from '../src/UI/Pages/NotFound/NotFound';
-import PriceAverage from './Components/PriceAverage/PriceAverage';
+import MainPage from './UI/Pages/MainPage';
 
 
 export default function Routes() {
@@ -13,7 +13,7 @@ export default function Routes() {
                 
                 <Route path="/Login" component={Login} />
                 <Route path="/FormRegister" component={FormRegister} />
-                <Route path="/PriceAverage" component={PriceAverage} />
+                <Route path="/MainPage" component={MainPage} />
 
             </Switch>
         </Router>

@@ -29,3 +29,9 @@
         line-height: 1;
         padding-bottom: 20px;
     }
+
+    .img-login{
+        position: absolute;
+        left: 542px;
+        top: 182px;
+    }

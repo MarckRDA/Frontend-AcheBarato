@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Form, Button, Jumbotron } from "react-bootstrap";
+import { Form,Container} from "react-bootstrap";
 import "./LoginStyles.css"
 import { LoginButton,JumbotronStyled} from "./loginstyles";
 import styled from "styled-components";
-
+import imagem from "../assets/logoicone.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,8 +11,9 @@ const Login = () => {
 
   return (
     
-
-    <JumbotronStyled >
+    <>
+     <img class="img-login" src={imagem}/>
+      <JumbotronStyled  >
       <div class="container">
       <Form >
       <h3>Login</h3>
@@ -54,7 +55,8 @@ const Login = () => {
       </Form>
       </div>
     </JumbotronStyled>
-
+    
+</>
   );
 };
 
