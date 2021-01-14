@@ -3,7 +3,7 @@ import { Nav, Accordion, Button, Badge } from "react-bootstrap";
 const CathegoryNavAside = () => {
   return (
     <>
-      <h3>Categoria</h3>
+      
       <Nav.Link>serei uma categoria</Nav.Link>
       <Nav.Link>serei uma categoria</Nav.Link>
       <Nav.Link>serei uma categoria</Nav.Link>

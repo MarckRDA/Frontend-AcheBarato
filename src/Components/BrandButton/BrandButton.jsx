@@ -1,4 +1,5 @@
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
+import { Twirl as Hamburger } from 'hamburger-react'
 
 const BrandButton = (props) => {
   const dropdownOptions = props.options.map((n) => (
@@ -7,13 +8,17 @@ const BrandButton = (props) => {
     </Dropdown.Item>
   ));
   return (
-    <DropdownButton
-      variant="link"
-      id="dropdown-item-button"
-      title="Ache Barato"
-    >
-      {dropdownOptions}
-    </DropdownButton>
+    <Dropdown>
+    <Dropdown.Toggle variant="success" id="dropdown-basic">
+      Dropdown Button
+    </Dropdown.Toggle>
+  
+    <Dropdown.Menu>
+      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
   );
 };
 
