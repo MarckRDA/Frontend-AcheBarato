@@ -1,11 +1,16 @@
 body {
-    background-color:#ff7212;
     width: 100vw;
-    margin: 0;
+    height: 100vh;
     padding: 0;
+    margin: 0 ;
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+    background-color: #ff7212
+}
+
+#root {
+    height: 100%;
 }
 
 * {

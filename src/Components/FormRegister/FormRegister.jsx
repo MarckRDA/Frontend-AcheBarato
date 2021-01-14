@@ -3,8 +3,9 @@ import { useState, Col } from "react";
 import styled from "styled-components";
 import {Jumbotron} from "react-bootstrap";
 import "./styleFormRegister.css";
-import { RegisterButton,JumbotronStyled} from "./FormRegisterStyles.js";
-import imagem from '../../Components/assets/logoicone.png'
+import { RegisterButton,JumbotronStyled,FormPage} from "./FormRegisterStyles.js";
+import imagem from "../assets/logoicone.png";
+
 
 // todo import blobalstyles.js
 import {
@@ -12,6 +13,7 @@ import {
   Button,
   InputGroup,
 } from "react-bootstrap";
+import { LoginPage } from '../Login/loginstyles';
 
 function FormRegister() {
   const [validated, setValidated] = useState(false);
@@ -30,10 +32,9 @@ function FormRegister() {
   
 
   return (
-    <>
-    <img class="img-form" src={imagem}/>
-    <JumbotronStyled fluid>
-      <div class="formregister">
+    <FormPage>
+    <img class="img-form" src={imagem} alt=""/>
+    <JumbotronStyled>
       <Form>
       <h3>Sign-in</h3>
 
@@ -62,14 +63,13 @@ function FormRegister() {
           Submit
   </RegisterButton>
   
-    </Form>
-    </div>
+  
+      </Form>
     </JumbotronStyled>
-</>
+</FormPage>
   );
 }
 
 
 
 export default FormRegister;
-

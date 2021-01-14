@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { Form, Button, Jumbotron, Nav } from "react-bootstrap";
 
 
-export const JumbotronStyled = styled(Jumbotron)
-`
+export const JumbotronStyled = styled(Jumbotron)`
 background-color: #ffff;
 border-radius: 2rem;
 color: #1a1515;

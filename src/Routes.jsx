@@ -1,9 +1,12 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css"
 import React from 'react'
 import Login from './Components/Login/Login.jsx'
 import FormRegister from './Components/FormRegister/FormRegister.jsx'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NotFound from '../src/UI/Pages/NotFound/NotFound';
 import MainPage from './UI/Pages/MainPage';
+import Reports from './Components/Reports/Reports.jsx'
 
 
 export default function Routes() {
@@ -13,7 +16,7 @@ export default function Routes() {
                 
                 <Route path="/Login" component={Login} />
                 <Route path="/FormRegister" component={FormRegister} />
-                <Route path="/MainPage" component={MainPage} />
+                <Route path="/Reports" component={Reports} />
 
             </Switch>
         </Router>

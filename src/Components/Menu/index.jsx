@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown, Container, Row, Col,Image } from 'react-bootstrap';
-import { LoginButton, ContactButton } from "./menustyles";
+import { LoginButton, SigInButton } from "./menustyles";
 import imagem from "../assets/logoicone.png";
+import { Link } from 'react-router-dom'
 
 const Navbarmenu = () => (
 
@@ -26,8 +27,12 @@ const Navbarmenu = () => (
 
       <Nav>
         <div style={{display:"flex"}}>
+        <Link to='/Login'>
           <LoginButton variant="secondary">Login</LoginButton>
-          <ContactButton variant="secondary">Contact</ContactButton>
+          </Link>
+          <Link to='/FormRegister'>
+          <SigInButton variant="secondary">Sig-In</SigInButton>
+          </Link>
         </div>
       </Nav>
     </Navbar.Collapse>
