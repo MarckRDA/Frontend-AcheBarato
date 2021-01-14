@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido.jsx'
-
+import MainPage from './UI/Pages/MainPage.jsx'
 // todo : to make a component call routers and make to render here
 function App() {
   return (
@@ -16,22 +16,22 @@ function App() {
       //   </Row>
       // </Container>
     //  <Login/>
-
-     <ProdutoEscolhido products={[
-      { name: "cyberpunk", price: "24,20"},
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" },
-      { name: "shbah", price: "43,23" }]}/>
-  );
+    <MainPage/>
+  //    <ProdutoEscolhido products={[
+  //     { name: "cyberpunk", price: "24,20"},
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" },
+  //     { name: "shbah", price: "43,23" }]}/>
+   );
 }
 
 export default App;

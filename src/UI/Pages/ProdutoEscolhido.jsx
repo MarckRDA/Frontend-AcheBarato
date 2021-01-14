@@ -32,9 +32,7 @@ function ProdutoEscolhido(props) {
       <PriceAverage />
       <br />
       <br />
-      <TechnicalInformation
-        specification={[{ exp1: [{ model: 1 }, { model2: 2 }] }, { exp2: [{ model: 1 }, { model2: 2 }] }, { exp2: [{ model: 1 }, { model2: 2 }] }]}
-      />
+      <TechnicalInformation/>
     </Container>
   );
 }
