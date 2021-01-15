@@ -55,7 +55,7 @@ const Login = () => {
 
       <Link to='/MainPage'>
         <div class="div-imgback">
-          <img class="img-back" src={backimage} alt="" />
+          <img class="img-loginback" src={backimage} alt="" />
         </div>
       </Link>
     </LoginPage>
