@@ -20,18 +20,17 @@ export const RegisterButton = styled(Button)`
     
     `;
 export const FormPage = styled.main`
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 
-export const JumbotronStyled = styled(Jumbotron)` 
+export const JumbotronStyled = styled(Jumbotron)`
   flex-direction:column;
   display: flex;
   justify-content: center;
   align-items: center;
-  width:fit-content;
   margin:25rem;
   width:fit-content;
   background-color: #ffff;

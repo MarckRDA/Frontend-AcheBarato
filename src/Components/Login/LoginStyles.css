@@ -52,3 +52,11 @@
        
        width: 180px;
     }
+
+    .img-back{
+        position: relative;
+        left: -24rem;
+        top: 13rem;
+        width: 50px;
+     }
+ 

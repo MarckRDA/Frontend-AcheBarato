@@ -68,7 +68,11 @@ h1 {
 
 
 .img-form{
-    position: absolute;
-    left: 35.5rem;
-    top: 3rem;
+    width: 180px;
 }
+.img-back{
+    position: relative;
+    left: -47rem;
+    top: 17rem;
+    width: 50px;
+ }
