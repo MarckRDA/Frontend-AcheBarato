@@ -5,7 +5,7 @@ import imagem from "../assets/logoicone.png";
 import { Link } from 'react-router-dom'
 
 const Navbarmenu = () => (
-
+<>
   <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
     <Navbar.Brand href="#home">
     <img src={imagem} />
@@ -31,13 +31,13 @@ const Navbarmenu = () => (
           <LoginButton variant="secondary">Login</LoginButton>
           </Link>
           <Link to='/FormRegister'>
-          <SigInButton variant="secondary">Sig-In</SigInButton>
+          <SigInButton variant="secondary">Register</SigInButton>
           </Link>
         </div>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
-
+</>
 )
 
 export default Navbarmenu;

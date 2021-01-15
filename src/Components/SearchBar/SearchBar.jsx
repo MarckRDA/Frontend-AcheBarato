@@ -11,9 +11,7 @@ const SearchBar = () => {
           aria-label="Search a product"
           aria-describedby="basic-addon2"
         />
-        <InputGroup.Append>
-          <ButtonStyled variant="outline-primary">Search</ButtonStyled>
-        </InputGroup.Append>
+          <ButtonStyled variant="outline-primary">Search</ButtonStyled> 
       </InputGroup>
 
     </>

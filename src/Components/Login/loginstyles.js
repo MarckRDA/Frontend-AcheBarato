@@ -28,6 +28,10 @@ export const LoginPage = styled.main`
 `
 
 export const JumbotronStyled = styled(Jumbotron)`
+flex-direction:column;
+display: flex;
+justify-content: center;
+align-items: center;
 width:fit-content;
 background-color: #ffff;
 border-radius: 2rem;

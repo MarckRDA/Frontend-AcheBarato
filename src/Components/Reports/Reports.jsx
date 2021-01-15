@@ -1,11 +1,11 @@
 import React from 'react';
-import "./Reports.css"
 import { Spinner } from "react-bootstrap";
 
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 import { data } from './data';
 import { Impressao } from './impressao.js';
+import {Report,H3,ReportHeader,ReportBody,P,ButtonHover} from'./Reports';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -20,22 +20,22 @@ function Reports() {
     }
 
     return (
-        <div className="Reports">
-            <h3>Relatório de produtos pesquisados</h3>
-            <header className="Reports-header">
+        <Report>
+            <H3>Relatório de produtos pesquisados</H3>
+            <ReportHeader>
                 <Spinner animation="border" role="status">
                     <span className="sr-only">Loading...</span>
                 </Spinner>
-                <p>
+                <P>
                     Criando Relatorio de pesquisa por produtos
-          </p>
-            </header>
-            <section className="Reports-body">
-                <button className="btn" onClick={visualizarImpressao}>
+          </P>
+            </ReportHeader>
+            <ReportBody>
+                <ButtonHover onClick={visualizarImpressao}>
                     Visualizar documento
-          </button>
-            </section>
-        </div>
+          </ButtonHover>
+            </ReportBody>
+        </Report>
     );
 }
 

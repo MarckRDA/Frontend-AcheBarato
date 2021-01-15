@@ -8,7 +8,6 @@ import NotFound from '../src/UI/Pages/NotFound/NotFound';
 import MainPage from './UI/Pages/MainPage';
 import Reports from './Components/Reports/Reports.jsx'
 
-
 export default function Routes() {
     return (
         <Router>
@@ -17,6 +16,10 @@ export default function Routes() {
                 <Route path="/Login" component={Login} />
                 <Route path="/FormRegister" component={FormRegister} />
                 <Route path="/Reports" component={Reports} />
+                <Route path="/MainPage" component={MainPage} />
+                
+                
+
 
             </Switch>
         </Router>

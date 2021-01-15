@@ -11,8 +11,9 @@ const Login = () => {
 
   return (
     <LoginPage>
-      <img class="img-login" src={imagem} alt=""/>
+      
       <JumbotronStyled >
+      <img class="img-login" src={imagem} alt=""/>
         <div class="container">
         <Form >
         <h3>Login</h3>
