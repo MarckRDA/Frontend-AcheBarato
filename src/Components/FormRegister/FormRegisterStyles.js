@@ -5,10 +5,10 @@ import { Form, Button, Jumbotron } from "react-bootstrap";
 
 
 export const RegisterButton = styled(Button)`
-    width: 20%;
+    width: 24%;
     height: 2.4rem;
     border: none;
-    margin-left:4rem;
+    margin-left:5rem;
     cursor: pointer;
     background: #13d0f1;
     border-radius: 0.5rem;
@@ -19,12 +19,20 @@ export const RegisterButton = styled(Button)`
     display: block;
     
     `;
+export const FormPage = styled.main`
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+`
 
-export const JumbotronStyled = styled(Jumbotron)` 
-
+export const JumbotronStyled = styled(Jumbotron)`
+  flex-direction:column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:25rem;
   width:fit-content;
-  margin-top:10rem;
-  margin-left:29rem;
   background-color: #ffff;
   border-radius: 2rem;
   color: #1a1515;

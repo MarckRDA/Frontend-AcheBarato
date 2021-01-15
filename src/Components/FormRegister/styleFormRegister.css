@@ -6,7 +6,8 @@
 
 
 .form-control {
-    margin-left: 4rem;
+    display: flex;
+    margin-left: 5rem;
     display: block;
     width: 57%;
     height: calc(1.5em + .75rem + 2px);
@@ -26,7 +27,7 @@
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 
 .form-group {
@@ -36,7 +37,7 @@ label {
 .form-check-input {
     position: absolute;
     margin-top: .3rem;
-    margin-left: 3rem;
+    margin-left: 4rem;
 }
 
 h3,
@@ -64,8 +65,14 @@ h1 {
     margin-bottom: -9px;
     margin-top: 7px;
 }
+
+
 .img-form{
-    position: absolute;
-    left: 542px;
-    top: 182px;
+    width: 180px;
 }
+.img-back{
+    position: relative;
+    left: -47rem;
+    top: 17rem;
+    width: 50px;
+ }

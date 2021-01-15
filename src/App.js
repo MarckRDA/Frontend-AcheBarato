@@ -1,5 +1,9 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
+=======
+import "./index.css"
+import "./App.css";
+>>>>>>> 889915890a4b71128eb26b3db47010ad0976304f
 import Login from './Components/Login/Login.jsx'
 import FormRegister from './Components/FormRegister/FormRegister.jsx'
 import BrandButton from './Components/BrandButton/BrandButton.jsx'
@@ -10,6 +14,7 @@ import BannerPropaganda from './Components/Banner/BannerPropaganda'
 function App() {
     return (
 
+<<<<<<< HEAD
         // <
         // Container >
         //   <Row>
@@ -51,6 +56,9 @@ function App() {
         // <
         // BannerPropaganda / >
 
+=======
+        <Routes/>
+>>>>>>> 889915890a4b71128eb26b3db47010ad0976304f
     );
 }
 

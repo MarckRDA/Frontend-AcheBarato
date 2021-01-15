@@ -1,30 +1,30 @@
-import { TextareaAutosize } from "@material-ui/core";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card} from "react-bootstrap";
 import PriceCharts from "./Charts/PriceCharts.jsx"
-import NavigationAside from "../NavigationAside/NavigationAside.jsx";
-
-
+import {CardCharts,CardChartsBody, CardInformationProduct,TitleProduct} from "./PriceAverage";
+import TechnicalInformation from "../TecnicalInformation/TechnicalInformation.jsx";
+import CathegoryNavAside from "../CathegoryNavAside/CathegoryNavAside";
 const PriceAverage = () => {
   return (
     <>
-      <h3 class="container">Histórico de preços</h3>
-      <table>
-        <tr>
-          <td>
-            <Card>
-              <Card.Header>
-                <p>Variação gráfica do preço</p>
-              </Card.Header>
-              <Card.Body>
-                <PriceCharts />
-              </Card.Body>
-            </Card>
-          </td>
-          <td>
-          <NavigationAside/>
-          </td> 
-        </tr>
-      </table>
+      <Card>
+        <Card.Header>
+          <h3 class="container">Search History</h3>
+        </Card.Header>
+      </Card>
+      
+      <CardCharts>
+        <CardChartsBody>
+          <TitleProduct>Price Variation</TitleProduct>
+          <PriceCharts />
+        </CardChartsBody>
+      </CardCharts>
+
+      <CardInformationProduct>
+        <CardChartsBody>
+        <span class="title-product">Product</span>
+          <TechnicalInformation />
+        </CardChartsBody>
+      </CardInformationProduct>
     </>
   );
 };

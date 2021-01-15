@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavigationAside from "../../Components/NavigationAside/NavigationAside";
-import ProdutosPesquisados from "../../ProdutosPesquisados";
+import NavigationAside from "../../Components/NavigationAside/NavigationAside.jsx";
+import ProdutosPesquisados from "../../Components/ProdutosPesquisados/ProdutosPesquisados.jsx";
 import NavigationBar from "../../Components/NavigationBar/NavigationBar";
 
 const SearchResultPage = () => {
