@@ -10,8 +10,3 @@ export const JumbotronStyled = styled(Jumbotron)`
     background-color: #e9ecef;
         `;
 
-export const Footer = styled.footer`
-color:#FFF;
-padding: 20px;
-background-color: #333;
-`

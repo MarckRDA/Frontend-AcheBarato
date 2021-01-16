@@ -5,7 +5,8 @@ import NavigationBar from "../../Components/NavigationBar/NavigationBar";
 import BannerPropaganda from "../../Components/Banner/BannerPropaganda";
 import Navbarmenu from "../../Components/Menu";
 import SearchBar from "../../Components/SearchBar/SearchBar.jsx"
-import {JumbotronStyled,Footer} from "./MainPageStyles/mainpagesstyles";
+import {JumbotronStyled} from "./MainPageStyles/mainpagesstyles";
+import Footer from '../../Components/Footer/Footer.jsx';
 
 function MainPage() {
   return (
@@ -19,32 +20,9 @@ function MainPage() {
       <JumbotronStyled>
       <SearchBar/>
       </JumbotronStyled>
-      <CarouselProdutos trendingProducts={[
-        { name: "cyberpunk", description: "xsxs", category: "eletronicos" },
-        { name: "shbah", description: "dsjbasj", category: "eletronicos" },
-        { name: "ssjnjn", description: "kmdskmd", category: "eletronicos" },
-        { name: "hbahasa", description: "dkdmskmd", category: "eletronicos" },
-        { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-        { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-        { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-        { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-        { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-        { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-        { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-        { name: "hbahasa", description: "dkdmskmd", category: "computadores" }
-      ]} 
-      />
-      <Footer>
-        <address>
-          <strong>
-          AcheBarato Project
-          </strong>
-          Informações sobre os desenvolvedores
-
-        </address>
-      </Footer>
+      
+     <Footer/>
     </>
-    
     
   );
 }

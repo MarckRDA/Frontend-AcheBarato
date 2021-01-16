@@ -5,8 +5,10 @@
   
     .card-body .p {
         display: block;
+        
         font-weight: 500;
         font-family: 'Fira Sans', sans-serif;
         margin-top: 17px;
         margin-bottom: 2rem;
+        height:100%;
     }

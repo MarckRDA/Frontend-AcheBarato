@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown, Container, Row, Col,Image } from 'react-boots
 import { LoginButton, SigInButton } from "./menustyles";
 import imagem from "../assets/logoicone.png";
 import { Link } from 'react-router-dom'
-
+import CarouselProducts from '../CarouselProducts/CarouselProducts.jsx';
 const Navbarmenu = () => (
 <>
 <div class="menu">
@@ -48,6 +48,7 @@ const Navbarmenu = () => (
     </Navbar.Collapse>
   </Navbar>
   </div>
+  
 </>
 )
 

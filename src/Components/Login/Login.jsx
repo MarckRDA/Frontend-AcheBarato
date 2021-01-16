@@ -19,7 +19,7 @@ const Login = () => {
       <img class="img-login" src={imagem} alt=""/>
           </Link>
         <Form >
-        <h3>Login</h3>
+        <h3 class="h3-login">Login</h3>
           <Form.Group controlId="formBasicEmail">
             <Form.Label >Email</Form.Label>
             <Form.Control

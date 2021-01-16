@@ -41,7 +41,7 @@ function FormRegister() {
         <img class="img-form" src={imagem} alt="" />
         </Link>
         <Form>
-          <h3>Sign-in</h3>
+          <h3 class="h3-register">Sign-in</h3>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Name</Form.Label>
             <Form.Control type="nome" placeholder="nome" />

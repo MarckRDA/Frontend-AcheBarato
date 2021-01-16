@@ -7,21 +7,21 @@ position:fixed;
 margin-top: 1rem;
 margin-left: 1rem;
 border-radius:2px;
-border-radius: 2rem
+border-radius: 2rem;
 `
 
-export const  CardInformationProduct = styled(Card)`
+export const CardInformationProduct = styled(Card)`
 position:fixed;
 margin-top: 1rem;
 margin-left: 30rem;
 width:20rem;
 height:26rem;
 border-radius:2px;
-border-radius: 2rem
+border-radius: 2rem;
 `
 
 export const CardChartsBody = styled(Card.Body)`
-margin-bottom: 2rem;
+height: 100%;
  `
 
 export const TitleProduct = styled.p`
@@ -31,11 +31,11 @@ font-family: 'Fira Sans', sans-serif;
 `
 
 export const MenuAside = styled(VerticalTabs)`
-position: fixed;
 margin-top: 0rem;
 margin-left: 1;
 border-radius: 2px;
 border-radius: 0rem;
-` 
+height:100wv;
+`
 
 
