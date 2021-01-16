@@ -34,39 +34,34 @@ function FormRegister() {
 
 
   return (
+    <>
     <FormPage>
       <JumbotronStyled>
+      <Link to='/MainPage'>
         <img class="img-form" src={imagem} alt="" />
+        </Link>
         <Form>
           <h3>Sign-in</h3>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>First Name</Form.Label>
+            <Form.Label>Name</Form.Label>
             <Form.Control type="nome" placeholder="nome" />
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control type="sobrenome" placeholder="sobrenome" />
-          </Form.Group>
-
+        
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Email</Form.Label>
             <Form.Control type="email" placeholder="email" />
           </Form.Group>
-          <Form.Group id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <RegisterButton variant="primary" type="submit">
             Submit
   </RegisterButton>
         </Form>
       </JumbotronStyled>
-      <Link to='/MainPage'>
-        <div class="div-imgback">
-          <img class="img-back" src={backimage} alt="" />
-        </div>
-      </Link>
-    </FormPage>
-
+      </FormPage>
+</>
   );
 }
 

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50,
     display: 'inline-block',
     maxWidth: '100%',
-    width: 560
+    width: 360
   }
 }));
 

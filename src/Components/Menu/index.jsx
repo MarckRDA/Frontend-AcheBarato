@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Navbarmenu = () => (
 <>
+<div class="menu">
   <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
     <Navbar.Brand href="#home">
     <img src={imagem} />
@@ -46,6 +47,7 @@ const Navbarmenu = () => (
       </Nav>
     </Navbar.Collapse>
   </Navbar>
+  </div>
 </>
 )
 

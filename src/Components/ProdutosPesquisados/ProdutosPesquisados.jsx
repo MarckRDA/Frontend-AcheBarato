@@ -16,7 +16,7 @@ function ProdutosPesquisados(props) {
     )
   );
   return (
-    <Container className="">
+    <Container className="search-product">
       <ListGroup variant="flush">
       <Row lg={4}>
         {listProducts}
