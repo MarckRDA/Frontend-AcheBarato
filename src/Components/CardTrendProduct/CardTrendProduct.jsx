@@ -1,6 +1,5 @@
 import { Card, Button } from "react-bootstrap";
 import styled from "styled-components";
-import l from '../assets/logotipo.png';
 
 
 const CardStyled = styled(Card)`
@@ -9,6 +8,8 @@ const CardStyled = styled(Card)`
 `
 
 const CardTrendProduct = (props) => {
+  
+  
   return (
     <>
     <Card>
