@@ -31,12 +31,9 @@ function CarouselProducts(props) {
 
   return (
     <Container style={{ margin: "auto" }}>
-      <h1>Ofertas de eletronicos</h1>
+      <h1 class="container">Ofertas de eletronicos</h1>
       <Carousel>{cards}</Carousel>
-      <h1>Ofertas de Computadores</h1>
-      <Carousel>{cards}</Carousel>
-      <h1>Oferta em roupas</h1>
-      <Carousel>{cards}</Carousel>
+      
     </Container>
   );
 }

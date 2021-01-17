@@ -1,20 +1,32 @@
 import { Card } from "react-bootstrap";
 import PriceCharts from "./Charts/PriceCharts.jsx"
 import { CardCharts, CardChartsBody, CardInformationProduct, TitleProduct } from "./PriceAverage";
-import TechnicalInformation from "../TecnicalInformation/TechnicalInformation.jsx";
-import SearchResultProducts from "../SearchResultProducts/SearchResultProducts";
+import CardResultProducts from "../CardResultProducts/CardResultProducts.jsx";
 import Menu from "../Menu";
-import {MenuAside} from '../PriceAverage/PriceAverage';
+import { MenuAside } from '../PriceAverage/PriceAverage';
+import Footer from '../Footer/Footer.jsx';
 
 
 const PriceAverage = () => {
   return (
     <>
-
-      <Menu/>
-      <div>
-        <MenuAside/>
-      </div>
+      <body class="price-average">
+        <div class="menu">
+          <Menu />
+I       <div>
+            <aside class="animate-right">
+              <MenuAside />
+            </aside>
+          </div>
+          <Footer />
+        </div>
+        <div class="technical-info">
+          <article>
+            <CardResultProducts/>
+          </article>
+        </div>
+      </body>
+      
     </>
   );
 };

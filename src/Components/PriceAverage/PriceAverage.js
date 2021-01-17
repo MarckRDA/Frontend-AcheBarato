@@ -37,5 +37,10 @@ border-radius: 2px;
 border-radius: 0rem;
 height:100wv;
 `
+export const DivCard = styled.div`
+margin-top: -38rem;
+margin-left: 15rem;
+`
+
 
 
