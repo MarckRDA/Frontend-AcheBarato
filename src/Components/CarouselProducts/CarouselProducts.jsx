@@ -1,25 +1,39 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
   CarouselItem,
   Carousel,
   Container,
   Row,
 } from "react-bootstrap";
-
+import axios from 'axios';
 import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 
 // ToDo: Fix dynamic carousel
 
-function CarouselProducts(props) {
-  const productInformations = props.trendingProducts;
+function CarouselProducts() {
+  
+  const [products, setProducts] = useState([]);
+ 
+ useEffect(() => {
+   async function loadBooks() {
+     const response = await axios.get('https://localhost:5001/achebarato/products?Search=games');
+ 
+     setProducts(response.data);
+   }
+ 
+   loadBooks();
+ }, []);
 
-  const CardsTrendsProdutcs = productInformations.map(({ ...rest }, index) => (
+ console.log(products)
+  
+ const CardsTrendsProdutcs = products.map((product) => (
     <CardTrendProduct
-      key={index.toString()}
-      productName={rest.name}
-      productDescription={rest.description}
+      key={product.id_product}
+      productName={product}
+      // productDescription={rest.description}
     />  
   ));
+
 
   const cards = [1, 1, 1, 1, 1, 1, 1].map((n) => (
     <CarouselItem key={n.toString()}>

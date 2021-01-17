@@ -8,6 +8,7 @@ import SearchBar from "../../Components/SearchBar/SearchBar.jsx"
 import {JumbotronStyled} from "./MainPageStyles/mainpagesstyles";
 import Footer from '../../Components/Footer/Footer.jsx';
 
+
 function MainPage() {
   return (
 
@@ -20,12 +21,14 @@ function MainPage() {
       <JumbotronStyled>
       <SearchBar/>
       </JumbotronStyled>
+      <CarouselProdutos trendingProducts={[{name: "saaaa", description: "anjanajs"}]}/>
       
      <Footer/>
     </>
     
   );
 }
+
 
 
 export default MainPage;

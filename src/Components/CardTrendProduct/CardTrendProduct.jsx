@@ -1,6 +1,5 @@
 import { Card, Button } from "react-bootstrap";
 import styled from "styled-components";
-import l from '../assets/logotipo.png';
 
 const CardStyled = styled(Card)`
     width:15rem;
@@ -8,13 +7,15 @@ const CardStyled = styled(Card)`
 `;
 
 const CardTrendProduct = (props) => {
+  
+  
   return (
     <CardStyled>
-      <Card.Img variant="top" src={l} />
+      <Card.Img variant="top" src={props.productName.thumbImgLink} />
       <Card.Body>
-        <Card.Title>{props.productName}</Card.Title>
-        <Card.Text>{props.productDescription}</Card.Text>
-        <Button variant="primary">Ver Produto</Button>
+        <Card.Title>{props.productName.name}</Card.Title>
+        {/* <Card.Text>{props.productDescription}</Card.Text> */}
+        <a href={props.productName.linkRedirectShop}><Button variant="primary">Ver Produto</Button></a>
       </Card.Body>
     </CardStyled>
   );
