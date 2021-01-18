@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { TextField } from '@material-ui/core';
 import { H3 } from '../AsideMenu/VerticalTabsStyles';
-import Footer from '../Footer/Footer.jsx';
 import CathegoryNavAside from '../CathegoryNavAside/CathegoryNavAside.jsx';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
     height: 530,
+    width:174,
+    marginTop:-40
+
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -80,7 +82,7 @@ export default function VerticalTabs() {
         </Tabs>
       
       </div>
-      <Footer />
+     
     </>
 
   );

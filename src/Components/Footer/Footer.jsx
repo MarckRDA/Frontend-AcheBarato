@@ -1,4 +1,5 @@
 import {FooterStyled} from './FooterStyles.js';
+import './animations.css';
 
 const Footer = () => {
   

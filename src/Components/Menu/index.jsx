@@ -2,8 +2,10 @@ import React from 'react'
 import { Navbar, Nav, NavDropdown, Container, Row, Col,Image } from 'react-bootstrap';
 import { LoginButton, SigInButton } from "./menustyles";
 import imagem from "../assets/logoicone.png";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import CarouselProducts from '../CarouselProducts/CarouselProducts.jsx';
+import SearchBar from '../SearchBar/SearchBar.jsx';
+
 const Navbarmenu = () => (
 <>
 <div class="menu">
@@ -14,7 +16,7 @@ const Navbarmenu = () => (
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#features">Outlet</Nav.Link>
+        <Nav.Link href="#faf5f4tures">Outlet</Nav.Link>
         <Nav.Link href="#pricing">Best Offers</Nav.Link>
         <NavDropdown title="Cathegorys" id="collasible-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Categoria1</NavDropdown.Item>
@@ -36,8 +38,12 @@ const Navbarmenu = () => (
       </Nav>
 
       <Nav>
+        <div>
+          
+        </div>
+        
         <div style={{display:"flex"}}>
-        <Link to='/Login'>
+          <Link to='/Login'>
           <LoginButton variant="secondary">Login</LoginButton>
           </Link>
           <Link to='/FormRegister'>
