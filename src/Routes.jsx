@@ -17,6 +17,7 @@ import CarouselProducts from './Components/CarouselProducts/CarouselProducts';
 import CathegoryNavAside from './Components/CathegoryNavAside/CathegoryNavAside';
 import DiscountList from './Components/DiscountList/DiscountList';
 import SearchResultProducts from './Components/SearchResultProducts/SearchResultProducts';
+import ProdutosPesquisados from './Components/ProdutosPesquisados/ProdutosPesquisados';
 
 
 export default function Routes() {
@@ -38,6 +39,7 @@ export default function Routes() {
                 <Route path="/DiscountList" component={DiscountList} />
                 <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
                 <Route path="/SearchResultProducts" component={SearchResultProducts} />
+                <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
                 <Route path="*" component={NotFound} />
 
                 
