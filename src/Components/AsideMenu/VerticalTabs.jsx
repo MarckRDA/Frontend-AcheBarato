@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     height: 530,
     width:174,
-    marginTop:-20
+    marginTop:-40
 
   },
   tabs: {
