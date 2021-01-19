@@ -1,4 +1,4 @@
-import "./index.css";
+import "../src/Components/GlobalStyles.js";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";

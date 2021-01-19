@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../../Components/GlobalStyles.js";
 
 import {
   Box,
@@ -10,11 +11,13 @@ import Page from './Page';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'linear-gradient(45deg, #f5efec 100%, #FF8E53 50%)',
+    background: 'linear-gradient(45deg, #e75004 100%, #FF8E53 50%)',
     backgroundColor: theme.palette.background.dark,
     height: '100%',
     paddingBottom: theme.spacing(3),
-    paddingTop: theme.spacing(3)
+    paddingTop: theme.spacing(3),
+    font:'Fira Sans'
+
   },
   image: {
     marginTop: 50,
