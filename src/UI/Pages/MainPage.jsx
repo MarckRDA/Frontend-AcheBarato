@@ -21,7 +21,7 @@ function MainPage() {
       <JumbotronStyled>
       <SearchBar/>
       </JumbotronStyled>
-      <CarouselProdutos trendingProducts={[{name: "saaaa", description: "anjanajs"}]}/>
+      <CarouselProdutos />
       
      <Footer/>
     </>
