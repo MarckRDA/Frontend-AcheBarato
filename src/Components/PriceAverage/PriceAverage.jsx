@@ -1,53 +1,47 @@
-import { Card } from "react-bootstrap";
-import PriceCharts from "./Charts/PriceCharts.jsx"
-import { CardCharts, CardChartsBody, CardInformationProduct, TitleProduct } from "./PriceAverage";
-import CardResultProducts from "../CardResultProducts/CardResultProducts.jsx";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import {useParams} from 'react-router';
+import { Container, Row } from "react-bootstrap";
 import MenuSearchBar from "../MenuSearchBar";
-import { MenuAside } from '../PriceAverage/PriceAverage';
-import Footer from '../Footer/Footer.jsx';
-import CarouselProducts from "../CarouselProducts/CarouselProducts.jsx";
-import {DivCard} from "./PriceAverage.js";
+import { MenuAside } from "../PriceAverage/PriceAverage";
+import Footer from "../Footer/Footer.jsx";
+import ProdutosPesquisados from "../ProdutosPesquisados/ProdutosPesquisados";
 
-const PriceAverage = () => {
+const PriceAverage = (props) => {
+  const [products, setProducts] = useState([]);
+  let {search} = useParams();
+
+  useEffect(() => {
+    async function loadProducts() {
+      const response = await axios.get(
+        `https://localhost:5001/achebarato/products?Search=${search}`
+      );
+
+      setProducts(response.data);
+    }
+
+    loadProducts();
+  }, []);
+
+  console.log(search);
+  console.log(products)
+
   return (
-    <>
-      <body class="price-average">
-        <div class="menu">
-          <MenuSearchBar />
-I       <div>
-            <aside class="animate-right">
-              <MenuAside />
-            </aside>
-          </div>
-          <Footer />
-        </div>
-        <DivCard>
-          <CarouselProducts trendingProducts={[
-            { name: "cyberpunk", description: "xsxs", category: "eletronicos" },
-            { name: "shbah", description: "dsjbasj", category: "eletronicos" },
-            { name: "ssjnjn", description: "kmdskmd", category: "eletronicos" },
-            { name: "hbahasa", description: "dkdmskmd", category: "eletronicos" },
-            { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-            { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-            { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-            { name: "hbahasa", description: "dkdmskmd", category: "roupas" },
-            { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-            { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-            { name: "hbahasa", description: "dkdmskmd", category: "computadores" },
-            { name: "hbahasa", description: "dkdmskmd", category: "computadores" }
-            
-          ]} />
-        </DivCard>
-
-
-      </body>
-
-
-
-
-    </>
+    <div class="menu ">
+      <MenuSearchBar />I{" "}
+      <Container fluid>
+        <Row>
+          <aside class="animate-right">
+            <MenuAside />
+          </aside>
+          <ProdutosPesquisados
+            products={products}
+          />
+        </Row>
+        <Footer />
+      </Container>
+    </div>
   );
 };
 
 export default PriceAverage;
-
