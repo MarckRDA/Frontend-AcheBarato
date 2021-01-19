@@ -3,13 +3,13 @@ import { FormControl, Button } from "react-bootstrap";
 
 
 
-export const ButtonStyled = styled(Button)`
+export const ButtonStyled = styled.button`
 display: flex;
 margin-left: 1rem;
 
 `;
 
-export const FormControlStyled = styled(FormControl)`
+export const FormControlStyled = styled.input`
 display: flex;
 margin-left: -1rem;
 display: block;
