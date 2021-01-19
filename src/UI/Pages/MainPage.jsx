@@ -7,6 +7,7 @@ import Navbarmenu from "../../Components/Menu";
 import SearchBar from "../../Components/SearchBar/SearchBar.jsx"
 import {JumbotronStyled} from "./MainPageStyles/mainpagesstyles";
 import Footer from '../../Components/Footer/Footer.jsx';
+import MenuSearchBar from "../../Components/MenuSearchBar/index";
 
 
 function MainPage() {
@@ -14,7 +15,7 @@ function MainPage() {
 
     <>
       <div class="menu-bar">
-        <Navbarmenu />
+        <MenuSearchBar />
       </div>
       {/* <BannerPropaganda /> */}
       <CarouselMainPage />

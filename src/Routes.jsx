@@ -18,7 +18,7 @@ import CathegoryNavAside from './Components/CathegoryNavAside/CathegoryNavAside'
 import DiscountList from './Components/DiscountList/DiscountList';
 import SearchResultProducts from './Components/SearchResultProducts/SearchResultProducts';
 import ProdutosPesquisados from './Components/ProdutosPesquisados/ProdutosPesquisados';
-
+import PriceCharts from './Components/PriceAverage/Charts/PriceCharts.jsx';
 
 export default function Routes() {
     return (
@@ -40,6 +40,8 @@ export default function Routes() {
                 <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
                 <Route path="/SearchResultProducts" component={SearchResultProducts} />
                 <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
+                <Route path="/PriceCharts" component={PriceCharts} />
+                
                 <Route path="*" component={NotFound} />
 
                 

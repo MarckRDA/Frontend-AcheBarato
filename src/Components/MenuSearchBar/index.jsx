@@ -28,6 +28,9 @@ const Navbarmenu = () => (
           <Link to='/Login'>
           <LoginButton variant="secondary">Login</LoginButton>
           </Link>
+          <Link to='/FormRegister'>
+          <SigInButton variant="secondary">Register</SigInButton>
+          </Link>
           </div>
       </Nav>
     </Navbar.Collapse>
