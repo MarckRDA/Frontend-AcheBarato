@@ -16,7 +16,8 @@ const SearchResultProducts = (props) => {
     <ListCard>
       <CardSearchResult
         productName={props.productName}
-        productDescription={props.productDescription}
+        productPrice={props.productPrice}
+        productThumbImage={props.thumbImgLink}
       />
     </ListCard>
   );
