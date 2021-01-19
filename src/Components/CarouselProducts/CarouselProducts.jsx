@@ -8,7 +8,7 @@ function CarouselProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    async function loadBooks() {
+    async function loadProducts() {
       const response = await axios.get(
         "https://localhost:5001/achebarato/products/trendproducts"
       );
@@ -16,7 +16,7 @@ function CarouselProducts() {
       setProducts(response.data);
     }
 
-    loadBooks();
+    loadProducts();
   }, []);
 
   return (
