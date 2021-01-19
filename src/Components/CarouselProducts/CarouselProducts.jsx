@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { CarouselItem, Carousel, Container, Row } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import axios from "axios";
 import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
+import Carousel from "react-elastic-carousel";
 
 function CarouselProducts() {
   const [products, setProducts] = useState([]);
@@ -18,44 +19,64 @@ function CarouselProducts() {
     loadBooks();
   }, []);
 
-  let index = 0;
- 
-  const CardsTrendsProdutcs = products.map((product) => (
-    <CardTrendProduct
-      key={product.id_product}
-      productName={product.name}
-      productPrice={product.price}
-      productThumbImage={product.thumbImgLink}
-    />
-  ));
-
-  const cards = [1,1].map((n) => (
-    <CarouselItem key={n.toString()}>
-      <Container>
-        <Row className="ml-auto mr-auto mb-3">
-          {products.map((product) => {
-           index = index  + 1;
-            if (product.cathegory.name === "Computadores")
-              return (
-                <CardTrendProduct
-                  key={product.id_product}
-                  productName={product.name}
-                  productPrice={product.price}
-                  productThumbImage={product.thumbImgLink}
-                />
-              )
-              ;
-              
-          })}
-        </Row>
-      </Container>
-    </CarouselItem>
-  ));
-
   return (
     <Container style={{ margin: "auto" }}>
-      <h1>Ofertas de eletronicos</h1>
-      <Carousel>{cards}</Carousel>
+      <h1 className="h1">Trends em Computadores</h1>
+      <Carousel itemsToShow={4}>
+        {products.map((product) => {
+          if (product.cathegory.name === "Computadores")
+            return (
+              <CardTrendProduct
+                key={product.id_product}
+                productName={product.name}
+                productPrice={product.price}
+                productThumbImage={product.thumbImgLink}
+              />
+            );
+        })}
+      </Carousel>
+      <h1 className="h1">Trends em Celulares Nokia</h1>
+      <Carousel itemsToShow={4}>
+        {products.map((product) => {
+          if (product.cathegory.name === "Celulares e Smartphones")
+            return (
+              <CardTrendProduct
+                key={product.id_product}
+                productName={product.name}
+                productPrice={product.price}
+                productThumbImage={product.thumbImgLink}
+              />
+            );
+        })}
+      </Carousel>
+      <h1 className="h1">Trends em Consoles</h1>
+      <Carousel itemsToShow={4}>
+        {products.map((product) => {
+          if (product.cathegory.name === "Consoles")
+            return (
+              <CardTrendProduct
+                key={product.id_product}
+                productName={product.name}
+                productPrice={product.price}
+                productThumbImage={product.thumbImgLink}
+              />
+            );
+        })}
+      </Carousel>
+      <h1 className="h1">Trends em Microondas</h1>
+      <Carousel itemsToShow={4}>
+        {products.map((product) => {
+          if (product.cathegory.name === "Microondas")
+            return (
+              <CardTrendProduct
+                key={product.id_product}
+                productName={product.name}
+                productPrice={product.price}
+                productThumbImage={product.thumbImgLink}
+              />
+            );
+        })}
+      </Carousel>
     </Container>
   );
 }
