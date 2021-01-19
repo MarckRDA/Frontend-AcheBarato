@@ -10,7 +10,7 @@ import Page from './Page';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'linear-gradient(45deg, #f4843c 100%, #FF8E53 50%)',
+    background: 'linear-gradient(45deg, #f5efec 100%, #FF8E53 50%)',
     backgroundColor: theme.palette.background.dark,
     height: '100%',
     paddingBottom: theme.spacing(3),
@@ -49,9 +49,9 @@ const NotFound = () => {
           
           <Box textAlign="center">
             <img
-              alt="Under development"
+              alt="Page Not Found"
               className={classes.image}
-              src="/static/images/undraw_page_not_found_su7k.svg"
+              src="/static/images/419.gif"
             />
           </Box>
         </Container>
