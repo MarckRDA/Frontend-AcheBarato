@@ -13,3 +13,8 @@ export const SearchBarStyled = styled.div`
     width: 48rem;
     margin-left: -11rem;
     `;
+export const SigInButton = styled(Button)`
+
+border: none;
+margin-left:10px;
+`;
