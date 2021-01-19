@@ -8,21 +8,17 @@ const CardStyled = styled(Card)`
 `
 
 const CardTrendProduct = (props) => {
-  
-  
+    
   return (
     <>
-    <Card>
-      <Card.Img variant="top" src={'./'} />
+    <CardStyled>
+      <Card.Img variant="top" src={props.productThumbImage} />
       <Card.Body>
         <Card.Title>{props.productName}</Card.Title>
-        <Card.Text>{props.productDescription}</Card.Text>
+        {/* <Card.Text>{props.productDescription}</Card.Text> */}
         <Button variant="primary">Ver Produto</Button>
-        <Card>
-
-        </Card>
       </Card.Body>
-    </Card>
+    </CardStyled>
     </>
   );
 }
