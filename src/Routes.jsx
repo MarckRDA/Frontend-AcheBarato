@@ -3,7 +3,8 @@ import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import FormRegister from "./Components/FormRegister/FormRegister.jsx";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { isAuthenticated } from  "./services/auth";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
@@ -22,6 +23,12 @@ import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
 
 export default function Routes() {
   return (
+
+    //configurando a autenticação
+
+
+
+
     <Router>
       <Switch>
         <Route path="/Login" component={Login} />

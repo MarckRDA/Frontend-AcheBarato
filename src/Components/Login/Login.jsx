@@ -4,6 +4,7 @@ import "./LoginStyles.css"
 import { LoginPage, LoginButton,JumbotronStyled} from "./loginstyles";
 import imagem from "../assets/logoicone.png"
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState("");
