@@ -3,7 +3,7 @@ import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import FormRegister from "./Components/FormRegister/FormRegister.jsx";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
@@ -19,6 +19,7 @@ import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
+import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido';
 
 export default function Routes() {
   return (
@@ -33,7 +34,7 @@ export default function Routes() {
           path="/PriceAverage/:search"
           children={<PriceAverage />}
         />
-
+        <Route path="/ProdutoEscolhido" component={ProdutoEscolhido}/>
         <Route path="/BannerPropaganda" component={BannerPropaganda} />
         <Route path="/BrandButton" component={BrandButton} />
         <Route path="/CardListProduct" component={CardListProduct} />
