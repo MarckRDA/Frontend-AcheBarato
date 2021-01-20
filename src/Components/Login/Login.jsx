@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import { Form, Button, Jumbotron } from "react-bootstrap";
+import { Form} from "react-bootstrap";
 import "./LoginStyles.css"
 import { LoginPage, LoginButton,JumbotronStyled} from "./loginstyles";
-import styled from "styled-components";
 import imagem from "../assets/logoicone.png"
-import backimage from "../assets/backimage.png"
 import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
 
+  const onSubmit = (event) => {
+    event.preventDefault()
+    axios.post(
+      'https://localhost:5001/auth/login',
+      { email, passwd }
+    )
+    .then(resp => alert(resp.data))
+    .catch(() => alert('Login inválido'))
+  }
+
+  
   return (
     <>
     <LoginPage>
