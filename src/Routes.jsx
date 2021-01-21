@@ -57,7 +57,6 @@ export default function Routes() {
           path="/PriceAverage/:search"
           children={<PriceAverage />}
         />
-
         <Route path="/BannerPropaganda" component={BannerPropaganda} />
         <Route path="/BrandButton" component={BrandButton} />
         <Route path="/CardListProduct" component={CardListProduct} />
