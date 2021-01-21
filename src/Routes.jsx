@@ -3,7 +3,8 @@ import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import FormRegister from "./Components/FormRegister/FormRegister.jsx";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { isAuthenticated } from  "./services/auth";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
@@ -19,10 +20,15 @@ import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
-import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido';
 
 export default function Routes() {
   return (
+
+    //configurando a autenticação
+
+
+
+
     <Router>
       <Switch>
         <Route path="/Login" component={Login} />
@@ -34,8 +40,12 @@ export default function Routes() {
           path="/PriceAverage/:search"
           children={<PriceAverage />}
         />
+<<<<<<< HEAD
         <Route exact path="/ProdutoEscolhido/:id" children={<ProdutoEscolhido/>}/>
         <Route path="/ProdutoEscolhido" component={ProdutoEscolhido}/>
+=======
+
+>>>>>>> 691cea27cf844eabb78ac7c7a032e3fccc6e07c6
         <Route path="/BannerPropaganda" component={BannerPropaganda} />
         <Route path="/BrandButton" component={BrandButton} />
         <Route path="/CardListProduct" component={CardListProduct} />
