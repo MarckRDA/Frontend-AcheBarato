@@ -5,14 +5,17 @@ const CardListProduct = (props) => {
     <Card className="mb-3">
       <Card.Body>
         <Row>
+          <Col xs={3}>
+            <Card.Img src={props.productImg} style={{width: 90}}/>
+          </Col>
           <Col xs={3} className="justify-content-start">
             <p>{props.productName}</p>
           </Col>
-          <Col xs={4} className="justify-content-center ml-auto">
+          <Col xs={3} className="justify-content-center ml-auto">
             <h4>{props.productPrice}</h4>
           </Col>
           <Col xs={3}>
-            <Button variant='primary'>Link para Loja</Button>
+            <Button variant="primary">Link para Loja</Button>
           </Col>
         </Row>
       </Card.Body>

@@ -18,6 +18,7 @@ import CarouselProducts from "./Components/CarouselProducts/CarouselProducts";
 import CathegoryNavAside from "./Components/CathegoryNavAside/CathegoryNavAside";
 import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
+import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido'
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
 import App from "./App";
@@ -57,6 +58,11 @@ export default function Routes() {
           path="/PriceAverage/:search"
           children={<PriceAverage />}
         />
+        <Route
+          exact
+          path="/ProdutoEscolhido/:id"
+          children={<ProdutoEscolhido />}
+        />
         <Route path="/BannerPropaganda" component={BannerPropaganda} />
         <Route path="/BrandButton" component={BrandButton} />
         <Route path="/CardListProduct" component={CardListProduct} />
@@ -67,6 +73,7 @@ export default function Routes() {
         <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
+        
         <Route path="/PriceCharts" component={PriceCharts} />
 
         <Route path="*" component={NotFound} />

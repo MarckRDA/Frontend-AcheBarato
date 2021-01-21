@@ -3,49 +3,50 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Carrousel from "../../Components/CarouselMainPage/CarouselMainPage";
 import { useParams } from "react-router-dom";
 import CardListProduct from "../../Components/CardListProduct/CardListProduct";
-import PriceAverage from '../../Components/PriceAverage/PriceAverage'
+import PriceAverage from "../../Components/PriceAverage/PriceAverage";
 import TechnicalInformation from "../../Components/TecnicalInformation/TechnicalInformation";
-import NavSuperior from '../../Components/MenuSearchBar/index';
+
+import NavSuperior from "../../Components/MenuSearchBar/index";
+
 import axios from "axios";
 import CarouselPictureSelected from "../../Components/CarouselPictureSelected/CarouselPictureSelected";
 
 const ProdutoEscolhido = () => {
   const [productSelected, setProductSelected] = useState([]);
   const [relatedProducts, setRelatedProducts] = useState([]);
-  const [isLoadedProductSelected, setIsLoadedProductSelected] = useState(false);
-  const [isLoadedRelatedProduct, setIsLoadedRelatedProduct] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   let { id } = useParams();
 
   useEffect(() => {
-    async function loadProductSelected() {
-      const response = await axios.get(
-        `https://localhost:5001/achebarato/products/${id}`
-      );
-      setProductSelected(response.data);
-      setIsLoadedProductSelected(true);
-    }
-
+    
     async function loadRelatedProducts() {
-      const response = await axios.get(
-        `https://localhost:50001/achebarato/products/${id}/relatedproducts`
-      );
-      setRelatedProducts(response.data);
-      setIsLoadedRelatedProduct(true);
+      await axios
+        .all([
+          axios.get(`https://localhost:5001/achebarato/products/${id}`),
+          axios.get(
+            `https://localhost:5001/achebarato/products/${id}/relatedproducts`
+          ),
+        ])
+        .then(
+          axios.spread((ps, rp) => {
+            setProductSelected(ps.data);
+            setRelatedProducts(rp.data);
+          })
+        );
+
+      setIsLoaded(true);
     }
 
-    loadProductSelected();
     loadRelatedProducts();
   }, []);
 
-  console.log(isLoadedRelatedProduct);
-  console.log(isLoadedProductSelected)
 
   return (
     <>
       <NavSuperior />
       <Container className="ml-auto mr-auto mt-3">
         <Row>
-          {isLoadedProductSelected && (
+          {isLoaded && (
             <>
               <Col xs={6}>
                 <CarouselPictureSelected pictures={productSelected.pictures} />
@@ -60,10 +61,12 @@ const ProdutoEscolhido = () => {
             </>
           )}
         </Row>
-        {isLoadedRelatedProduct &&
+        <h1>Produtos relacionados</h1>
+        {isLoaded &&
           relatedProducts.map((relatedProduct) => (
             <CardListProduct
               key={relatedProduct.id_product}
+              productImg={relatedProduct.thumbImgLink}
               productName={relatedProduct.name}
               productPrice={relatedProduct.price}
             />
@@ -73,16 +76,11 @@ const ProdutoEscolhido = () => {
         {/* <PriceAverage /> */}
         <br />
         <br />
-        <TechnicalInformation
-          specification={[
-            { exp1: [{ model: 1 }, { model2: 2 }] },
-            { exp2: [{ model: 1 }, { model2: 2 }] },
-            { exp2: [{ model: 1 }, { model2: 2 }] },
-          ]}
-        />
+        {isLoaded && <TechnicalInformation
+          productInformations={productSelected.descriptions}
+        />}
       </Container>
     </>
-
   );
 };
 
