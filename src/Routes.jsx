@@ -3,8 +3,8 @@ import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import SignUp from "./Components/FormRegister/SignUp.jsx";
-import { BrowserRouter,Router, Switch, Route, Redirect } from "react-router-dom";
-import { isAuthenticated } from  "./services/auth";
+import { BrowserRouter, Router, Switch, Route, Redirect } from "react-router-dom";
+import { isAuthenticated } from "./services/auth";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
@@ -43,14 +43,15 @@ export default function Routes() {
 
     //configurando a autenticação para obter as rotas
     <BrowserRouter>
-    <Switch>
-      {/* <Route exact path="/MainPage" component={MainPage} />
+      <Switch>
+        {/* <Route exact path="/MainPage" component={MainPage} />
       <Route path="/SignUp" component={SignUp}/>
       <PrivateRoute path="/app" component={() => <h1>App</h1>} />
       <Route path="*" component={NotFound} />
      */}
+        <Route exact path="/" component={MainPage} />
         <Route path="/Login" component={Login} />
-        {/* <Route path="/FormRegister" component={FormRegister} /> */}
+        <Route path="/FormRegister" component={SignUp} />
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
         <Route
@@ -73,11 +74,11 @@ export default function Routes() {
         <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
-        
+
         <Route path="/PriceCharts" component={PriceCharts} />
 
         <Route path="*" component={NotFound} />
       </Switch>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
