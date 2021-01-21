@@ -2,8 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
-import FormRegister from "./Components/FormRegister/FormRegister.jsx";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import SignUp from "./Components/FormRegister/SignUp.jsx";
+import { BrowserRouter,Router, Switch, Route, Redirect } from "react-router-dom";
 import { isAuthenticated } from  "./services/auth";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
@@ -20,18 +20,35 @@ import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
+import App from "./App";
+
+//essa rota só é acessada se o usuario se autenticar
+const PrivateRoute = ({ component : Component, ... rest}) => (
+  <Route
+  {...rest}
+  render={props=>
+    //se a autenticação for true
+  isAuthenticated() ? (
+    <Component {...props}/>):(
+      <Redirect to={{ pathname: "/Login", state : {from:props.location}}}/>
+
+    )
+    }
+/>
+);
 
 export default function Routes() {
   return (
 
-    //configurando a autenticação
-
-
-
-
-    <Router>
-      <Switch>
-        <Route path="/Login" component={Login} />
+    //configurando a autenticação para obter as rotas
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Login} />
+      <Route path="/SignUp" component={SignUp}/>
+      <PrivateRoute path="/app" component={() => <h1>App</h1>} />
+      <Route path="*" component={NotFound} />
+    
+        {/* <Route path="/Login" component={Login} />
         <Route path="/FormRegister" component={FormRegister} />
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
@@ -53,8 +70,8 @@ export default function Routes() {
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
         <Route path="/PriceCharts" component={PriceCharts} />
 
-        <Route path="*" component={NotFound} />
+        <Route path="*" component={NotFound} /> */}
       </Switch>
-    </Router>
+  </BrowserRouter>
   );
 }

@@ -1,71 +1,69 @@
-import React, { useState } from "react";
-import { Form} from "react-bootstrap";
-import "./LoginStyles.css"
-import { LoginPage, LoginButton,JumbotronStyled} from "./loginstyles";
-import imagem from "../assets/logoicone.png"
-import { Link } from "react-router-dom";
+import "./LoginStyles.css";
+import { LoginPage, LoginButton, JumbotronStyled,Form } from "./loginstyles";
+import imagem from "../assets/logoicone.png";
 import axios from 'axios';
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+import api from "../../services/api";
+import { login } from "../../services/auth";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [passwd, setPasswd] = useState("");
+class Login extends Component {
+  state = {
+    email: "",
+    password: "",
+    error: ""
+  };
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-    axios.post(
-      'https://localhost:5001/auth/login',
-      { email, passwd }
-    )
-    .then(resp => alert(resp.data))
-    .catch(() => alert('Login inválido'))
-  }
-
+  handleSignIn = async e => {
+    e.preventDefault();
+    const { email, password } = this.state;
+    if (!email || !password) {
+      this.setState({ error: "E-mail or Password is empty " });
+    } else {
+      try {
+        const response = await api.post("/sessions", { email, password });
+        login(response.data.token);
+        this.props.history.push("/app");
+      } catch (err) {
+        this.setState({
+          error:
+            "Houve um problema com o login, verifique suas credenciais. T.T"
+        });
+      }
+    }
+  };
   
+  render(){
   return (
     <>
-    <LoginPage>
-        <JumbotronStyled >
-        <Link to='/MainPage'>
-      <img class="img-login" src={imagem} alt=""/>
+      <LoginPage>
+        <JumbotronStyled>
+          
+          <Form onSubmit={this.handleSignIn}>
+          <Link to="/MainPage">
+            <img class="img-login" src={imagem} alt="" />
           </Link>
-        <Form >
-        <h3 class="h3-login">Login</h3>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label >Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicPassword" >
-            <Form.Label >Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              value={passwd}
-              onChange={(event) => setPasswd(event.target.value)}
-            />
-          </Form.Group>
-          <Form.Group>
-            <LoginButton variant="outline-primary" type="submit" color="primary" block>
-              Login
-          </LoginButton>
-
-              <LoginButton variant="outline-primary"
-                type="submit"
-                color="primary"
-                block>
-                Register
-            </LoginButton>
-          </Form.Group>
+          <p>Login</p>
+          {this.state.error && <p>{this.state.error}</p>}
+          <input
+            type="email"
+            placeholder="E-mail"
+            onChange={e => this.setState({ email: e.target.value })}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={e => this.setState({ password: e.target.value })}
+          />
+          <LoginButton type="submit">Entrar</LoginButton>
+          <hr />
+          <Link to="/signup">Criar conta grátis</Link>
         </Form>
-      </JumbotronStyled>
-  </LoginPage>
-  </>
+        </JumbotronStyled>
+      </LoginPage>
+    </>
   );
 };
+}
 
 export default Login;
