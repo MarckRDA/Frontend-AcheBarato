@@ -14,7 +14,6 @@ function MainPage() {
       <div class="menu-bar">
         <MenuSearchBar />
       </div>
-      {/* <BannerPropaganda /> */}
       <CarouselMainPage />
       <JumbotronStyled>
       <SearchBar/>

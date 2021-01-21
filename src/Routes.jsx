@@ -34,6 +34,7 @@ export default function Routes() {
           path="/PriceAverage/:search"
           children={<PriceAverage />}
         />
+        <Route exact path="/ProdutoEscolhido/:id" children={<ProdutoEscolhido/>}/>
         <Route path="/ProdutoEscolhido" component={ProdutoEscolhido}/>
         <Route path="/BannerPropaganda" component={BannerPropaganda} />
         <Route path="/BrandButton" component={BrandButton} />

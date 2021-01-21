@@ -23,9 +23,7 @@ const PriceAverage = (props) => {
     loadProducts();
   }, []);
 
-  console.log(search);
-  console.log(products)
-
+ 
   return (
     <div class="menu ">
       <MenuSearchBar />I{" "}

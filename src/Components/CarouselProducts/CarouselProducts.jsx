@@ -31,6 +31,8 @@ function CarouselProducts() {
                 productName={product.name}
                 productPrice={product.price}
                 productThumbImage={product.thumbImgLink}
+                productId={product.id_product}
+
               />
             );
         })}
@@ -45,6 +47,7 @@ function CarouselProducts() {
                 productName={product.name}
                 productPrice={product.price}
                 productThumbImage={product.thumbImgLink}
+                productId={product.id_product}
               />
             );
         })}
@@ -59,6 +62,7 @@ function CarouselProducts() {
                 productName={product.name}
                 productPrice={product.price}
                 productThumbImage={product.thumbImgLink}
+                productId={product.id_product}
               />
             );
         })}
@@ -73,6 +77,7 @@ function CarouselProducts() {
                 productName={product.name}
                 productPrice={product.price}
                 productThumbImage={product.thumbImgLink}
+                productId={product.id_product}
               />
             );
         })}

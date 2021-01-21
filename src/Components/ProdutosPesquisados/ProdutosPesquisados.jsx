@@ -3,14 +3,17 @@ import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 import { ListGroup, Container, Row } from "react-bootstrap";
 
 function ProdutosPesquisados(props) {
+ 
   const productsSearched = props.products;
-  const listProducts = productsSearched.map((productsSearched, index) => (
+  
+  const listProducts = productsSearched.map((productsSearched) => (
     <ListGroup.Item>
       <CardTrendProduct
         key={productsSearched.id_product}
         productName={productsSearched.name}
         productPrice={productsSearched.price}
         productThumbImage={productsSearched.thumbImgLink}
+        productId={productsSearched.id_product}
       />
     </ListGroup.Item>
   ));

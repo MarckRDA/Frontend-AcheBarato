@@ -11,6 +11,7 @@ const CarouselStyled = Styled(Carousel)`
 
 function CarouselMainPage() {
   
+
   return (
     <CarouselStyled>
       <Carousel.Item>
