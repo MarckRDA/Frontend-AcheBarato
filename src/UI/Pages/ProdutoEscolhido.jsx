@@ -5,11 +5,7 @@ import { useParams } from "react-router-dom";
 import CardListProduct from "../../Components/CardListProduct/CardListProduct";
 import PriceAverage from '../../Components/PriceAverage/PriceAverage'
 import TechnicalInformation from "../../Components/TecnicalInformation/TechnicalInformation";
-<<<<<<< HEAD
 import NavSuperior from '../../Components/MenuSearchBar/index';
-=======
-<<<<<<< HEAD
-import NavSuperior from "../../Components/MenuSearchBar/index";
 import axios from "axios";
 import CarouselPictureSelected from "../../Components/CarouselPictureSelected/CarouselPictureSelected";
 
@@ -86,48 +82,7 @@ const ProdutoEscolhido = () => {
         />
       </Container>
     </>
-=======
->>>>>>> dbd16826035477b7f474b0eb6ec736122cd00965
 
-
-function ProdutoEscolhido() {
-  // const products = props.products;
-  // const listProducts = products.map(({ ...products }, index) => (
-  //   <CardListProduct
-  //     key={index}
-  //     productName={products.name}
-  //     productPrice={products.price}
-  //   />
-  // ));
-
-  return (
-    <>
-    <NavSuperior/>
-    <Container className="ml-auto mr-auto">
-      <Row>
-        <Col xs={6}>
-          <Carrousel />
-        </Col>
-        <Col xs={6} className="align-self-center">
-          <h1>Iphone 7s bla bla</h1>
-          <Button variant="primary">Link para loja</Button>
-        </Col>
-      </Row>
-      {/* {listProducts} */}
-      <br />
-      <br />
-      {/* <PriceAverage /> */}
-      <br />
-      <br />
-      <TechnicalInformation
-        specification={[{ exp1: [{ model: 1 }, { model2: 2 }] }, { exp2: [{ model: 1 }, { model2: 2 }] }, { exp2: [{ model: 1 }, { model2: 2 }] }]}
-      />
-    </Container>
-<<<<<<< HEAD
-    </>
-=======
->>>>>>> 691cea27cf844eabb78ac7c7a032e3fccc6e07c6
->>>>>>> dbd16826035477b7f474b0eb6ec736122cd00965
   );
 };
 

@@ -23,19 +23,19 @@ import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
 import App from "./App";
 
 //essa rota só é acessada se o usuario se autenticar
-const PrivateRoute = ({ component : Component, ... rest}) => (
-  <Route
-  {...rest}
-  render={props=>
-    //se a autenticação for true
-  isAuthenticated() ? (
-    <Component {...props}/>):(
-      <Redirect to={{ pathname: "/Login", state : {from:props.location}}}/>
+// const PrivateRoute = ({ component : Component, ... rest}) => (
+//   <Route
+//   {...rest}
+//   render={props=>
+//     //se a autenticação for true
+//   isAuthenticated() ? (
+//     <Component {...props}/>):(
+//       <Redirect to={{ pathname: "/Login", state : {from:props.location}}}/>
 
-    )
-    }
-/>
-);
+//     )
+//     }
+// />
+// );
 
 export default function Routes() {
   return (
@@ -43,13 +43,13 @@ export default function Routes() {
     //configurando a autenticação para obter as rotas
     <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Login} />
+      {/* <Route exact path="/MainPage" component={MainPage} />
       <Route path="/SignUp" component={SignUp}/>
       <PrivateRoute path="/app" component={() => <h1>App</h1>} />
       <Route path="*" component={NotFound} />
-    
-        {/* <Route path="/Login" component={Login} />
-        <Route path="/FormRegister" component={FormRegister} />
+     */}
+        <Route path="/Login" component={Login} />
+        {/* <Route path="/FormRegister" component={FormRegister} /> */}
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
         <Route
@@ -69,7 +69,7 @@ export default function Routes() {
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
         <Route path="/PriceCharts" component={PriceCharts} />
 
-        <Route path="*" component={NotFound} /> */}
+        <Route path="*" component={NotFound} />
       </Switch>
   </BrowserRouter>
   );
