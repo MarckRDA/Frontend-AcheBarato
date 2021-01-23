@@ -6,16 +6,18 @@ const CardListProduct = (props) => {
       <Card.Body>
         <Row>
           <Col xs={3}>
-            <Card.Img src={props.productImg} style={{width: 90}}/>
+            <Card.Img src={props.productImg} style={{ width: 90 }} />
           </Col>
           <Col xs={3} className="justify-content-start">
             <p>{props.productName}</p>
           </Col>
           <Col xs={3} className="justify-content-center ml-auto">
-            <h4>{props.productPrice}</h4>
+            <h4>R$ {parseFloat(props.productPrice)}</h4>
           </Col>
           <Col xs={3}>
-            <Button variant="primary">Link para Loja</Button>
+            <a href={props.productLinkRedirec}>
+              <Button variant="primary">Link para Loja</Button>
+            </a>
           </Col>
         </Row>
       </Card.Body>

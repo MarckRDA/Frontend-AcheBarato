@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import axios from "axios";
 import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 import Carousel from "react-elastic-carousel";
 
 function CarouselProducts() {
   const [products, setProducts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     async function loadProducts() {
@@ -15,73 +16,79 @@ function CarouselProducts() {
 
       setProducts(response.data);
     }
-
+    setIsLoaded(true);
     loadProducts();
   }, []);
-
+  console.log(isLoaded);
+  console.log(products)
   return (
     <Container style={{ margin: "auto" }}>
-      <h1 className="h1">Trends em Computadores</h1>
-      <Carousel itemsToShow={4}>
-        {products.map((product) => {
-          if (product.cathegory.name === "Computadores")
-            return (
-              <CardTrendProduct
-                key={product.id_product}
-                productName={product.name}
-                productPrice={product.price}
-                productThumbImage={product.thumbImgLink}
-                productId={product.id_product}
-
-              />
-            );
-        })}
-      </Carousel>
-      <h1 className="h1">Trends em Celulares Nokia</h1>
-      <Carousel itemsToShow={4}>
-        {products.map((product) => {
-          if (product.cathegory.name === "Celulares e Smartphones")
-            return (
-              <CardTrendProduct
-                key={product.id_product}
-                productName={product.name}
-                productPrice={product.price}
-                productThumbImage={product.thumbImgLink}
-                productId={product.id_product}
-              />
-            );
-        })}
-      </Carousel>
-      <h1 className="h1">Trends em Consoles</h1>
-      <Carousel itemsToShow={4}>
-        {products.map((product) => {
-          if (product.cathegory.name === "Consoles")
-            return (
-              <CardTrendProduct
-                key={product.id_product}
-                productName={product.name}
-                productPrice={product.price}
-                productThumbImage={product.thumbImgLink}
-                productId={product.id_product}
-              />
-            );
-        })}
-      </Carousel>
-      <h1 className="h1">Trends em Microondas</h1>
-      <Carousel itemsToShow={4}>
-        {products.map((product) => {
-          if (product.cathegory.name === "Microondas")
-            return (
-              <CardTrendProduct
-                key={product.id_product}
-                productName={product.name}
-                productPrice={product.price}
-                productThumbImage={product.thumbImgLink}
-                productId={product.id_product}
-              />
-            );
-        })}
-      </Carousel>
+      {!isLoaded ? (
+        <h1>Loading</h1>
+      ) : (
+        <>
+          <h1 className="h1">Trends em HDs e SSDs</h1>
+          <Carousel itemsToShow={4}>
+            {products.map((product) => {
+              if (product.cathegory.name === "HDs e SSDs")
+                return (
+                  <CardTrendProduct
+                    key={product.id_product}
+                    productName={product.name}
+                    productPrice={product.price}
+                    productThumbImage={product.thumbImgLink}
+                    productId={product.id_product}
+                  />
+                );
+            })}
+          </Carousel>
+          <h1 className="h1">Trends em Livros</h1>
+          <Carousel itemsToShow={4}>
+            {products.map((product) => {
+              if (product.cathegory.name === "Livros")
+                return (
+                  <CardTrendProduct
+                    key={product.id_product}
+                    productName={product.name}
+                    productPrice={product.price}
+                    productThumbImage={product.thumbImgLink}
+                    productId={product.id_product}
+                  />
+                );
+            })}
+          </Carousel>
+          <h1 className="h1">Trends em Cabos e Adaptadores</h1>
+          <Carousel itemsToShow={4}>
+            {products.map((product) => {
+              if (product.cathegory.name === "Cabos e Adaptadores")
+                return (
+                  <CardTrendProduct
+                    key={product.id_product}
+                    productName={product.name}
+                    productPrice={product.price}
+                    productThumbImage={product.thumbImgLink}
+                    productId={product.id_product}
+                  />
+                );
+            })}
+          </Carousel>
+          <h1 className="h1">Trends em Ar Condicionado</h1>
+          <Carousel itemsToShow={4}>
+            {products.map((product) => {
+              if (product.cathegory.name === "Ar Condicionado")
+                return (
+                  <CardTrendProduct
+                    key={product.id_product}
+                    productName={product.name}
+                    productPrice={product.price}
+                    productThumbImage={product.thumbImgLink}
+                    productId={product.id_product}
+                  />
+                );
+            })}
+          </Carousel>{" "}
+        </>
+      )}
     </Container>
   );
 }
