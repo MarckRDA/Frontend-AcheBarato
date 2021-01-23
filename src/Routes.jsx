@@ -51,7 +51,7 @@ export default function Routes() {
      */}
         <Route exact path="/" component={MainPage} />
         <Route path="/Login" component={Login} />
-        <Route path="/FormRegister" component={SignUp} />
+        <Route path="/SignUp" component={SignUp} />
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
         <Route
