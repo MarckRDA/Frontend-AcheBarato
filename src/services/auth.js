@@ -1,5 +1,5 @@
 //export o token do ache barato
-export const TOKEN_KEY = "@ache-Barato";
+export const TOKEN_KEY = "UserId";
 // o token que esta no cach é diferente de null
 export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
 //export o token apra autenticação

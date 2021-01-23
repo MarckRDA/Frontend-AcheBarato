@@ -3,7 +3,7 @@ import {getToken}  from './auth';
 
 //definndo qual a api de consumo
 const api = axios.create({
-baseURL:"http://localhost:5001"
+baseURL:"http://localhost:5001/"
 });
 
 api.interceptors.request.use(

@@ -5,11 +5,6 @@ import imagem from "../assets/logoicone.png";
 import { Link, withRouter } from "react-router-dom";
 import api from "../../services/api";
 
-// todo import blobalstyles.js
-import {
-  Button,
-  InputGroup,
-} from "react-bootstrap";
 
 class SignUp extends Component {
 
@@ -27,7 +22,7 @@ class SignUp extends Component {
       this.setState({ error: "Preencha todos os dados para se cadastrar" });
     } else {
       try {
-        await api.post("/users", { username, email, password });
+        await api.post("/achebarato/users", { username, email, password});
         this.props.history.push("/");
       } catch (err) {
         console.log(err);
