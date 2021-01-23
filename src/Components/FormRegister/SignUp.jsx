@@ -1,91 +1,77 @@
-import React, { Component } from "react";
-
-import { RegisterButton, JumbotronStyled, FormPage, Form } from "./FormRegisterStyles.js";
+import React, { useState } from "react";
+import {
+  RegisterButton,
+  JumbotronStyled,
+  FormPage,
+  Form,
+} from "./FormRegisterStyles.js";
 import imagem from "../assets/logoicone.png";
 import { Link, withRouter } from "react-router-dom";
-import api from "../../services/api";
+import axios from 'axios';
 
-// todo import blobalstyles.js
-import {
-  Button,
-  InputGroup,
-} from "react-bootstrap";
 
-class SignUp extends Component {
+const SignUp = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  state = {
-    username: "",
-    email: "",
-    password: "",
-    error: ""
-  };
 
-  handleSignUp = async e => {
+  const handleSignUp = (e) => {
     e.preventDefault();
-    const { username, email, password } = this.state;
-    if (!username || !email || !password) {
-      this.setState({ error: "Preencha todos os dados para se cadastrar" });
+
+    if (!name || !email || !password) {
+      setError("Preencha todos os dados para se cadastrar");
     } else {
       try {
-        await api.post("/users", { username, email, password });
-        this.props.history.push("/");
+        axios.post("https://localhost:5001/achebarato/users", {
+          name,
+          email,
+          password,
+        }, {headers: {'content-type': 'application/json'}}).then(response => console.log(response.data));
+  
       } catch (err) {
-        console.log(err);
-        this.setState({ error: "Error!" });
+        setError("Error!");
       }
     }
   };
 
-  // const [validated, setValidated] = useState(false);
-
-  // const handleSubmit = (event) => {
-  //   const form = event.currentTarget;
-  //   if (form.checkValidity() === false) {
-  //     event.preventDefault();
-  //     event.stopPropagation();
-  //   }
-
-  //   setValidated(true);
-  // };
-  render() {
-    return (
-      <>
-        <FormPage>
-          <JumbotronStyled>
-            <Form onSubmit={this.handleSignUp}>
-              <Link to="/MainPage">
-                <img class="img-login" src={imagem} alt="" />
-              </Link>
-              {this.state.error && <p>{this.state.error}</p>}
-              <p>Sign-In</p>
-              <input
-                type="text"
-                placeholder="User Name"
-                onChange={e => this.setState({ username: e.target.value })}
-              />
-              <input
-                type="email"
-                placeholder="E-mail"
-                onChange={e => this.setState({ email: e.target.value })}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                onChange={e => this.setState({ password: e.target.value })}
-              />
-              <RegisterButton type="submit">Sign-in</RegisterButton>
-              <hr />
-              <Link to="/Login">Login</Link>
-
-            </Form>
-          </JumbotronStyled>
-        </FormPage>
-      </>
-    );
-  }
-
-}
-
-
+  return (
+    <>
+      <FormPage>
+        <JumbotronStyled>
+          <Form onSubmit={handleSignUp}>
+            <Link to="/MainPage">
+              <img class="img-login" src={imagem} alt="" />
+            </Link>
+            {error && <p>{error}</p>}
+            <p>Sign-In</p>
+            <input
+              type="text"
+              placeholder="User Name"
+              value={name}
+              onChange={(e) => setName(e.target.value )}
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <RegisterButton type="submit">Sign-in</RegisterButton>
+            <hr />
+            <Link to="/Login">Login</Link>
+          </Form>
+        </JumbotronStyled>
+      </FormPage>
+    </>
+  );
+};
 
 export default withRouter(SignUp);
