@@ -9,6 +9,7 @@ import ProdutosPesquisados from "../ProdutosPesquisados/ProdutosPesquisados";
 
 const PriceAverage = (props) => {
   const [products, setProducts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   let {search} = useParams();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ const PriceAverage = (props) => {
       );
 
       setProducts(response.data);
+      setIsLoaded(true);
     }
 
     loadProducts();
@@ -32,9 +34,9 @@ const PriceAverage = (props) => {
           <aside class="animate-right">
             <MenuAside />
           </aside>
-          <ProdutosPesquisados
+          {isLoaded ? <ProdutosPesquisados
             products={products}
-          />
+          /> : <h1>Loading</h1>}
         </Row>
         <Footer />
       </Container>

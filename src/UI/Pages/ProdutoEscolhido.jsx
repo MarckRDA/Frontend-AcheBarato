@@ -70,10 +70,9 @@ const ProdutoEscolhido = () => {
                 </>
               }
             </Row>
+            <Row>
             <PriceCharts data={productSelected.historycalṔrices} />
-            <br />
-
-            <AlertPrice />
+            </Row>
             <br />
             <br />
             <TechnicalInformation
@@ -87,6 +86,7 @@ const ProdutoEscolhido = () => {
                 key={relatedProduct.id_product}
                 productImg={relatedProduct.thumbImgLink}
                 productName={relatedProduct.name}
+                productId={relatedProduct.id_product}
                 productPrice={relatedProduct.price}
                 productLinkRedirec={relatedProduct.linkRedirectShop}
               />
@@ -97,6 +97,7 @@ const ProdutoEscolhido = () => {
                   <CardListProduct
                     key={relatedProduct.id_product}
                     productImg={relatedProduct.thumbImgLink}
+                    productId={relatedProduct.id_product}
                     productName={relatedProduct.name}
                     productPrice={relatedProduct.price}
                     productLinkRedirec={relatedProduct.linkRedirectShop}
