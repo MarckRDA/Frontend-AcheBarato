@@ -1,4 +1,5 @@
 import { Card, Row, Col, Button } from "react-bootstrap";
+import { Link, BrowserRouter } from "react-router-dom";
 
 const CardListProduct = (props) => {
   return (
@@ -9,7 +10,11 @@ const CardListProduct = (props) => {
             <Card.Img src={props.productImg} style={{ width: 90 }} />
           </Col>
           <Col xs={3} className="justify-content-start">
-            <p>{props.productName}</p>
+            <BrowserRouter forceRefresh={true}>
+              <Link to={`/ProdutoEscolhido/${props.productId}`}>
+                <p>{props.productName}</p>
+              </Link>
+            </BrowserRouter>
           </Col>
           <Col xs={3} className="justify-content-center ml-auto">
             <h4>R$ {parseFloat(props.productPrice)}</h4>
