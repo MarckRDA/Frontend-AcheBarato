@@ -1,22 +1,13 @@
-import axios from 'axios';
-import {getToken}  from './auth';
+import axios from "axios";
+import { getToken } from "./auth";
 
-//definndo qual a api de consumo
 const api = axios.create({
-baseURL:"https://localhost:5001/achebarato"
+  baseURL: "https://localhost:5001/achebarato",
+  headers: { "content-type": "application/json" },
 });
 
-api.interceptors.request.use(
-  async config =>{
+const 
 
-  console.log("calling");
-  const token = getToken();
-  console.log("done");
-
-  if (token){
-    config.headers.Authorization = 'Bearer ${token}';
-  }
-  return config;
-});
-
-export default api;
+api.interceptors.request.use(config =>{
+  config.headers
+})
