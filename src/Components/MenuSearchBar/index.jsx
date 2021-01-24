@@ -29,7 +29,7 @@ const Navbarmenu = () => (
               <Link to="/Login">
                 <LoginButton variant="secondary">Login</LoginButton>
               </Link>
-              <Link to="/FormRegister">
+              <Link to="/SignUp">
                 <SigInButton variant="secondary">Register</SigInButton>
               </Link>
             </div>
