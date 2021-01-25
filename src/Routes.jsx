@@ -20,6 +20,7 @@ import SearchResultProducts from "./Components/SearchResultProducts/SearchResult
 import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido'
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
+import MainPageProfile from "./Components/PageProfile/MainPageProfile.jsx"
 import App from "./App";
 
 //essa rota só é acessada se o usuario se autenticar
@@ -73,7 +74,8 @@ export default function Routes() {
         <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
-
+        <Route path="/MainPageProfile" component={MainPageProfile} />
+        
         <Route path="/PriceCharts" component={PriceCharts} />
 
         <Route path="*" component={NotFound} />

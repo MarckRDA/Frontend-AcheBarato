@@ -22,6 +22,8 @@ function CarouselProducts() {
   console.log(isLoaded);
   console.log(products)
   return (
+
+    
     <Container style={{ margin: "auto" }}>
       {!isLoaded ? (
         <h1>Loading</h1>

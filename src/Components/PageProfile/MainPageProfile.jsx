@@ -1,10 +1,11 @@
 import React from "react";
 import CarouselProdutos from "../../Components/CarouselProducts/CarouselProducts";
 import CarouselMainPage from '../../Components/CarouselMainPage/CarouselMainPage';
-import SearchBar from "../../Components/UserProfile/SearchBar"
+import SearchBar from "../../Components/SearchBar/SearchBar.jsx"
 import {JumbotronStyled} from "./MainPageStyles/mainpagesstyles";
 import Footer from '../../Components/Footer/Footer.jsx';
-import MenuSearchBar from "../../Components/MenuSearchBar/index";
+import MenuSearchBar from "../MenuSearchBar/index";
+import Navbar from "./NavBar.jsx";
 
 
 function MainPage() {
@@ -12,7 +13,7 @@ function MainPage() {
 
     <>
       <div class="menu-bar">
-        <MenuSearchBar />
+        <Navbar/>
       </div>
       <CarouselMainPage />
       <JumbotronStyled>
