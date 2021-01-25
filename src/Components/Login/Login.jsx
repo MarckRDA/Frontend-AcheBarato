@@ -4,12 +4,12 @@ import imagem from "../assets/logoicone.png";
 import axios from 'axios';
 import React, { useState } from "react";
 import {Link, useHistory} from 'react-router-dom';
+import {login} from '../../services/api';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [id, setId] = useState('');
   const history = useHistory(); 
 
   
@@ -17,12 +17,11 @@ const Login = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setEmail("E-mail or Password is empty");
+      setError("E-mail or Password is empty");
     } else {
       try {
-        axios.post("https://localhost:5001/achebarato/users/login", { email, password }, {headers: {'UserId':'d57301d0-a125-4be1-b0dd-75a629430525'}})
-        .then(res => setId(res.data));
-        console.log("deu certo!")
+        login({email, password});
+        history.push('/');
        
       } catch (err) {
         setError("Houve um problema com o login, verifique suas credenciais. T.T");
@@ -30,10 +29,7 @@ const Login = () => {
     }
   };
 
-  console.log(email);
-  console.log(id)
-  console.log(password);
-  
+    
   return (
     <>
       <LoginPage>
@@ -44,7 +40,7 @@ const Login = () => {
             <img class="img-login" src={imagem} alt="" />
           </Link>
           <p>Login</p>
-          {error && <p>{error}</p>}
+          {error && <span>{error}</span>}
           <input
             type="email"
             placeholder="E-mail"
@@ -57,7 +53,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <LoginButton type="submit" onClick={() => history.push('/')}>Entrar</LoginButton>
+          <LoginButton type="submit">Entrar</LoginButton>
           <hr />
           <Link to="/signup">Criar conta grátis</Link>
         </Form>

@@ -7,15 +7,13 @@ import {
 } from "./FormRegisterStyles.js";
 import imagem from "../assets/logoicone.png";
 import { Link, withRouter } from "react-router-dom";
-import axios from 'axios';
-
+import { signUp } from "../../services/api";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -24,12 +22,7 @@ const SignUp = () => {
       setError("Preencha todos os dados para se cadastrar");
     } else {
       try {
-        axios.post("https://localhost:5001/achebarato/users", {
-          name,
-          email,
-          password,
-        }, {headers: {'content-type': 'application/json'}}).then(response => console.log(response.data));
-  
+        signUp({name, email, password});
       } catch (err) {
         setError("Error!");
       }
@@ -50,7 +43,7 @@ const SignUp = () => {
               type="text"
               placeholder="User Name"
               value={name}
-              onChange={(e) => setName(e.target.value )}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               type="email"

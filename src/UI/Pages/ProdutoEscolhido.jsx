@@ -7,6 +7,7 @@ import CardListProduct from "../../Components/CardListProduct/CardListProduct";
 import TechnicalInformation from "../../Components/TecnicalInformation/TechnicalInformation";
 import NavSuperior from "../../Components/MenuSearchBar/index";
 import axios from "axios";
+
 import PriceCharts from "../../Components/PriceAverage/Charts/PriceCharts";
 import CarouselPictureSelected from "../../Components/CarouselPictureSelected/CarouselPictureSelected";
 import AlertPrice from "../../Components/AlertPrice/AlertPrice";

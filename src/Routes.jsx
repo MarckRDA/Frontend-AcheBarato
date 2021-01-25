@@ -4,7 +4,6 @@ import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import SignUp from "./Components/FormRegister/SignUp.jsx";
 import { BrowserRouter, Router, Switch, Route, Redirect } from "react-router-dom";
-import { isAuthenticated } from "./services/auth";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
