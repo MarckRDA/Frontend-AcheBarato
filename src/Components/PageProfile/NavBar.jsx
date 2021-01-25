@@ -1,7 +1,6 @@
 import React from "react";
 import {Button,Nav,Form,FormControl,Navbar} from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
 import axios from "axios";
 
 
@@ -13,21 +12,20 @@ function NavBar() {
   useEffect(() => {
     async function loadUser() {
       const response = await axios.get(
-        "https://localhost:5001/achebarato/users/7afc143f-42db-4753-a4cf-f9ad1a082c6d"
+        "https://localhost:5001/achebarato/users/467f1f82-f96e-4a1d-8fa0-304b3cbf882a"
       );
 
       setUser(response.data);
     }
     loadUser();
   }, []);
-  console.log(user);
   
 
     return (
     <>    
       <Navbar sticky="top" bg="dark" variant="dark">
     <Navbar.Brand href="#home">
-      nome usuario 
+      <p>Olá {user.name} ,tudo certo?</p>
     </Navbar.Brand>
     <Nav className="mr-auto" style={{}}>
       <Nav.Link href="#home">Produtos pesquisados</Nav.Link>
