@@ -6,7 +6,7 @@ import {
   Form,
 } from "./FormRegisterStyles.js";
 import imagem from "../assets/logoicone.png";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/api";
 
 const SignUp = () => {
@@ -14,6 +14,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const history = useHistory();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -21,11 +22,8 @@ const SignUp = () => {
     if (!name || !email || !password) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
-      try {
-        signUp({name, email, password});
-      } catch (err) {
-        setError("Error!");
-      }
+      signUp({ name, email, password });
+      history.push("/login");
     }
   };
 
@@ -67,4 +65,4 @@ const SignUp = () => {
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;

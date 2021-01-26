@@ -6,8 +6,8 @@ import AlertPrice from "../../AlertPrice/AlertPrice";
 
 const PriceCharts = (props) => {
   const dataArray = [["Variação de preço", "Variação de Preços"]];
-
-  const output = props.data.map(({ dateOfPrice, priceOfThatDay }) =>
+  const historicalPrice = props.data.historycalṔrices;
+  const output = historicalPrice.map(({ dateOfPrice, priceOfThatDay }) =>
     dataArray.push([dateOfPrice, priceOfThatDay])
   );
 
@@ -43,7 +43,7 @@ const PriceCharts = (props) => {
           />
         </Col>
         <Col >
-          <AlertPrice />
+          <AlertPrice product={props.data}/>
         </Col>
       </Row>
     </Container>

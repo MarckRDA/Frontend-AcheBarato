@@ -3,7 +3,13 @@ import "./index.css";
 import React from "react";
 import Login from "./Components/Login/Login.jsx";
 import SignUp from "./Components/FormRegister/SignUp.jsx";
-import { BrowserRouter, Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter,
+  Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
 import Reports from "./Components/Reports/Reports.jsx";
@@ -17,30 +23,14 @@ import CarouselProducts from "./Components/CarouselProducts/CarouselProducts";
 import CathegoryNavAside from "./Components/CathegoryNavAside/CathegoryNavAside";
 import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
-import ProdutoEscolhido from './UI/Pages/ProdutoEscolhido'
+import ProdutoEscolhido from "./UI/Pages/ProdutoEscolhido";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
-import MainPageProfile from "./Components/PageProfile/MainPageProfile.jsx"
+import MainPageProfile from "./Components/PageProfile/MainPageProfile.jsx";
 import App from "./App";
-
-//essa rota só é acessada se o usuario se autenticar
-// const PrivateRoute = ({ component : Component, ... rest}) => (
-//   <Route
-//   {...rest}
-//   render={props=>
-//     //se a autenticação for true
-//   isAuthenticated() ? (
-//     <Component {...props}/>):(
-//       <Redirect to={{ pathname: "/Login", state : {from:props.location}}}/>
-
-//     )
-//     }
-// />
-// );
 
 export default function Routes() {
   return (
-
     //configurando a autenticação para obter as rotas
     <BrowserRouter>
       <Switch>
@@ -51,14 +41,11 @@ export default function Routes() {
      */}
         <Route exact path="/" component={MainPage} />
         <Route path="/Login" component={Login} />
+
         <Route path="/SignUp" component={SignUp} />
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
-        <Route
-          exact
-          path="/PriceAverage/:search"
-          children={<PriceAverage />}
-        />
+        <Route exact path="/PriceAverage/:search" children={<PriceAverage />} />
         <Route
           exact
           path="/ProdutoEscolhido/:id"
@@ -75,9 +62,8 @@ export default function Routes() {
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
         <Route path="/MainPageProfile" component={MainPageProfile} />
-        
-        <Route path="/PriceCharts" component={PriceCharts} />
 
+        <Route path="/PriceCharts" component={PriceCharts} />
         <Route path="*" component={NotFound} />
       </Switch>
     </BrowserRouter>

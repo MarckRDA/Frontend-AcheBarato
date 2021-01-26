@@ -19,8 +19,7 @@ function CarouselProducts() {
     setIsLoaded(true);
     loadProducts();
   }, []);
-  console.log(isLoaded);
-  console.log(products)
+  
   return (
 
     

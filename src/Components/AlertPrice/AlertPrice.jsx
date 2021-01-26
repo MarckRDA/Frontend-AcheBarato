@@ -1,5 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { postAlarmPrice } from "../../services/api";
+import useAuth from "../../Context/hooks/useAuth";
 
 const AlarmButton = styled.button`
   color: #ff6633;
@@ -49,25 +51,40 @@ const ContainerAligh = styled.div`
   align-items: center;
 `;
 
+const AlertPrice = (props) => {
+  const [priceToMonitor, setPriceToMonitor] = useState(0);
+  const { isAuthenticated, user } = useAuth();
+  
+  const userId = isAuthenticated ? user.userId : null;
+  
+  // TODO: Fix postAlarmPrice
+  //const product = JSON.stringify(props.product);
 
-
-const AlertPrice = () => {
-  
-  const [price, setPrice] = useState(0);
-  
-  const handleAlertPrice = () =>(
-    console.log(`enviando esse preço: ${price}`)
-  )
-  
+  // const handleAlertPrice = () => {
+  //   if(!isAuthenticated){
+  //     alert("Você precisa estar logado !");
+  //   }
+  //  postAlarmPrice({userId, product, priceToMonitor});
+  //   //console.log(`enviando esse preço: ${price}${user.userId}${JSON.stringify(props.product)}`);
+  // };
   return (
     <>
       <h2>Qual preço deseja pagar no produto?</h2>
       <ContainerAligh>
         <FlexContainer style={{ marginRight: 10 }}>
           <span>R$</span>
-          <InputPrice type="number" min="1.0" step="0.10" max="99999" value={price} onChange={(e) => setPrice(e.target.value)} />
+          <InputPrice
+            type="number"
+            min="1.0"
+            step="0.10"
+            max="99999"
+            value={priceToMonitor}
+            onChange={(e) => setPriceToMonitor(e.target.value)}
+          />
         </FlexContainer>
-        <AlarmButton size="lg" onClick={handleAlertPrice}>Avise-me !</AlarmButton>
+        <AlarmButton size="lg" >
+          Avise-me !
+        </AlarmButton>
       </ContainerAligh>
     </>
   );
