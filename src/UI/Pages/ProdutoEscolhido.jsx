@@ -72,7 +72,7 @@ const ProdutoEscolhido = () => {
               }
             </Row>
             <Row>
-            <PriceCharts data={productSelected.historycalṔrices} />
+            <PriceCharts data={productSelected} />
             </Row>
             <br />
             <br />
