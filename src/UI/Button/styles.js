@@ -9,17 +9,26 @@ margin-left: 1rem;
 
 `;
 
-const GlobalButton = styled.button`
+export const GlobalButton = styled.button`
   color: #ff6633;
   background-color: rgba(255, 102, 51, 0);
   border: none !important;
-  width: 255px;
+  width: 100px;
   border-radius: 8px;
   height: 43px;
+  border-color: #ff6633;
+  transition: width 1s;
+  opacity:70%;
 
   &:hover {
     background-color: #ff6633;
     color: #fff;
+    width: 85px;
+    opacity:100%;
+
+    
+
+
   }
   &:focus {
     outline: none;

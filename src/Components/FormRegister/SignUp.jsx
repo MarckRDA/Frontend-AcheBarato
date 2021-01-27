@@ -8,6 +8,7 @@ import {
 import imagem from "../assets/logoicone.png";
 import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/api";
+import {Button} from "../../UI/Button/index";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -55,12 +56,12 @@ const SignUp = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <RegisterButton type="submit">Sign-in</RegisterButton>
-            <hr />
-            <Link to="/Login">Login</Link>
+            <Button type="submit">Sign-in</Button>
+          <hr />
+          <Link to="/Login">Login</Link>
           </Form>
         </JumbotronStyled>
-      </FormPage>
+    </FormPage>
     </>
   );
 };

@@ -4,7 +4,7 @@ import imagem from "../assets/logoicone.png";
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../Context/hooks/useAuth";
-
+import {Button} from "../../UI/Button/index";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -50,7 +50,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <LoginButton type="submit">Entrar</LoginButton>
+            <Button type="submit">Entrar</Button>
             <hr />
             <Link to="/signup">Criar conta grátis</Link>
           </Form>

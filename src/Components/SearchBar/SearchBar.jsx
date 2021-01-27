@@ -4,6 +4,7 @@ import { ButtonStyled, FormControlStyled } from "./SearchBar.js";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import PriceAverage from '../PriceAverage/PriceAverage.jsx'
 
+
 const SearchBar = () => {
   const [search, setSearch] = useState("");
 
