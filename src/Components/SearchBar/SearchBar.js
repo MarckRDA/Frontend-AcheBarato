@@ -4,7 +4,7 @@ import { FormControl, Button } from "react-bootstrap";
 
 
 export const ButtonStyled = styled.button`
-color: #ff6633;
+  color: #ff6633;
   background-color: rgba(255, 102, 51, 0);
   border: none !important;
   width: 100px;
@@ -18,7 +18,6 @@ color: #ff6633;
   &:hover {
     background-color: #ff6633;
     color: #fff;
-    width: 80px;
     opacity:100%;
 
 `;
