@@ -17,7 +17,7 @@ export const get = (url) => {
   return api.get(url);
 }
 
-export const postAlarmPrice = ({userId, product, priceToMonitor}) => {
+export const postAlarmPrice = ({productId, priceToMonitor}) => {
   return api
-  .post('/users/postalarmprice', {userId, product, priceToMonitor}).then(console.log("deu certo!"));
+  .post('/users/alarmsprice', {productId, priceToMonitor});
 }
