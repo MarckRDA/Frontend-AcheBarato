@@ -52,21 +52,20 @@ const ContainerAligh = styled.div`
 `;
 
 const AlertPrice = (props) => {
-  const [priceToMonitor, setPriceToMonitor] = useState(0);
+  const [price, setPrice] = useState(0);
   const { isAuthenticated, user } = useAuth();
   
-  const userId = isAuthenticated ? user.userId : null;
-  
-  // TODO: Fix postAlarmPrice
-  //const product = JSON.stringify(props.product);
+  const productId = props.product.id_product;
+  const priceToMonitor = parseFloat(price);
 
-  // const handleAlertPrice = () => {
-  //   if(!isAuthenticated){
-  //     alert("Você precisa estar logado !");
-  //   }
-  //  postAlarmPrice({userId, product, priceToMonitor});
-  //   //console.log(`enviando esse preço: ${price}${user.userId}${JSON.stringify(props.product)}`);
-  // };
+  const handleAlertPrice = () => {
+    if(!isAuthenticated){
+      alert("Você precisa estar logado !");
+    }
+   postAlarmPrice({productId, priceToMonitor})
+   
+    console.log(`enviando esse preço: ${price} \n${user.userId}\n${productId}`);
+  };
   return (
     <>
       <h2>Qual preço deseja pagar no produto?</h2>
@@ -78,11 +77,11 @@ const AlertPrice = (props) => {
             min="1.0"
             step="0.10"
             max="99999"
-            value={priceToMonitor}
-            onChange={(e) => setPriceToMonitor(e.target.value)}
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
           />
         </FlexContainer>
-        <AlarmButton size="lg" >
+        <AlarmButton size="lg" onClick={handleAlertPrice}>
           Avise-me !
         </AlarmButton>
       </ContainerAligh>
