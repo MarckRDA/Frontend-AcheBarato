@@ -5,14 +5,13 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../Context/hooks/useAuth";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const history = useHistory();
 
-  const { login, isAuthenticated} = useAuth();
+  const { login, isAuthenticated } = useAuth();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -25,9 +24,13 @@ const Login = () => {
       }
     }
   };
-  
-  
- 
+
+  // const boletim = [
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  // ];
+
   return (
     <>
       <LoginPage>
