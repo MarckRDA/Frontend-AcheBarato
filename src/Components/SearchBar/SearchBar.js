@@ -4,18 +4,32 @@ import { FormControl, Button } from "react-bootstrap";
 
 
 export const ButtonStyled = styled.button`
-display: flex;
-margin-left: 1rem;
+color: #ff6633;
+  background-color: rgba(255, 102, 51, 0);
+  border: none !important;
+  width: 100px;
+  border-radius: 8px;
+  height: 43px;
+  border-color: #ff6633;
+  transition: width 1s;
+  opacity:70%;
+  margin-left:2rem;
+
+  &:hover {
+    background-color: #ff6633;
+    color: #fff;
+    width: 80px;
+    opacity:100%;
 
 `;
 
 export const FormControlStyled = styled.input`
 display: flex;
-margin-left: -1rem;
+margin-left: 1rem;
 display: block;
 width: 57%;
 height: calc(1.5em + 0.75rem + 2px);
-padding: .375rem .75rem;
+padding: .375rem .85rem;
 font-size: 1rem;
 font-weight: 400;
 line-height: 1.5;

@@ -62,7 +62,7 @@ export default function Routes() {
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
         <Route path="/MainPageProfile" component={MainPageProfile} />
-
+        
         <Route path="/PriceCharts" component={PriceCharts} />
         <Route path="*" component={NotFound} />
       </Switch>

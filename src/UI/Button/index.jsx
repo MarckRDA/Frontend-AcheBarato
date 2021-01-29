@@ -1,6 +1,6 @@
-import StyledButton from "./styles";
-import { Children } from "react";
+import {GlobalButton} from "./styles";
+import { children } from "react";
 
 export const Button = ({ children }) => (
-    <StyledButton>{Children}</StyledButton>
+    <GlobalButton>{children}</GlobalButton>
 )
