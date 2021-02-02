@@ -18,6 +18,7 @@ export default function useAuth() {
       if (userLocalStorage && tokenlocalStorage) {
         setUser(JSON.parse(userLocalStorage));
         api.defaults.headers.Authorization = `Bearer ${tokenlocalStorage}`;
+        api.defaults.headers.UserId = `${JSON.parse(userLocalStorage).userId}`;
         setIsAuthenticated(true);
       }
       setLoading(false);
@@ -37,5 +38,6 @@ export default function useAuth() {
     setUser(null);
     setIsAuthenticated(false);
   }
+  
   return { isAuthenticated, login, user, signOut, loading };
 }

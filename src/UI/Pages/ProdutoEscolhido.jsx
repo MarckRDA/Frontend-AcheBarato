@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Accordion, Badge } from "react-bootstrap";
-
 import { useParams } from "react-router-dom";
 import CardListProduct from "../../Components/CardListProduct/CardListProduct";
 import TechnicalInformation from "../../Components/TecnicalInformation/TechnicalInformation";
 import NavSuperior from "../../Components/MenuSearchBar/index";
 import axios from "axios";
-
 import PriceCharts from "../../Components/PriceAverage/Charts/PriceCharts";
 import CarouselPictureSelected from "../../Components/CarouselPictureSelected/CarouselPictureSelected";
-import AlertPrice from "../../Components/AlertPrice/AlertPrice";
+import {useEffectOnce} from "react-use";
+
 
 const ProdutoEscolhido = () => {
   const [productSelected, setProductSelected] = useState([]);
@@ -18,7 +17,7 @@ const ProdutoEscolhido = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   let { id } = useParams();
 
-  useEffect(() => {
+  useEffectOnce(() => {
     async function loadRelatedProducts() {
       await axios
         .all([
@@ -38,12 +37,12 @@ const ProdutoEscolhido = () => {
     }
 
     loadRelatedProducts();
-  }, []);
+  });
 
   const productRelatedPartOne = relatedProducts.slice(
     Math.max(relatedProducts.length - 5, 1)
   );
-
+   
   return (
     <>
       <NavSuperior />

@@ -4,7 +4,10 @@ import imagem from "../assets/logoicone.png";
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../Context/hooks/useAuth";
+<<<<<<< HEAD
+=======
 import {Button} from "../../UI/Button/index";
+>>>>>>> 1c79e3bf8dbb7d5d28f6cfa311e936f0c8ef6d8e
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +15,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const history = useHistory();
 
-  const { login, isAuthenticated} = useAuth();
+  const { login, isAuthenticated } = useAuth();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -25,9 +28,13 @@ const Login = () => {
       }
     }
   };
-  
-  
- 
+
+  // const boletim = [
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  //   { id_student: "1283267138732673", nota: [12, 34] },
+  // ];
+
   return (
     <>
       <LoginPage>
