@@ -15,7 +15,7 @@ const Navbarmenu = () => {
 
   return (
     <>
-      <div class="menu" style={{ backgroundColor: "#ff6633" }}>
+      <div class="menu" style={{ backgroundColor: "#f48221" }}>
         <Navbar collapseOnSelect expand="xl" variant="dark">
           <Navbar.Brand>
             <Link to="/MainPage">
