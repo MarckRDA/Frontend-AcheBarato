@@ -9,10 +9,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  img {
-    width: 300px;
-    margin: 10px 0 40px;
-  }
+ 
   p {
     font-size:2rem;
     color: #719ECE;

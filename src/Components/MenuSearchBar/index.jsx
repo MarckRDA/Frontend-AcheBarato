@@ -7,6 +7,7 @@ import SearchBar from "../MenuSearchBar/SearchBar/SearchBar.jsx";
 import { SearchBarStyled } from "./menustyles.js";
 import useAuth from "../../Context/hooks/useAuth";
 
+
 const Navbarmenu = () => {
   const { isAuthenticated, user, signOut } = useAuth();
   const location = useLocation();
