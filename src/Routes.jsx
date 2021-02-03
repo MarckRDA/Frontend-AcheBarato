@@ -20,7 +20,7 @@ import CardListProduct from "./Components/CardListProduct/CardListProduct";
 import CardTrendProduct from "./Components/CardTrendProduct/CardTrendProduct";
 import CarouselMainPage from "./Components/CarouselMainPage/CarouselMainPage";
 import CarouselProducts from "./Components/CarouselProducts/CarouselProducts";
-import CathegoryNavAside from "./Components/CathegoryNavAside/CathegoryNavAside";
+
 import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 import ProdutoEscolhido from "./UI/Pages/ProdutoEscolhido";
@@ -34,18 +34,15 @@ export default function Routes() {
     //configurando a autenticação para obter as rotas
     <BrowserRouter>
       <Switch>
-        {/* <Route exact path="/MainPage" component={MainPage} />
-      <Route path="/SignUp" component={SignUp}/>
-      <PrivateRoute path="/app" component={() => <h1>App</h1>} />
-      <Route path="*" component={NotFound} />
-     */}
+    
         <Route exact path="/" component={MainPage} />
         <Route path="/Login" component={Login} />
 
         <Route path="/SignUp" component={SignUp} />
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
-        <Route exact path="/PriceAverage/:search" children={<PriceAverage />} />
+        {/* <Route exact path="/PriceAverage/:id" children={<PriceAverage/>}/> */}
+        <Route><PriceAverage /></Route>
         <Route
           exact
           path="/ProdutoEscolhido/:id"
@@ -58,11 +55,10 @@ export default function Routes() {
         <Route path="/CarouselMainPage" component={CarouselMainPage} />
         <Route path="/CarouselProducts" component={CarouselProducts} />
         <Route path="/DiscountList" component={DiscountList} />
-        <Route path="/CathegoryNavAside" component={CathegoryNavAside} />
         <Route path="/SearchResultProducts" component={SearchResultProducts} />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
         <Route path="/MainPageProfile" component={MainPageProfile} />
-        
+
         <Route path="/PriceCharts" component={PriceCharts} />
         <Route path="*" component={NotFound} />
       </Switch>

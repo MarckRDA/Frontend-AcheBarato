@@ -1,4 +1,5 @@
 import { useState } from "react";
+import usePriceFilter  from '../../Context/hooks/usePriceFilter';
 import { InputGroup, Form } from "react-bootstrap";
 import { ButtonStyled, FormControlStyled } from "./SearchBar.js";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
@@ -7,10 +8,10 @@ import PriceAverage from '../PriceAverage/PriceAverage.jsx'
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
-
+  const { priceMin } = usePriceFilter();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(search);
   };
 
   return (
@@ -22,7 +23,7 @@ const SearchBar = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <Link to= {search === '' ? '/MainPage' : `/PriceAverage/${search}`}>
+          <Link to= {search === '' ? '/MainPage' : `/PriceAverage?search=${search}`}>
             <ButtonStyled variant="outline-primary">Search</ButtonStyled>
           </Link>
         </InputGroup>

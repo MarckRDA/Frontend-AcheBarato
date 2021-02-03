@@ -1,21 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
-import {useParams} from 'react-router';
+import {useEffectOnce} from 'react-use';
+import {useLocation} from 'react-router';
 import { Container, Row } from "react-bootstrap";
 import MenuSearchBar from "../MenuSearchBar";
-import { MenuAside } from "../PriceAverage/PriceAverage";
+import MenuAside  from "../MenuAside/index";
 import Footer from "../Footer/Footer.jsx";
 import ProdutosPesquisados from "../ProdutosPesquisados/ProdutosPesquisados";
+import usePriceFilter from "../../Context/hooks/usePriceFilter";
 
-const PriceAverage = (props) => {
+const PriceAverage = () => {
   const [products, setProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  let {search} = useParams();
+  const { priceMin } = usePriceFilter();
 
-  useEffect(() => {
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+  let urlParams = useQuery();
+
+  useEffectOnce(() => {
     async function loadProducts() {
       const response = await axios.get(
-        `https://localhost:5001/achebarato/products?Search=${search}`
+        `https://localhost:5001/achebarato/products?Search=${urlParams.get('search')}&MinPrice=${priceMin}`
       );
 
       setProducts(response.data);
@@ -23,16 +31,17 @@ const PriceAverage = (props) => {
     }
 
     loadProducts();
-  }, []);
-
+  });
+  
+ 
  
   return (
     <div class="menu ">
-      <MenuSearchBar />I{" "}
-      <Container fluid>
-        <Row>
+      <MenuSearchBar />
+      <Container  fluid>
+        <Row style={{marginTop:'10px'}}>
           <aside class="animate-right">
-            <MenuAside />
+            <MenuAside/>
           </aside>
           {isLoaded ? <ProdutosPesquisados
             products={products}

@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import { TextField } from '@material-ui/core';
 import { H3 } from '../AsideMenu/VerticalTabsStyles';
 import CathegoryNavAside from '../CathegoryNavAside/CathegoryNavAside.jsx';
+import usePriceFilter from '../../Context/hooks/usePriceFilter';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -59,10 +60,13 @@ const useStyles = makeStyles((theme) => ({
 export default function VerticalTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
+  const { price, handlerPrice } = usePriceFilter();
+  
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  console.log(value)
 
   return (
     <>
@@ -71,7 +75,7 @@ export default function VerticalTabs() {
 
           orientation="vertical"
           variant="scrollable"
-          value={value}
+          value={price}
           onChange={handleChange}
           aria-label="Vertical tabs example"
           className={classes.tabs}
