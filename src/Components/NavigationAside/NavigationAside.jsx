@@ -9,7 +9,7 @@ import "./NavigationAside.css";
 
 
 function NavigationAside() {
-  const [range, setRange] = useState([0, 100]);
+  const [range, setRange] = useState([0, 1000]);
 
   function ShowBaloonValue(value) {
     return `${value}`;
