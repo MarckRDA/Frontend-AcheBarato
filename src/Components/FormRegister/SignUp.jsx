@@ -13,6 +13,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 
+
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,10 +26,10 @@ const SignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !phone) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
-      signUp({ name, email, password });
+      signUp({ name, email, password,phone });
       history.push("/login");
     }
   };
@@ -59,7 +60,7 @@ const SignUp = () => {
              <PhoneInput
               placeholder="Enter phone number"
               value={phone}
-              onChange={setPhone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <input
               type="password"

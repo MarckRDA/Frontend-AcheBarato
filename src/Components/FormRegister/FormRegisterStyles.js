@@ -52,19 +52,7 @@ export const Form = styled.form`
   }
   `;
 
-export const RegisterButton = styled(Button)`
-   
-    margin-left:1rem;
-    cursor: pointer;
-    background: #13d0f1;
-    border-radius: 0.5rem;
-    color: #ffffff;
-    display: flex;
-    
-    justify-content: center;
-    display: block;
-    
-    `;
+
 export const FormPage = styled.main`
 height: 100%;
 display: flex;
