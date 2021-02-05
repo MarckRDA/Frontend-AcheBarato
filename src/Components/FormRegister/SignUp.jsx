@@ -9,8 +9,7 @@ import imagem from "../assets/logoicone.png";
 import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/api";
 import { Button } from "../../UI/Button/index";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+
 
 
 const SignUp = () => {
@@ -24,15 +23,16 @@ const SignUp = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-
-    if (!name || !email || !password) {
+    
+    if (!name || !email || !password || !phone) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
-      signUp({ name, email, password });
+      signUp({ name, email, password,phone });
       history.push("/login");
     }
   };
-
+  console.log(phone)  
+  
   return (
     <>
       <FormPage>
@@ -56,10 +56,11 @@ const SignUp = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-             <PhoneInput
-              placeholder="Enter phone number"
+             <input
+              type="text"
+              placeholder="cod+ddd+celular"
               value={phone}
-              onChange={setPhone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <input
               type="password"
