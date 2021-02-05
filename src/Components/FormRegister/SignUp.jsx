@@ -58,12 +58,11 @@ const SignUp = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-             <PhoneInput
-              
-              placeholder="Enter phone number"
+             <input
+              type="text"
+              placeholder="cod+ddd+cellphone"
               value={phone}
-              onChange={setPhone}
-              
+              onChange={(e) => setPhone(e.target.value)}
             />
             <input
               type="password"
