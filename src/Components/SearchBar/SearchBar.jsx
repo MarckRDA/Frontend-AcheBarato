@@ -1,14 +1,11 @@
 import { useState } from "react";
-import usePriceFilter  from '../../Context/hooks/usePriceFilter';
-import { InputGroup, Form } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 import { ButtonStyled, FormControlStyled } from "./SearchBar.js";
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import PriceAverage from '../PriceAverage/PriceAverage.jsx'
+import { Link } from "react-router-dom";
 
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
-  const { priceMin } = usePriceFilter();
   
   const handleSubmit = (event) => {
     event.preventDefault();

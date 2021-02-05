@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { postAlarmPrice } from "../../services/api";
 import useAuth from "../../Context/hooks/useAuth";
 
-const AlarmButton = styled.button`
+export const AlarmButton = styled.button`
   color: #ff6633;
   background-color: rgba(255, 102, 51, 0);
   border: none !important;

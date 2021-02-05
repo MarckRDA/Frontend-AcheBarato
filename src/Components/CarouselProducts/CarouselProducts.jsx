@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import axios from "axios";
+import ReactLoading from "react-loading";
 import CardTrendProduct from "../CardTrendProduct/CardTrendProduct";
 import Carousel from "react-elastic-carousel";
 
@@ -19,13 +20,17 @@ function CarouselProducts() {
     setIsLoaded(true);
     loadProducts();
   }, []);
-  
-  return (
 
-    
+  return (
     <Container style={{ margin: "auto" }}>
       {!isLoaded ? (
-        <h1>Loading</h1>
+        <Col
+          xl={10}
+          xs={10}
+          style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
+        >
+          <ReactLoading type="balls" color="#ff6633" height={200} width={200} />
+        </Col>
       ) : (
         <>
           <h1 className="h1">Trends em HDs e SSDs</h1>

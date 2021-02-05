@@ -1,5 +1,6 @@
 import React, {useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import { Button } from "../Button/index";
 import { Accordion, Badge } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CardListProduct from "../../Components/CardListProduct/CardListProduct";

@@ -1,4 +1,5 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Button } from "../../UI/Button/index";
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
 
@@ -26,7 +27,7 @@ const CardTrendProduct = (props) => {
           </CardTitleStyled>
           <CardStyled.Text>R$ {props.productPrice}</CardStyled.Text>
           <Link to={`/ProdutoEscolhido/${props.productId}`}>
-            <Button variant="primary">Ver Produto</Button>
+            <Button style={{margin:'auto'}}>Ver Produto</Button>
           </Link>
         </Card.Body>
       </CardStyled>

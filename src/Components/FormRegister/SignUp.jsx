@@ -38,7 +38,7 @@ const SignUp = () => {
       <FormPage>
         <JumbotronStyled>
           <Form onSubmit={handleSignUp}>
-            <Link to="/MainPage">
+            <Link to="/">
               <img class="img-login" src={imagem} alt="" />
             </Link>
             {error && <p>{error}</p>}

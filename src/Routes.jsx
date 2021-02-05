@@ -5,10 +5,8 @@ import Login from "./Components/Login/Login.jsx";
 import SignUp from "./Components/FormRegister/SignUp.jsx";
 import {
   BrowserRouter,
-  Router,
   Switch,
-  Route,
-  Redirect,
+  Route
 } from "react-router-dom";
 import NotFound from "../src/UI/Pages/NotFound/NotFound";
 import MainPage from "./UI/Pages/MainPage";
@@ -20,14 +18,13 @@ import CardListProduct from "./Components/CardListProduct/CardListProduct";
 import CardTrendProduct from "./Components/CardTrendProduct/CardTrendProduct";
 import CarouselMainPage from "./Components/CarouselMainPage/CarouselMainPage";
 import CarouselProducts from "./Components/CarouselProducts/CarouselProducts";
-
 import DiscountList from "./Components/DiscountList/DiscountList";
 import SearchResultProducts from "./Components/SearchResultProducts/SearchResultProducts";
 import ProdutoEscolhido from "./UI/Pages/ProdutoEscolhido";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
 import PriceCharts from "./Components/PriceAverage/Charts/PriceCharts.jsx";
 import MainPageProfile from "./Components/PageProfile/MainPageProfile.jsx";
-import App from "./App";
+
 
 export default function Routes() {
   return (
@@ -40,9 +37,7 @@ export default function Routes() {
 
         <Route path="/SignUp" component={SignUp} />
         <Route path="/Reports" component={Reports} />
-        <Route path="/MainPage" component={MainPage} />
-        {/* <Route exact path="/PriceAverage/:id" children={<PriceAverage/>}/> */}
-        
+  
         <Route path="/PriceAverage"><PriceAverage /></Route>
         <Route
           path="/ProdutoEscolhido/:id"

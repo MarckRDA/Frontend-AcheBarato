@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./PriceCharts.css";
+import { ReactLoading } from 'react-loading';
 import { Chart } from "react-google-charts";
 import { Container, Row, Col } from "react-bootstrap";
 import AlertPrice from "../../AlertPrice/AlertPrice";
@@ -29,7 +30,8 @@ const PriceCharts = (props) => {
             width={400}
             height={"300px"}
             chartType="AreaChart"
-            loader={<div>Loading Chart</div>}
+            
+            loader={<ReactLoading type='spokes' color='#ff6633' height={67} width={37} />}
             data={dataArray}
             options={{
               title: "Historico de Preços",

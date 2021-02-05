@@ -2,10 +2,11 @@ import { InputGroup,Form} from "react-bootstrap";
 import { useState } from "react";
 
 import {ButtonStyled,FormControlStyled} from "./SearchBar.js";
-import { Link } from "react-router-dom";
+import { Link, useLocation, BrowserRouter } from "react-router-dom";
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
+  const location = useLocation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,9 +22,11 @@ const SearchBar = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <Link to={search === '' ? '/MainPage' : `/PriceAverage/${search}`}>
+        <BrowserRouter forceRefresh={true}>
+        <Link to={search === '' ? `${location.pathname}` : `/PriceAverage?search=${search}`}>
         <ButtonStyled variant="secondary">Search</ButtonStyled> 
         </Link>
+        </BrowserRouter>
       </InputGroup>
     </form>
       

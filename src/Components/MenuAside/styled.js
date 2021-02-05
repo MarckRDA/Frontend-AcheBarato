@@ -18,10 +18,13 @@ export const InputPrice = styled.input`
   border: 1px solid #d3e6d8;
   width: 70px;
   margin-left: 5px;
-  
 `;
-export const LabelPrice = styled.label`
+export const Label = styled.label`
   font-weight: bolder;
   display: inline-block;
   margin: 0px;
+`;
+
+export const SelectOrdering = styled.select`
+  margin-bottom: 10px;
 `;
