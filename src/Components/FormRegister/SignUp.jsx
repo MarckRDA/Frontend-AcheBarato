@@ -25,7 +25,7 @@ const SignUp = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-
+    
     if (!name || !email || !password || !phone) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
@@ -33,7 +33,8 @@ const SignUp = () => {
       history.push("/login");
     }
   };
-
+  console.log(phone)  
+  
   return (
     <>
       <FormPage>
@@ -58,9 +59,11 @@ const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
              <PhoneInput
+              
               placeholder="Enter phone number"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={setPhone}
+              
             />
             <input
               type="password"
