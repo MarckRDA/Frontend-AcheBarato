@@ -60,7 +60,7 @@ const SignUp = () => {
             />
              <input
               type="text"
-              placeholder="cod+ddd+cellphone"
+              placeholder="cod+ddd+celular"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
