@@ -9,8 +9,6 @@ import imagem from "../assets/logoicone.png";
 import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/api";
 import { Button } from "../../UI/Button/index";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 
 
 
