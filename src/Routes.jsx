@@ -42,9 +42,9 @@ export default function Routes() {
         <Route path="/Reports" component={Reports} />
         <Route path="/MainPage" component={MainPage} />
         {/* <Route exact path="/PriceAverage/:id" children={<PriceAverage/>}/> */}
-        <Route><PriceAverage /></Route>
+        
+        <Route path="/PriceAverage"><PriceAverage /></Route>
         <Route
-          exact
           path="/ProdutoEscolhido/:id"
           children={<ProdutoEscolhido />}
         />
