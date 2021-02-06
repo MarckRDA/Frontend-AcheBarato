@@ -6,7 +6,7 @@ import useAuth from "../../Context/hooks/useAuth";
 export const AlarmButton = styled.button`
   color: #ff6633;
   background-color: rgba(255, 102, 51, 0);
-  border: none !important;
+  border: 2px solid #ff6633 !important;
   width: 255px;
   border-radius: 8px;
   height: 43px;
