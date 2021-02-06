@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Button } from "../Button/index";
 import { Accordion, Badge } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { getProductSelected } from "../../services/api.js"
 import CardListProduct from "../../Components/CardListProduct/CardListProduct";
 import TechnicalInformation from "../../Components/TecnicalInformation/TechnicalInformation";
 import NavSuperior from "../../Components/MenuSearchBar/index";
@@ -20,13 +21,7 @@ const ProdutoEscolhido = () => {
 
   useEffectOnce(() => {
     async function loadRelatedProducts() {
-      await axios
-        .all([
-          axios.get(`https://localhost:5001/achebarato/products/${id}`),
-          axios.get(
-            `https://localhost:5001/achebarato/products/${id}/relatedproducts`
-          ),
-        ])
+      await getProductSelected({ id })
         .then(
           axios.spread((ps, rp) => {
             setProductSelected(ps.data);
