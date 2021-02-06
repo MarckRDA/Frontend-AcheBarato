@@ -15,7 +15,7 @@ import { Button } from "../../UI/Button/index";
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -24,14 +24,14 @@ const SignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     
-    if (!name || !email || !password || !phone) {
+    if (!name || !email || !password || !phoneNumber) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
-      signUp({ name, email, password,phone });
+      signUp({ name, email, password,phoneNumber });
       history.push("/login");
     }
   };
-  console.log(phone)  
+  console.log(phoneNumber)  
   
   return (
     <>
@@ -45,7 +45,7 @@ const SignUp = () => {
             <p>Sign-In</p>
             <input
               type="text"
-              placeholder="User Name"
+              placeholder="Nome"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -59,12 +59,12 @@ const SignUp = () => {
              <input
               type="text"
               placeholder="cod+ddd+celular"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

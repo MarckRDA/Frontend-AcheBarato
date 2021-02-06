@@ -1,5 +1,5 @@
 import "./LoginStyles.css";
-import { LoginPage, LoginButton, JumbotronStyled, Form } from "./loginstyles";
+import { LoginPage, JumbotronStyled, Form } from "./loginstyles";
 import imagem from "../assets/logoicone.png";
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
@@ -26,12 +26,6 @@ const Login = () => {
       }
     }
   };
-
-  // const boletim = [
-  //   { id_student: "1283267138732673", nota: [12, 34] },
-  //   { id_student: "1283267138732673", nota: [12, 34] },
-  //   { id_student: "1283267138732673", nota: [12, 34] },
-  // ];
 
   return (
     <>
