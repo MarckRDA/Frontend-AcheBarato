@@ -20,7 +20,7 @@ const SearchBar = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <Link to= {search === '' ? '/MainPage' : `/PriceAverage?search=${search}`}>
+          <Link to= {search === '' ? '/' : `/PageResults?search=${search}`}>
             <ButtonStyled variant="outline-primary">Search</ButtonStyled>
           </Link>
         </InputGroup>

@@ -26,28 +26,28 @@ const Navbarmenu = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="/PriceAverage?search=MLB1649">
+                <NavDropdown.Item href="/PageResults?search=MLB1649">
                   Computadores
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB11172">
+                <NavDropdown.Item href="/PageResults?search=MLB11172">
                   Consoles
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB1055">
+                <NavDropdown.Item href="/PageResults?search=MLB1055">
                   Celulares e Smartphones
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB1002">
+                <NavDropdown.Item href="/PageResults?search=MLB1002">
                   Televisores
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB437616">
+                <NavDropdown.Item href="/PageResults?search=MLB437616">
                   Livros
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB269589">
+                <NavDropdown.Item href="/PageResults?search=MLB269589">
                   Elétricos
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB1646">
+                <NavDropdown.Item href="/PageResults?search=MLB1646">
                   Ar Condicionado
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/PriceAverage?search=MLB3853">
+                <NavDropdown.Item href="/PageResults?search=MLB3853">
                   Outros
                 </NavDropdown.Item>
               </NavDropdown>

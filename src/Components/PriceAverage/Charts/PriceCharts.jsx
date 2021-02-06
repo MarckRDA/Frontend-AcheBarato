@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./PriceCharts.css";
-import { ReactLoading } from 'react-loading';
+import ReactLoading  from 'react-loading';
 import { Chart } from "react-google-charts";
 import { Container, Row, Col } from "react-bootstrap";
 import AlertPrice from "../../AlertPrice/AlertPrice";
