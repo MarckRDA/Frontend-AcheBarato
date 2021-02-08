@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { postAlarmPrice } from "../../services/api";
 import useAuth from "../../Context/hooks/useAuth";
+import AlertPopup from '../AlertPopUp/index';
 
 export const AlarmButton = styled.button`
   color: #ff6633;
@@ -53,7 +54,7 @@ const ContainerAligh = styled.div`
 
 const AlertPrice = (props) => {
   const [price, setPrice] = useState(0);
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   
   const productId = props.product.id_product;
   const priceToMonitor = parseFloat(price);
@@ -62,9 +63,13 @@ const AlertPrice = (props) => {
     if(!isAuthenticated){
       alert("Você precisa estar logado !");
     }
-   postAlarmPrice({productId, priceToMonitor})
-   
-    console.log(`enviando esse preço: ${price} \n${user.userId}\n${productId}`);
+   postAlarmPrice({productId, priceToMonitor}).then(resp =>{
+     if(resp.status === 201){
+        return(
+          <AlertPopup text={"Seu alarme foi salvo!!"}/>     
+        )
+     }
+   } )
   };
   return (
     <>

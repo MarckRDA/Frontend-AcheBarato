@@ -1,4 +1,4 @@
-import { InputGroup,Form} from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 import { useState } from "react";
 
 import {ButtonStyled,FormControlStyled} from "./SearchBar.js";
@@ -10,7 +10,6 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(search);
   };
 
   return (
@@ -23,7 +22,7 @@ const SearchBar = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <BrowserRouter forceRefresh={true}>
-        <Link to={search === '' ? `${location.pathname}` : `/PriceAverage?search=${search}`}>
+        <Link to={search === '' ? `${location.pathname}` : `/PageResults?search=${search}`}>
         <ButtonStyled variant="secondary">Search</ButtonStyled> 
         </Link>
         </BrowserRouter>
