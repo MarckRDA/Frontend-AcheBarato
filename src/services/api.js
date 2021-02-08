@@ -36,6 +36,11 @@ export const postUserPreferences = ( SearchTag ) =>{
     .post("/users/addPreferences", {SearchTag});
 }
 
+export const getTrendProducts = () =>{
+  return api
+    .get("/products/trendproducts");
+}
+
 export const getTrendProductsByUserPreferences = ( search ) =>{
   return api
     .get(`/products/usersPreferences/${search}` );
