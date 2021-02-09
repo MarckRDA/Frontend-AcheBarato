@@ -12,7 +12,7 @@ import Carousel from "react-elastic-carousel";
 function CarouselProducts() {
   const [products, setProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  
+
   // const [
   //   trendsProductUserPreferences,
   //   setTrendsProductUserPreferences,
@@ -46,7 +46,9 @@ function CarouselProducts() {
   //   setIsUserPreferenceLoaded(true);
   // }, []);
 
- console.log(products);
+  
+
+  console.log(products);
   return (
     <Container style={{ margin: "auto" }}>
       {!isLoaded ? (
@@ -90,7 +92,6 @@ function CarouselProducts() {
                 );
               }
             })}
-
           </Carousel>
           <h1 className="h1">Trends em Geladeiras</h1>
           <Carousel itemsToShow={4}>
@@ -106,7 +107,6 @@ function CarouselProducts() {
                   />
                 );
               }
-
             })}
           </Carousel>
           <h1 className="h1">Trends em Ar Condicionado</h1>
@@ -123,7 +123,6 @@ function CarouselProducts() {
                   />
                 );
               }
-
             })}
           </Carousel>{" "}
         </>
