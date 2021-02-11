@@ -14,7 +14,6 @@ import Reports from "./Components/Reports/Reports.jsx";
 import PriceAverage from "./Components/PriceAverage/PriceAverage.jsx";
 import ProdutoEscolhido from "./UI/Pages/ProdutoEscolhido";
 import ProdutosPesquisados from "./Components/ProdutosPesquisados/ProdutosPesquisados";
-import MainPageProfile from "./Components/PageProfile/MainPageProfile.jsx";
 
 
 export default function Routes() {
@@ -35,7 +34,6 @@ export default function Routes() {
           children={<ProdutoEscolhido />}
         />
         <Route path="/ProdutosPesquisados" component={ProdutosPesquisados} />
-        <Route path="/MainPageProfile" component={MainPageProfile} />
 
         <Route path="*" component={NotFound} />
       </Switch>
