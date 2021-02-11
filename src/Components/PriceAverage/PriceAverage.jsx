@@ -38,7 +38,7 @@ const PriceAverage = () => {
         maxPrice,
         ordering,
       });
-      setProducts(response.data);
+      setProducts(response.data.data);
       setIsLoaded(true);
     }
    
