@@ -45,3 +45,8 @@ export const getTrendProductsByUserPreferences = ( search ) =>{
   return api
     .get(`/products/usersPreferences/${search}` );
 }
+
+export const getUserInformation = () =>{
+  return api
+    .get(`/users/me` );
+}

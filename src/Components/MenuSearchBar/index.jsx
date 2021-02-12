@@ -52,31 +52,42 @@ const Navbarmenu = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               {location.pathname === "/" ? (
-                <span style={{width: "48rem", marginLeft: "-11rem"}}></span>
+                <span style={{ width: "48rem", marginLeft: "-11rem" }}></span>
               ) : (
-                <>
-                  <SearchBarStyled>
-                    <SearchBar />
-                  </SearchBarStyled>
-                </>
-              )}
+                  <>
+                    <SearchBarStyled>
+                      <SearchBar />
+                    </SearchBarStyled>
+                  </>
+                )}
 
-              <div style={{ display: "flex"}}>
+              {location.pathname === "/MainPageProfile" ? (
+                <span style={{ width: "48rem", marginLeft: "-11rem" }}></span>
+              ) : (
+                  <>
+                    <SearchBarStyled>
+                      <SearchBar />
+                    </SearchBarStyled>
+                  </>
+                )}
+
+
+              <div style={{ display: "flex" }}>
                 {isAuthenticated ? (
                   <>
                     <p>Olá {user.name.split(" ")[0]}</p>
                     <LogOutButton onClick={signOut}>Logout</LogOutButton>
                   </>
                 ) : (
-                  <>
-                    <Link to="/Login">
-                      <LoginButton variant="secondary">Login</LoginButton>
-                    </Link>
-                    <Link to="/SignUp">
-                      <SigInButton variant="secondary">Register</SigInButton>
-                    </Link>
-                  </>
-                )}
+                    <>
+                      <Link to="/Login">
+                        <LoginButton variant="secondary">Login</LoginButton>
+                      </Link>
+                      <Link to="/SignUp">
+                        <SigInButton variant="secondary">Register</SigInButton>
+                      </Link>
+                    </>
+                  )}
               </div>
             </Nav>
           </Navbar.Collapse>
