@@ -10,7 +10,7 @@ import { FormatSize } from "@material-ui/icons";
 import { Form, Col, Navbar, Nav, FormControl } from 'react-bootstrap';
 import { Button } from "../../UI/Button/index";
 import MenuSearchBar from "../../Components/MenuSearchBar/index";
-
+import useAuth from "../../Context/hooks/useAuth"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MainPageProfile() {
+  const {user} = useAuth();
   const classes = useStyles();
 
   return (
@@ -34,21 +35,21 @@ export default function MainPageProfile() {
       <MenuSearchBar />
       <Form style={{ margin: 74 }}>
         <Avatar alt="Remy Sharp" src="/broken-image.jpg" className={classes.orange}>
-          {/* <p>Olá {user.name.split(" ")[0][0]}</p> */}
+          {user.name[0][0]}
         </Avatar>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail"   >
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="email do usuario" />
+            <Form.Control type="email" placeholder={user.email} />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridPassword" >
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password usuario" />
+            <Form.Control type="password" placeholder= "**********" />
           </Form.Group>
         </Form.Row>
         <Form.Group controlId="formGridAddress1" style={{ width: 400 }}>
           <Form.Label>Celular</Form.Label>
-          <Form.Control type="text" placeholder="Celular do usuario" />
+          <Form.Control type="text" placeholder= {user.phoneNumber} />
         </Form.Group>
 
         <div class="buttonsubmit" style={{margin:80}}>
