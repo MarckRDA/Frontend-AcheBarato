@@ -13,13 +13,6 @@ function CarouselProducts() {
   const [products, setProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // const [
-  //   trendsProductUserPreferences,
-  //   setTrendsProductUserPreferences,
-  // ] = useState([]);
-  // const { isAuthenticated, user } = useAuth();
-  // const [isUserPreferenceLoaded, setIsUserPreferenceLoaded] = useState(false);
-
   useEffect(() => {
     async function loadProducts() {
       const response = await getTrendProducts();
@@ -30,25 +23,8 @@ function CarouselProducts() {
     loadProducts();
   }, []);
 
-  // useEffect(() => {
-  //   const lastUserSearched = isAuthenticated
-  //     ? [user.searchTags[user.searchTags.length - 1]]
-  //     : [];
+   
 
-  //   async function TrendProductsBasedOnUserPreferences() {
-  //     const response = await getTrendProductsByUserPreferences(
-  //       lastUserSearched[lastUserSearched.length - 1]
-  //     );
-  //     setTrendsProductUserPreferences(response.data);
-  //   }
-
-  //   TrendProductsBasedOnUserPreferences();
-  //   setIsUserPreferenceLoaded(true);
-  // }, []);
-
-  
-
-  console.log(products);
   return (
     <Container style={{ margin: "auto" }}>
       {!isLoaded ? (
