@@ -7,11 +7,9 @@ import SearchBar from "../MenuSearchBar/SearchBar/SearchBar.jsx";
 import { SearchBarStyled } from "./menustyles.js";
 import useAuth from "../../Context/hooks/useAuth";
 
-
 const Navbarmenu = () => {
   const { isAuthenticated, user, signOut } = useAuth();
   const location = useLocation();
-
 
   return (
     <>
@@ -51,26 +49,16 @@ const Navbarmenu = () => {
                   Outros
                 </NavDropdown.Item>
               </NavDropdown>
-              {location.pathname === "/" ? (
+              {location.pathname === "/" ||
+              location.pathname === "/MainPageProfile" ? (
                 <span style={{ width: "48rem", marginLeft: "-11rem" }}></span>
               ) : (
-                  <>
-                    <SearchBarStyled>
-                      <SearchBar />
-                    </SearchBarStyled>
-                  </>
-                )}
-
-              {location.pathname === "/MainPageProfile" ? (
-                <span style={{ width: "48rem", marginLeft: "-11rem" }}></span>
-              ) : (
-                  <>
-                    <SearchBarStyled>
-                      <SearchBar />
-                    </SearchBarStyled>
-                  </>
-                )}
-
+                <>
+                  <SearchBarStyled>
+                    <SearchBar />
+                  </SearchBarStyled>
+                </>
+              )}
 
               <div style={{ display: "flex" }}>
                 {isAuthenticated ? (
@@ -79,15 +67,15 @@ const Navbarmenu = () => {
                     <LogOutButton onClick={signOut}>Logout</LogOutButton>
                   </>
                 ) : (
-                    <>
-                      <Link to="/Login">
-                        <LoginButton variant="secondary">Login</LoginButton>
-                      </Link>
-                      <Link to="/SignUp">
-                        <SigInButton variant="secondary">Register</SigInButton>
-                      </Link>
-                    </>
-                  )}
+                  <>
+                    <Link to="/Login">
+                      <LoginButton variant="secondary">Login</LoginButton>
+                    </Link>
+                    <Link to="/SignUp">
+                      <SigInButton variant="secondary">Register</SigInButton>
+                    </Link>
+                  </>
+                )}
               </div>
             </Nav>
           </Navbar.Collapse>
