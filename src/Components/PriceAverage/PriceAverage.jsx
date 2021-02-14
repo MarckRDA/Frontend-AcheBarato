@@ -19,7 +19,7 @@ const PriceAverage = () => {
   const [maxPrice, setMaxPrice] = useState(99999);
   const [ordering, setOrdering] = useState(" ");
 
-  const { isAuthenticated } = useAuth();
+//  const { isAuthenticated } = useAuth();
 
 
   function useQuery() {
@@ -30,32 +30,32 @@ const PriceAverage = () => {
 
   const search = urlParams.get("search");
 
+  async function loadProducts() {
+    const response = await getSearchedProducts({
+      search,
+      minPrice,
+      maxPrice,
+      ordering,
+    });
+    setProducts(response.data.data);
+    setIsLoaded(true);
+  }
+ 
   useEffect(() => {
-    async function loadProducts() {
-      const response = await getSearchedProducts({
-        search,
-        minPrice,
-        maxPrice,
-        ordering,
-      });
-      setProducts(response.data.data);
-      setIsLoaded(true);
-    }
-   
 
     loadProducts();
   }, [minPrice, maxPrice, ordering]);
 
-  useEffect(() => {
-    function getUserPreference() {
-      postUserPreferences( search );
-    }
+  // useEffect(() => {
+  //   function getUserPreference() {
+  //     postUserPreferences( search );
+  //   }
     
-    if (isAuthenticated) {
-      getUserPreference(search);
-    }
+  //   if (isAuthenticated) {
+  //     getUserPreference(search);
+  //   }
 
-  });
+  // });
 
   const handlerFilters = (minprice, maxprice, orderBy) => {
     setMinPrice(minprice);
@@ -63,7 +63,6 @@ const PriceAverage = () => {
     setMaxPrice(maxprice);
   };
 
-  console.log(isAuthenticated);
 
   return (
     <div class="menu ">
