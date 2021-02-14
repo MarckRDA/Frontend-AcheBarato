@@ -24,7 +24,7 @@ const ProdutoEscolhido = () => {
       await getProductSelected({ id })
         .then(
           axios.spread((ps, rp) => {
-            setProductSelected(ps.data);
+            setProductSelected(ps.data.data);
             setRelatedProducts(rp.data);
           })
         );
