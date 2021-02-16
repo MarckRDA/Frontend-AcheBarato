@@ -61,7 +61,7 @@ const Navbarmenu = () => {
                   </>
                 )}
 
-              {location.pathname === "/MainPageProfile" ? (
+              {/* {location.pathname === "/MainPageProfile" ? (
                 <span style={{ width: "48rem", marginLeft: "-11rem" }}></span>
               ) : (
                   <>
@@ -69,7 +69,7 @@ const Navbarmenu = () => {
                       <SearchBar />
                     </SearchBarStyled>
                   </>
-                )}
+                )} */}
 
 
               <div style={{ display: "flex" }}>
