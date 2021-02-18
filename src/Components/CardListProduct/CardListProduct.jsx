@@ -7,7 +7,7 @@ const CardListProduct = (props) => {
       <Card.Body>
         <Row>
           <Col xs={3}>
-            <Card.Img src={props.productImg} style={{ width: 90 }} />
+            <Card.Img src={props.productImg} style={{ width: '90px', marginLeft:'100px' }} />
           </Col>
           <Col xs={3} className="justify-content-start">
             <BrowserRouter forceRefresh={true}>

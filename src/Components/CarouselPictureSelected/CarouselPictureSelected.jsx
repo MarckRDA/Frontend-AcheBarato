@@ -14,6 +14,7 @@ function CarouselPictureSelected(props) {
     <Carousel.Item>
       <img
         height="360px"
+        width= "250px"
         className="d-block w-100"
         src={picture}
         alt="First slide"

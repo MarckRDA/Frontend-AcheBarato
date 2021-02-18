@@ -1,7 +1,7 @@
 import { InputGroup } from "react-bootstrap";
 import { useState } from "react";
 
-import {ButtonStyled,FormControlStyled} from "./SearchBar.js";
+import {ButtonSearch, FormControlStyled} from "./SearchBar.js";
 import { Link, useLocation, BrowserRouter } from "react-router-dom";
 
 const SearchBar = () => {
@@ -22,8 +22,8 @@ const SearchBar = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <BrowserRouter forceRefresh={true}>
-        <Link to={search === '' ? `${location.pathname}` : `/PageResults?search=${search}`}>
-        <ButtonStyled variant="secondary">Search</ButtonStyled> 
+        <Link style={{textDecoration:'none'}} to={search === "" ? `${location.pathname}` : `/ProdutosPesquisados?search=${search}`}>
+        <ButtonSearch variant="secondary">Search</ButtonSearch> 
         </Link>
         </BrowserRouter>
       </InputGroup>

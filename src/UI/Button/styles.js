@@ -26,6 +26,6 @@ export const GlobalButton = styled.button`
 
   }
   &:focus {
-    outline: none;
+    outline: 0;
   }
 `;

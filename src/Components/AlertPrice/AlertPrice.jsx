@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { postAlarmPrice } from "../../services/api";
 import useAuth from "../../Context/hooks/useAuth";
-import AlertPopup from '../AlertPopUp/index';
+import AlertPopup from "../AlertPopUp/index";
 
 export const AlarmButton = styled.button`
   color: #ff6633;
@@ -53,23 +53,20 @@ const ContainerAligh = styled.div`
 `;
 
 const AlertPrice = (props) => {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(props.product.price);
   const { isAuthenticated } = useAuth();
-  
+  const [response, setResponse] = useState(0);
+
   const productId = props.product.id_product;
   const priceToMonitor = parseFloat(price);
 
   const handleAlertPrice = () => {
-    if(!isAuthenticated){
+    if (!isAuthenticated) {
       alert("Você precisa estar logado !");
     }
-   postAlarmPrice({productId, priceToMonitor}).then(resp =>{
-     if(resp.status === 201){
-        return(
-          <AlertPopup text={"Seu alarme foi salvo!!"}/>     
-        )
-     }
-   } )
+    postAlarmPrice({ productId, priceToMonitor }).then((resp) => {
+      setResponse(resp.status);
+    });
   };
   return (
     <>
@@ -86,9 +83,19 @@ const AlertPrice = (props) => {
             onChange={(e) => setPrice(e.target.value)}
           />
         </FlexContainer>
-        <AlarmButton size="lg" onClick={handleAlertPrice}>
-          Avise-me !
-        </AlarmButton>
+
+        {response === 204 ? (
+          <>
+            <AlertPopup text={"Seu alarme foi salvo!!"} />
+            <AlarmButton size="lg" onClick={handleAlertPrice}>
+              Avise-me !
+            </AlarmButton>
+          </>
+        ) : (
+          <AlarmButton size="lg" onClick={handleAlertPrice}>
+            Avise-me !
+          </AlarmButton>
+        )}
       </ContainerAligh>
     </>
   );

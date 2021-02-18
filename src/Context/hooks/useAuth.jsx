@@ -1,3 +1,4 @@
+import jwtDecode from "jwt-decode";
 import { useState } from "react";
 import { useEffectOnce } from "react-use";
 import { api } from "../../services/api";
@@ -12,24 +13,24 @@ export default function useAuth() {
 
   useEffectOnce(() => {
     async function loadStorageData() {
-      const userLocalStorage = localStorage.getItem(USER);
       const tokenlocalStorage = localStorage.getItem(TOKEN_USER);
-
-      if (userLocalStorage && tokenlocalStorage) {
-        setUser(JSON.parse(userLocalStorage));
+           
+      if (tokenlocalStorage) {
+        const user = decodeTokenToGetUserInformations();
+        setUser(user);
         api.defaults.headers.Authorization = `Bearer ${tokenlocalStorage}`;
-        api.defaults.headers.UserId = `${JSON.parse(userLocalStorage).userId}`;
+        api.defaults.headers.UserId = user.userId;
         setIsAuthenticated(true);
       }
       setLoading(false);
     }
     loadStorageData();
   }, []);
-
+  
   async function login({ email, password }) {
     const response = await api.post("/users/login", { email, password });
     localStorage.setItem(TOKEN_USER, response.data.token);
-    localStorage.setItem(USER, JSON.stringify(response.data.user));
+    decodeTokenToGetUserInformations();
     setIsAuthenticated(true);
   }
 
@@ -37,6 +38,18 @@ export default function useAuth() {
     localStorage.clear();
     setUser(null);
     setIsAuthenticated(false);
+  }
+
+  function decodeTokenToGetUserInformations(){
+     const decodeToken = jwtDecode(localStorage.getItem(TOKEN_USER));
+     
+     const user={
+       name: decodeToken.unique_name,
+       email: decodeToken.email,
+       userId: decodeToken.nameid,
+       cellphone: Object.values(decodeToken)[3]       
+     }
+     return user;
   }
   
   return { isAuthenticated, login, user, signOut, loading };

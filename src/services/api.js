@@ -18,9 +18,10 @@ export const getSearchedProducts = ({
   minPrice,
   maxPrice,
   ordering,
+  pageNumber
 }) => {
   return api.get(
-    `/products?Search=${search}&MinPrice=${minPrice}&MaxPrice=${maxPrice}&OrderBy=${ordering}`
+    `/products?Search=${search}&pageNumber=${pageNumber}&MinPrice=${minPrice}&MaxPrice=${maxPrice}&OrderBy=${ordering}`
   );
 };
 
