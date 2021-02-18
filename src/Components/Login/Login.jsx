@@ -20,7 +20,7 @@ const Login = () => {
     if (!email || !password) {
       setError("E-mail or Password is empty");
     } else {
-      login({ email, password });
+      login({ email, password })
       if (isAuthenticated) {
         history.push("/");
       }

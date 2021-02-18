@@ -23,10 +23,9 @@ function CarouselProducts() {
     loadProducts();
   }, []);
 
-   
-
   return (
     <Container style={{ margin: "auto" }}>
+      <br />
       {!isLoaded ? (
         <Col
           xl={10}
@@ -103,6 +102,7 @@ function CarouselProducts() {
           </Carousel>{" "}
         </>
       )}
+      <br />
     </Container>
   );
 }

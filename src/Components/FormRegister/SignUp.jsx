@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  RegisterButton,
   JumbotronStyled,
   FormPage,
   Form,
@@ -9,6 +8,7 @@ import imagem from "../assets/logoicone.png";
 import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/api";
 import { Button } from "../../UI/Button/index";
+import InputMask from 'react-input-mask';
 
 
 
@@ -27,11 +27,11 @@ const SignUp = () => {
     if (!name || !email || !password || !phoneNumber) {
       setError("Preencha todos os dados para se cadastrar");
     } else {
+      console.log(phoneNumber);
       signUp({ name, email, password,phoneNumber });
       history.push("/login");
     }
   };
-  console.log(phoneNumber)  
   
   return (
     <>
@@ -56,12 +56,13 @@ const SignUp = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-             <input
+             {/* <input
               type="text"
               placeholder="cod+ddd+celular"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-            />
+            /> */}
+            <InputMask mask={"(99)99999-9999"} maskPlaceholder={"(99)99999-9999"} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
             <input
               type="password"
               placeholder="Senha"

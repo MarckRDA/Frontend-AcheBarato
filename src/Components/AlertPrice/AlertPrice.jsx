@@ -53,7 +53,7 @@ const ContainerAligh = styled.div`
 `;
 
 const AlertPrice = (props) => {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(props.product.price);
   const { isAuthenticated } = useAuth();
   const [response, setResponse] = useState(0);
 

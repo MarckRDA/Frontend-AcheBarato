@@ -59,7 +59,7 @@ const ProdutoEscolhido = () => {
                   >
                     <h1 className="h1">{productSelected.name}</h1>
                     <h3>R$ {productSelected.price}</h3>
-                    <a href={productSelected.linkRedirectShop}>
+                    <a href={productSelected.linkRedirectShop} rel="noreferrer" target="_blank">
                       <Button variant="primary">Link para loja</Button>
                     </a>
                   </Col>
