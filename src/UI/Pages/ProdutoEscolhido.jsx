@@ -100,8 +100,8 @@ const ProdutoEscolhido = () => {
                   />
                 </Accordion.Collapse>
               ))}
-              <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                <Badge variant="primary">Ver mais</Badge>{" "}
+              <Accordion.Toggle as="a" variant="link" eventKey="0">
+                <Button variant="primary">Ver mais</Button>
               </Accordion.Toggle>
             </Accordion>
           </>
